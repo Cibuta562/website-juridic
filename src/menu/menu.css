@@ -1,0 +1,112 @@
+/* Your existing styles for .menu-container */
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+    position: relative;
+    color: white;
+    background-color: black;
+    font-family: 'Montserrat', serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-lng {
+    display: flex;
+}
+
+.img-ro {
+    width: 30px;
+    height: 30px;
+}
+
+.img-de {
+    width: 30px;
+    height: 30px;
+}
+
+.home-button {
+    margin-right: 10px;
+    display: flex;
+}
+
+.dec-line{
+  display: none;
+}
+
+/* Desktop styles - visible when screen width is 768px or more */
+@media screen and (min-width: 768px) {
+    .mobile-menu {
+        display: none;
+    }
+
+    .desktop-menu {
+        display: flex;
+    }
+
+    .main-category {
+        margin-right: 10px;
+    }
+}
+
+/* Mobile styles - visible when screen width is less than 768px */
+@media screen and (max-width: 767px) {
+    .menu-container {
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+
+    .menu-toggle-button {
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    .menu-hamburger {
+        height: 30px;
+        width: 35px;
+    }
+
+    .mobile-categories {
+        overflow: hidden;
+        max-height: 0;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: calc(100% + 0px);
+        left: 0;
+        width: 100%;
+        background-color: #000000;
+        z-index: 1;
+        color: #ffffff;
+        transition: max-height 0.7s ease-out, background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .menu-toggle-button.active + .mobile-categories {
+        max-height: 100vh; /* Adjust to a value larger than your content's height */
+    }
+
+    .main-category {
+        padding: 15px;
+        /*border-bottom: 1px solid #ccc;*/
+        transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    .main-category1 {
+        padding: 15px;
+        /*border-bottom: 1px solid #ccc;*/
+        /*border-top: 1px solid #ccc;*/
+        transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    .dec-line{
+        display: initial;
+        height: 1px;
+        background-color: #C1A267FF;
+        width: 50px;
+        margin-left: 15px;
+
+    }
+}

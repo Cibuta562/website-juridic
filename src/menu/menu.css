@@ -96,8 +96,6 @@
 
     .main-category1 {
         padding: 15px;
-        /*border-bottom: 1px solid #ccc;*/
-        /*border-top: 1px solid #ccc;*/
         transition: background-color 0.5s ease, color 0.5s ease;
     }
 

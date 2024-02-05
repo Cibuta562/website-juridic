@@ -5,7 +5,7 @@ import ro_img from "../assets/romania-flag-square-icon-32.png";
 import de_img from "../assets/germany-flag-square-icon-32.png";
 import menu_hamburger from "../assets/menu.png";
 
-const YourMenuComponent = () => {
+const Menu = () => {
     const [isMobileMenuVisible, setMobileMenuVisible] = useState(false);
 
     return (
@@ -74,4 +74,4 @@ const YourMenuComponent = () => {
     );
 };
 
-export default YourMenuComponent;
+export default Menu;

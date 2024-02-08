@@ -3,16 +3,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 15px;
-    position: relative;
+    padding: 0px 0px;
+    position: fixed;
+    width: 100%;
     color: white;
     background-color: black;
     font-family: 'Montserrat', serif;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.home-button {
+    padding-left: 15px;
+}
+
+.menu-hamburger {
+    padding-right: 15px;
+}
+
 .menu-lng {
     display: flex;
+    padding-right: 15px;
 }
 
 .img-ro {
@@ -89,8 +99,8 @@
     }
 
     .menu-hamburger {
-        height: 30px;
-        width: 35px;
+        height: 40px;
+        width: 40px;
     }
 
     .mobile-categories {
@@ -119,7 +129,7 @@
     }
 
     .main-category1 {
-        padding: 15px;
+        padding: 15px 20px 15px 15px;
         transition: background-color 0.5s ease, color 0.5s ease;
     }
 
@@ -134,5 +144,13 @@
 
     .menu-lng{
         margin-top: 30px;
+    }
+
+    .mobile-menu{
+        font-size: 24px;
+    }
+
+    .menu-container{
+        font-size: 24px;
     }
 }

@@ -1,9 +1,156 @@
-.heading-cont {
-    height: 100vh;
+.stats-row{
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 220px;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    font-family: Montserrat;
+    width: 100%;
 }
 
-.img-heading {
+.stats-row1{
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 220px;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    font-family: Montserrat;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+}
+
+.stats-column{
+
+}
+
+
+
+@media screen and (min-width: 600px) {
+
+    .btn-top{
+        display: none;
+    }
+
+    .heading-cont {
+        height: 100vh;
+        background-image: url("../assets/heading.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .stats-row, .stats-row1{
+        width: 25%;
+        border: none;
+    }
+
+    .stats-column{
+        display: flex;
+    }
+
+    .heading-stats-number{
+        font-size: 28px;
+        margin-top: 55px;
+        margin-bottom: 20px;
+    }
+
+    .heading-stats-title{
+        font-size: 20px;
+        margin: 5px;
+    }
+
+    .heading-quote {
+        z-index: 1;
+        font-family: Montserrat, serif;
+        width: 500px;
+        font-size: 30px;
+        padding-top: 300px;
+        margin-left: 80px;
+        margin-top: 0;
+        color: white;
+    }
+
+    .btn-heading {
+        font-size: 20px;
+        font-family: Montserrat;
+        padding: 10px 10px;
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
+        border: 1px solid white;
+        margin-left: 80px;
+        margin-top: 10px;
+    }
+
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+
+    .heading-cont {
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.6);
+        background-image: url("../assets/heading2.jpg");
+        object-fit: initial;
+    }
+
+    .img-arrow{
+        width: 35px;
+        margin-left: 1px;
+    }
+
+
+    .heading-quote {
+        z-index: 1;
+        font-family: Montserrat;
+        width: 300px;
+        font-size: 30px;
+        padding-top: 180px;
+        margin-left: 25px;
+        margin-top: 0;
+        color: white;
+    }
+
+    .btn-heading {
+        font-size: 20px;
+        font-family: Montserrat;
+        padding: 10px 10px;
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
+        border: 1px solid white;
+        margin-left: 25px;
+        margin-top: 400px;
+    }
+
+    .heading-stats-number{
+        font-size: 38px;
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+
+    .heading-stats-title{
+        font-size: 25px;
+        margin: 5px;
+    }
+
+    .btn-top{
+        position: fixed;
+        top: 87%;
+        width: 50px;
+        height: 50px;
+        background-color: rgba(0,0,0,0);
+        border: solid white 1px;
+        left: 80%;
+        border-radius: 50%;
+        z-index: 1;
+    }
+
 }

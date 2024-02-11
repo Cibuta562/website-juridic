@@ -14,8 +14,11 @@ function Heading() {
 
 
     return(
-        <div>
+        <div style={{width: "100%", margin: "0"}}>
         <div className="heading-cont">
+
+            <div className="dark-overlay"></div>
+
             <h1 className="heading-quote">
                 UN DREPT NEDOVEDIT ESTE
                 PRECUM UN DREPT INEXISTENT

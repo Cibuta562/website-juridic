@@ -4,10 +4,18 @@
     text-align: center;
     height: 220px;
     border-top: 1px solid white;
-    border-right: 1px solid white;
-    border-left: 1px solid white;
+    /*border-right: 1px solid white;*/
+    /*border-left: 1px solid white;*/
     font-family: Montserrat;
     width: 100%;
+}
+
+.dark-overlay {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: +50px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .stats-row1{
@@ -16,8 +24,8 @@
     text-align: center;
     height: 220px;
     border-bottom: 1px solid white;
-    border-right: 1px solid white;
-    border-left: 1px solid white;
+    /*border-right: 1px solid white;*/
+    /*border-left: 1px solid white;*/
     font-family: Montserrat;
     width: 100%;
 
@@ -35,12 +43,14 @@
         display: none;
     }
 
+
     .heading-cont {
         height: 100vh;
         background-image: url("../assets/heading.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        width: 100%;
     }
 
     .stats-row, .stats-row1{
@@ -68,7 +78,7 @@
         font-family: Montserrat, serif;
         width: 500px;
         font-size: 30px;
-        padding-top: 300px;
+        padding-top: 450px;
         margin-left: 80px;
         margin-top: 0;
         color: white;
@@ -99,21 +109,22 @@
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.6);
         background-image: url("../assets/heading2.jpg");
-        object-fit: initial;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     .img-arrow{
         width: 35px;
-        margin-left: 1px;
     }
 
 
     .heading-quote {
         z-index: 1;
         font-family: Montserrat;
-        width: 300px;
-        font-size: 30px;
-        padding-top: 180px;
+        width: 250px;
+        font-size: 28px;
+        padding-top: 200px;
         margin-left: 25px;
         margin-top: 0;
         color: white;
@@ -127,7 +138,7 @@
         color: white;
         border: 1px solid white;
         margin-left: 25px;
-        margin-top: 400px;
+        margin-top: 300px;
     }
 
     .heading-stats-number{
@@ -151,6 +162,7 @@
         left: 80%;
         border-radius: 50%;
         z-index: 1;
+        text-align: center;
     }
 
 }

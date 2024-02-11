@@ -87,6 +87,7 @@
     .menu-container {
         transition: background-color 0.3s ease, color 0.3s ease;
         border: none;
+        height: 55px;
     }
 
     .desktop-menu {
@@ -99,8 +100,9 @@
     }
 
     .menu-hamburger {
-        height: 40px;
-        width: 40px;
+        margin-top: 5px;
+        height: 35px;
+        width: 35px;
     }
 
     .mobile-categories {

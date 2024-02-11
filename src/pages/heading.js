@@ -19,10 +19,10 @@ function Heading() {
 
             <div className="dark-overlay"></div>
 
-            <h1 className="heading-quote">
+            <p className="heading-quote">
                 UN DREPT NEDOVEDIT ESTE
                 PRECUM UN DREPT INEXISTENT
-            </h1>
+            </p>
 
             <div>
                 <button className="btn-heading">

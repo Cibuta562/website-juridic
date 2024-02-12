@@ -115,7 +115,7 @@
     }
 
     .img-arrow{
-        width: 35px;
+        width: 32px;
     }
 
 
@@ -142,13 +142,13 @@
     }
 
     .heading-stats-number{
-        font-size: 38px;
-        margin-top: 60px;
+        font-size: 30px;
+        margin-top: 50px;
         margin-bottom: 20px;
     }
 
     .heading-stats-title{
-        font-size: 25px;
+        font-size: 22px;
         margin: 5px;
     }
 
@@ -163,6 +163,11 @@
         border-radius: 50%;
         z-index: 1;
 
+    }
+
+
+    .stats-row, .stats-row1{
+        height: 180px;
     }
 
 }

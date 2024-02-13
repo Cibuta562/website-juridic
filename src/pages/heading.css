@@ -78,7 +78,7 @@
         font-family: Montserrat;
         width: 500px;
         font-size: 30px;
-        padding-top: 450px;
+        padding-top: 300px;
         margin-left: 80px;
         margin-top: 0;
         color: white;
@@ -95,6 +95,62 @@
         margin-top: 10px;
     }
 
+    .brief{
+        display: flex;
+        height: 300px;
+        background-color: black;
+        padding-top: 50px;
+    }
+
+    .first-brief{
+        width: 50%;
+    }
+
+    .second-brief{
+        width: 50%;
+        font-family: Montserrat;
+        color: white;
+    }
+
+    .line-dec{
+        width: 100px;
+        height: 0.5px;
+        background-color: #C1A267FF;
+    }
+
+    .brief-img{
+        padding-top: 15px;
+        height: 215px;
+        width: 340px;
+        margin-left: 20%;
+    }
+
+    .brief-text{
+        width: 80%;
+    }
+
+    .brief-btn{
+        display: flex;
+    }
+
+    .brief-btn-1{
+        width: 180px;
+        height: 30px;
+        border: 1px solid #C1A267FF;
+        background-color: rgba(0,0,0,0);
+        font-family: Montserrat;
+        color: white;
+    }
+
+    .brief-btn-2{
+        width: 180px;
+        height: 30px;
+        border: 1px solid #C1A267FF;
+        background-color: rgba(0,0,0,0);
+        font-family: Montserrat;
+        color: white;
+        margin-left: 40px;
+    }
 
 }
 
@@ -168,6 +224,77 @@
 
     .stats-row, .stats-row1{
         height: 180px;
+    }
+
+    .brief{
+        display: inline-block;
+        height: 700px;
+        background-color: black;
+    }
+
+    .first-brief{
+        width: 100%;
+    }
+
+    .second-brief{
+        width: 100%;
+        font-family: Montserrat;
+        color: white;
+        padding-left: 20px;
+    }
+
+    .line-dec{
+        width: 100px;
+        height: 1px;
+        background-color: #C1A267FF;
+        margin-bottom: 20px;
+    }
+
+    .brief-img{
+        object-fit: cover;
+        object-position: top;
+        height: 220px;
+        width: 100%;
+    }
+
+    .brief-text{
+        width: 80%;
+    }
+
+    .brief-btn{
+        display: grid;
+        padding-top: 15px;
+    }
+
+    .brief-heading{
+        padding-top: 5px;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .brief-btn-1{
+        width: 230px;
+        height: 38px;
+        border: 1px solid #C1A267FF;
+        background-color: rgba(0,0,0,0);
+        font-family: Montserrat;
+        color: white;
+        font-size: 18px;
+        text-align: left;
+        padding-left: 15px;
+    }
+
+    .brief-btn-2{
+        width: 230px;
+        height: 38px;
+        border: 1px solid #C1A267FF;
+        background-color: rgba(0,0,0,0);
+        font-family: Montserrat;
+        color: white;
+        margin-top: 20px;
+        font-size: 18px;
+        text-align: left;
+        padding-left: 15px;
     }
 
 }

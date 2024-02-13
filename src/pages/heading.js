@@ -1,6 +1,7 @@
 import "./heading.css"
 import heading from "../assets/heading.jpg"
 import upArrow from "../assets/arrow.png"
+import briefImg from"../assets/brief-img.jpg"
 
 function Heading() {
 
@@ -61,7 +62,7 @@ function Heading() {
                         Cauze Instrumentate
                     </p>
                 </div>
-                <div className="stats-row" style={{borderBottom: "1px solid white"}}>
+                <div className="stats-row" >
                     <p className="heading-stats-number">
                         547
                     </p>
@@ -71,6 +72,29 @@ function Heading() {
                 </div>
 
             </div>
+
+            <div className="brief">
+                <div className="first-brief">
+                    <img className="brief-img" src={briefImg}/>
+                </div>
+                <div className="second-brief">
+                    <p className="brief-heading">Consultanta Juridica</p>
+                    <div className="line-dec"></div>
+                    <div className="brief-text">
+                    <p>Asigurăm asistență juridică de specialitate atât în drept german cât și în drept român</p>
+                    <p>Pentru cazuri ce necesita urgentare va rog sa ne contactati telefonic. Altfel va rog sa folositi formularul de contact</p>
+                    </div>
+                    <div className="brief-btn">
+                        <button className="brief-btn-1">
+                            Contacteaza-ne >
+                        </button>
+                        <button className="brief-btn-2">
+                            Catre Formular >
+                        </button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     )
 }

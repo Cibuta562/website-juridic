@@ -78,6 +78,7 @@ function Heading() {
                     <img className="brief-img" src={briefImg}/>
                 </div>
                 <div className="second-brief">
+                    <div style={{paddingLeft: "20px"}}>
                     <p className="brief-heading">Consultanta Juridica</p>
                     <div className="line-dec"></div>
                     <div className="brief-text">
@@ -91,6 +92,7 @@ function Heading() {
                         <button className="brief-btn-2">
                             Catre Formular >
                         </button>
+                    </div>
                     </div>
                 </div>
             </div>

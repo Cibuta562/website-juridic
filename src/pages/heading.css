@@ -37,7 +37,7 @@
 
 
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
 
     .btn-top{
         display: none;
@@ -104,12 +104,15 @@
 
     .first-brief{
         width: 50%;
+        text-align: center;
     }
 
     .second-brief{
-        width: 50%;
+        width: 40%;
         font-family: Montserrat;
         color: white;
+        margin-left: 5% ;
+        margin-right: 5%;
     }
 
     .line-dec{
@@ -119,10 +122,14 @@
     }
 
     .brief-img{
-        padding-top: 15px;
-        height: 215px;
+        padding-top: 23px;
+        height: 240px;
         width: 340px;
-        margin-left: 20%;
+        object-fit: cover;
+    }
+
+    .brief-heading{
+        font-size: 20px;
     }
 
     .brief-text{
@@ -159,7 +166,7 @@
 
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 
     .heading-cont {
         height: 100vh;

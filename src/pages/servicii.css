@@ -1,14 +1,43 @@
 @media screen and (min-width: 800px) {
 
+
+    .div-servicii {
+        padding-left: 15px;
+    }
+
     .text-servicii{
         color: white;
         font-family: Montserrat;
-        font-size: 18px;
+        font-size: 15px;
         height: 200px;
     }
 
     .desc-servicii{
         height: 100px;
+    }
+
+    .first-brief-servicii{
+        width: 50%;
+        text-align: center;
+    }
+
+    .second-brief-servicii{
+        width: 44%;
+        margin-left: 6%;
+        font-family: Montserrat;
+        color: white;
+        float: right;
+    }
+
+    .brief-servicii{
+        display: flex;
+        padding-top: 200px;
+        display: flex;
+        height: 300px;
+        background-color: black;
+        /*padding-top: 50px;*/
+        justify-content: center;
+        align-items: center;
     }
 
     .heading-servicii{
@@ -20,7 +49,7 @@
         border: 1px solid #C1A267FF;
         color: white;
         font-family: Montserrat;
-        height: 37px;
+        height: 33px;
         width: 170px;
         text-align: left;
         font-size: 16px;
@@ -34,22 +63,23 @@
 
     .img-serv{
         width: 100%;
-        object-fit: contain;
+        object-fit: cover;
+        height: 180px;
     }
 
     .servicii-title{
         font-family: Montserrat;
         text-align: center;
-        font-size: 28px;
+        font-size: 26px;
         color: #ffffff;
         margin: 0;
-        padding-top: 30px;
+        padding-top: 80px;
     }
 
     .servicii-subtitle{
         font-family: Montserrat;
         text-align: center;
-        font-size: 16px;
+        font-size: 15px;
         color: #ffffff;
         margin: 0;
         padding-top: 10px;
@@ -65,6 +95,10 @@
         z-index: 0;
     }
 
+    .line-dec-ver2{
+        display: none;
+    }
+
     .row-servicii{
         padding-top: 120px;
         width: 90%;
@@ -75,7 +109,7 @@
     }
 
     .row-servicii1{
-        padding-top: 280px;
+        padding-top: 200px;
         width: 90%;
         display: flex;
         height: 300px;
@@ -90,14 +124,31 @@
         margin-right: 35px;
         height: 500px;
     }
+
+    .brief-img-servicii{
+        padding-top: 23px;
+        height: 240px;
+        width: 340px;
+        object-fit: cover;
+    }
+
+
 }
 
 
 @media screen and (max-width: 800px) {
 
+    .brief-img-servicii{
+        object-fit: cover;
+        object-position: center;
+        height: 230px;
+        width: 100%;
+    }
+
     .img-serv{
         width: 100%;
-        object-fit: contain;
+        object-fit: cover;
+        height: 280px;
     }
 
     .text-servicii{
@@ -105,11 +156,12 @@
         font-family: Montserrat;
         font-size: 18px;
         margin-left: 15px;
-        height: 200px;
+        height: 250px;
     }
 
     .heading-servicii{
         font-size: 22px;
+
     }
 
     .btn-servicii{
@@ -151,7 +203,7 @@
 
     .servicii-cont{
         width: 100%;
-        height: 3800px;
+        height: 4500px;
         background-color: black;
     }
 
@@ -181,6 +233,39 @@
         z-index: 0;
         margin-left: 50%;
         margin-top: 20px;
+    }
+
+    .line-dec-ver2{
+        width: 0.5px;
+        height: 60px;
+        background-color: #C1A267FF;
+        position: absolute;
+        z-index: 0;
+        margin-left: 50%;
+        margin-top: 1380px;
+    }
+
+
+    .first-brief-servicii{
+        width: 100%;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .second-brief-servicii{
+        width: 100%;
+        font-family: Montserrat;
+        color: white;
+    }
+
+    .brief-servicii{
+        display: grid;
+        padding-top: 1350px;
+    }
+
+    .div-servicii{
+        padding-left: 15px;
+        padding-top: 80px;
     }
 
 }

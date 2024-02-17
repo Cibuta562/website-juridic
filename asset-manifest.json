@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/website-juridic/static/css/main.4770cf55.css",
-    "main.js": "/website-juridic/static/js/main.d75213b3.js",
+    "main.css": "/website-juridic/static/css/main.745b66ce.css",
+    "main.js": "/website-juridic/static/js/main.28a634ca.js",
     "static/js/592.36d6c253.chunk.js": "/website-juridic/static/js/592.36d6c253.chunk.js",
     "static/media/servicii1.jpg": "/website-juridic/static/media/servicii1.6e0b29cf618780820432.jpg",
     "static/media/servicii2.jpg": "/website-juridic/static/media/servicii2.a81c29ec774c5ce846e7.jpg",
@@ -13,14 +13,15 @@
     "static/media/servicii6.jpg": "/website-juridic/static/media/servicii6.d9078cca43442b4cdb05.jpg",
     "static/media/heading2.jpg": "/website-juridic/static/media/heading2.ee2b93ffc2fb17f9415a.jpg",
     "static/media/servicii3.jpg": "/website-juridic/static/media/servicii3.ee2b93ffc2fb17f9415a.jpg",
+    "static/media/mike.webp": "/website-juridic/static/media/mike.ec360eaab848d200699f.webp",
     "static/media/logo.svg": "/website-juridic/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/website-juridic/index.html",
-    "main.4770cf55.css.map": "/website-juridic/static/css/main.4770cf55.css.map",
-    "main.d75213b3.js.map": "/website-juridic/static/js/main.d75213b3.js.map",
+    "main.745b66ce.css.map": "/website-juridic/static/css/main.745b66ce.css.map",
+    "main.28a634ca.js.map": "/website-juridic/static/js/main.28a634ca.js.map",
     "592.36d6c253.chunk.js.map": "/website-juridic/static/js/592.36d6c253.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4770cf55.css",
-    "static/js/main.d75213b3.js"
+    "static/css/main.745b66ce.css",
+    "static/js/main.28a634ca.js"
   ]
 }

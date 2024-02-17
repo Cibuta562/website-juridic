@@ -1,0 +1,139 @@
+@media screen and (min-width: 800px) {
+    .echipa-cont{
+        height: 900px;
+        width: 100%;
+        text-align: center;
+        background-color: #000000;
+    }
+
+    .echipa-title{
+        margin: 0;
+        padding-top: 40px;
+        color: white;
+        font-size: 28px;
+        font-family: Montserrat;
+    }
+
+    .line-dec-echipa{
+        width: 0.5px;
+        height: 50px;
+        background-color: #C1A267FF;
+        position: absolute;
+        z-index: 0;
+        margin-left: 50%;
+        margin-top: 30px;
+    }
+
+    .row-echipa{
+        margin-top: 110px;
+        padding-top: 20px;
+        width: 90%;
+        display: flex;
+        height: 300px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .col-echipa{
+        /*border: 1px solid white;*/
+        width: 25%;
+        margin-left: 25px;
+        margin-right: 25px;
+        height: 350px;
+
+    }
+
+    .pic-avocat{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .membru-title{
+        font-family: Montserrat;
+        color: white;
+        font-size: 22px;
+        margin-top: 15px;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    .membru-desc{
+        color: #C1A267FF;
+        font-family: Montserrat;
+        width: 85%;
+        margin-top: 5px;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .echipa-cont{
+        height: 2250px;
+        width: 100%;
+        text-align: center;
+        background-color: #000000;
+    }
+
+    .echipa-title{
+        margin: 0;
+        padding-top: 40px;
+        color: white;
+        font-size: 30px;
+        font-family: Montserrat;
+    }
+
+    .line-dec-echipa{
+        width: 0.5px;
+        height: 50px;
+        background-color: #C1A267FF;
+        position: absolute;
+        z-index: 0;
+        margin-left: 50%;
+        margin-top: 30px;
+    }
+
+    .row-echipa{
+        margin-top: 110px;
+        padding-top: 20px;
+        width: 90%;
+        height: 300px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .col-echipa{
+        /*border: 1px solid white;*/
+        width: 100%;
+        height: 500px;
+
+    }
+
+    .pic-avocat{
+        width: 80%;
+        object-fit: cover;
+    }
+
+    .membru-title{
+        font-family: Montserrat;
+        color: white;
+        font-size: 22px;
+        margin-top: 15px;
+        text-align: left;
+        margin-bottom: 10px;
+        width: 80%;
+    }
+
+    .membru-desc{
+        color: #C1A267FF;
+        font-family: Montserrat;
+        width: 80%;
+        margin-top: 5px;
+        text-align: left;
+    }
+
+    .desc-echipa{
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}

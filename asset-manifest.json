@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/website-juridic/static/css/main.745b66ce.css",
-    "main.js": "/website-juridic/static/js/main.28a634ca.js",
+    "main.css": "/website-juridic/static/css/main.5673dc8a.css",
+    "main.js": "/website-juridic/static/js/main.53a699d2.js",
     "static/js/592.36d6c253.chunk.js": "/website-juridic/static/js/592.36d6c253.chunk.js",
     "static/media/servicii1.jpg": "/website-juridic/static/media/servicii1.6e0b29cf618780820432.jpg",
     "static/media/servicii2.jpg": "/website-juridic/static/media/servicii2.a81c29ec774c5ce846e7.jpg",
     "static/media/heading.jpg": "/website-juridic/static/media/heading.8545d406f8099d11538c.jpg",
     "static/media/brief-down.jpg": "/website-juridic/static/media/brief-down.70ec97a63ad86e40f040.jpg",
     "static/media/brief-img.jpg": "/website-juridic/static/media/brief-img.b5aed0138596e04d308a.jpg",
+    "static/media/contact.jpg": "/website-juridic/static/media/contact.a893a51fb3a830d99de5.jpg",
     "static/media/servicii5.jpg": "/website-juridic/static/media/servicii5.3f4a18f38872f137108a.jpg",
     "static/media/servicii4.jpg": "/website-juridic/static/media/servicii4.d7c2ad093ee30648d125.jpg",
     "static/media/servicii6.jpg": "/website-juridic/static/media/servicii6.d9078cca43442b4cdb05.jpg",
@@ -16,12 +17,12 @@
     "static/media/mike.webp": "/website-juridic/static/media/mike.ec360eaab848d200699f.webp",
     "static/media/logo.svg": "/website-juridic/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/website-juridic/index.html",
-    "main.745b66ce.css.map": "/website-juridic/static/css/main.745b66ce.css.map",
-    "main.28a634ca.js.map": "/website-juridic/static/js/main.28a634ca.js.map",
+    "main.5673dc8a.css.map": "/website-juridic/static/css/main.5673dc8a.css.map",
+    "main.53a699d2.js.map": "/website-juridic/static/js/main.53a699d2.js.map",
     "592.36d6c253.chunk.js.map": "/website-juridic/static/js/592.36d6c253.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.745b66ce.css",
-    "static/js/main.28a634ca.js"
+    "static/css/main.5673dc8a.css",
+    "static/js/main.53a699d2.js"
   ]
 }

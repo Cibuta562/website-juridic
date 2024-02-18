@@ -28,10 +28,10 @@ const Echipa = () => {
                     </div>
                     <div className="desc-echipa">
                         <p className="membru-title">
-                            Lucian Niculescu
+                            Partener
                         </p>
                         <p className="membru-desc">
-                            avocat CNSA, membru al UNBR și BRAO Germania
+                            avocat CNSA, membru al Baroului București
                         </p>
                     </div>
                 </div>
@@ -41,10 +41,10 @@ const Echipa = () => {
                     </div>
                     <div className="desc-echipa">
                         <p className="membru-title">
-                            Lucian Niculescu
+                            Partener
                         </p>
                         <p className="membru-desc">
-                            avocat CNSA, membru al UNBR și BRAO Germania
+                            avocat CNSA
                         </p>
                     </div>
                 </div>
@@ -54,10 +54,10 @@ const Echipa = () => {
                     </div>
                     <div className="desc-echipa">
                         <p className="membru-title">
-                            Lucian Niculescu
+                            Partener
                         </p>
                         <p className="membru-desc">
-                            avocat CNSA, membru al UNBR și BRAO Germania
+                            avocat CNSA
                         </p>
                     </div>
                 </div>

@@ -4,6 +4,7 @@ import Menu from "./menu/menu";
 import Heading from "./pages/heading";
 import Servicii from "./pages/servicii";
 import Echipa from "./pages/echipa";
+import Contact from "./assets/contact";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Heading/>
         <Servicii/>
         <Echipa/>
+        <Contact/>
     </div>
   );
 }

@@ -110,6 +110,7 @@
 
     .pic-avocat{
         width: 80%;
+        height: 300px;
         object-fit: cover;
     }
 

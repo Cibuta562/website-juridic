@@ -5,6 +5,7 @@ import Heading from "./pages/heading";
 import Servicii from "./pages/servicii";
 import Echipa from "./pages/echipa";
 import Contact from "./assets/contact";
+import Subsol from "./assets/subsol";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Servicii/>
         <Echipa/>
         <Contact/>
+        <Subsol/>
     </div>
   );
 }

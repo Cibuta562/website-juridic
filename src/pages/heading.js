@@ -6,11 +6,15 @@ import briefImg from"../assets/brief-img.jpg"
 function Heading() {
 
     function moveToTop() {
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "smooth"
-        });
+        if ('scrollBehavior' in document.documentElement.style) {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            });
+        } else {
+            window.scrollTo(0, 0);
+        }
     }
 
 

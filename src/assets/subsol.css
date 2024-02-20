@@ -1,0 +1,89 @@
+@media screen and (min-width: 800px) {
+    .subsol-row{
+        height: 250px;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .subsol-flex{
+        display: flex;
+    }
+
+    .icon-socials{
+        margin-top: 13px;
+        margin-right: 10px;
+        height: 18px;
+        width: 18px;
+    }
+
+    .subsol-socials{
+        margin: 10px
+    }
+
+    .subsol-col{
+        width: 33.33%;
+        text-align: left;
+        padding-left: 8%;
+        font-family: Montserrat;
+    }
+
+    .subsol-schedule{
+        margin: 10px;
+        white-space: pre;
+    }
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+    .subsol-col{
+        width: 100%;
+        height: 200px;
+        text-align: center;
+        font-family: Montserrat;
+        align-items: center;
+        margin-top: 50px;
+        font-size: 18px;
+    }
+
+
+    .subsol-dec-hor{
+        height: 1px;
+        width: 20%;
+        position: absolute;
+        margin-left: 40%;
+        background-color: black;
+    }
+
+    .subsol-row{
+        height: 800px;
+        background-color: #ffffff;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .subsol-flex{
+        display: flex;
+        justify-content: center;
+    }
+
+    .icon-socials{
+        margin-top: 13px;
+        margin-right: 10px;
+        height: 18px;
+        width: 18px;
+    }
+
+    .subsol-socials{
+        margin: 10px;
+        white-space: pre;
+    }
+
+    .subsol-schedule{
+        margin: 10px;
+        white-space: pre;
+    }
+}

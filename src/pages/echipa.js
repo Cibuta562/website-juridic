@@ -1,5 +1,6 @@
 import "./echipa.css"
 import pisicaAvocat from "../assets/mike.webp"
+import lawyer from "../assets/lawyer.jpg"
 
 const Echipa = () => {
     return(
@@ -11,7 +12,7 @@ const Echipa = () => {
             <div className="row-echipa">
                 <div className="col-echipa">
                     <div>
-                    <img className="pic-avocat" src={pisicaAvocat} alt="mike"/>
+                    <img className="pic-avocat" src={lawyer} alt="mike"/>
                     </div>
                     <div className="desc-echipa">
                         <p className="membru-title">
@@ -24,7 +25,7 @@ const Echipa = () => {
                 </div>
                 <div className="col-echipa">
                     <div>
-                        <img className="pic-avocat" src={pisicaAvocat} alt="mike"/>
+                        <img className="pic-avocat" src={lawyer} alt="mike"/>
                     </div>
                     <div className="desc-echipa">
                         <p className="membru-title">
@@ -37,7 +38,7 @@ const Echipa = () => {
                 </div>
                 <div className="col-echipa">
                     <div>
-                        <img className="pic-avocat" src={pisicaAvocat} alt="mike"/>
+                        <img className="pic-avocat" src={lawyer} alt="mike"/>
                     </div>
                     <div className="desc-echipa">
                         <p className="membru-title">
@@ -50,7 +51,7 @@ const Echipa = () => {
                 </div>
                 <div className="col-echipa">
                     <div>
-                        <img className="pic-avocat" src={pisicaAvocat} alt="mike"/>
+                        <img className="pic-avocat" src={lawyer} alt="mike"/>
                     </div>
                     <div className="desc-echipa">
                         <p className="membru-title">

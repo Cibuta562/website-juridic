@@ -103,10 +103,10 @@ const Menu = () => {
                         Despre Noi
                     </Link></div>
                 <div className="main-category">
-                    <Link className="link-menu" to="/">Servicii
+                    <Link className="link-menu" to="/servicii">Servicii
                     </Link></div>
                 <div className="main-category">
-                    <Link className="link-menu" to="/">Consultanta
+                    <Link className="link-menu" to="/consultanta">Consultanta
                     </Link></div>
                 {/*<div className="main-category">*/}
                 {/*    <Link className="link-menu" to="/">Contact*/}
@@ -147,11 +147,19 @@ const Menu = () => {
                         <div className="dec-line"></div>
                     </div>
                     <div style={{ marginTop: "15px" }}>
-                        <div className="main-category">Servicii</div>
+                        <div className="main-category">
+                            <Link className="link-menu" to="/despre/noi">
+                                Servicii
+                            </Link>
+                        </div>
                         <div className="dec-line"></div>
                     </div>
                     <div style={{ marginTop: "15px" }} onClick={moveToTop}>
-                        <div className="main-category1">Consultanta</div>
+                        <div className="main-category1">
+                            <Link className="link-menu" to="/despre/noi">
+                                Consultanta
+                            </Link>
+                        </div>
                         <div className="dec-line"></div>
                     </div>
                     {/*<div style={{ marginTop: "15px" }}>*/}

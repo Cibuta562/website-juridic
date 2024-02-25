@@ -3,21 +3,23 @@ import insta from "../assets/insta.png"
 import facebook from "../assets/facebook.svg"
 import linkedin from "../assets/linkedin.svg"
 
-const Contact = () => {
+const Subsol = () => {
    return(
+       <div>
+           <p className="subsol-adv">Folositi numerele de telefon de mai jos, sau adresa de email, exclusiv in situatii de urgenta</p>
         <div className="subsol-row">
             <div className="subsol-col">
                 <div className="subsol-flex">
                     {/*<img className="icon-socials" src={insta} alt="insta"/>*/}
                     <p className="subsol-socials">
-                        Petronia-Steiner Str 25, 67346 Speyer
+                        Bucuresti/Romania; Speyer/Deutschland
                     </p>
                 </div>
                 <div className="subsol-flex">
                     {/*<img className="icon-socials" src={facebook} alt="insta"/>*/}
                     <p className="subsol-socials">
-                        0040 731 57 90 43 |
-                        0040 176 31 23 42 32
+                        <p style={{margin: "0px"}}>0040 731 57 90 43</p>
+                        <p style={{margin: "0px"}}>0040 176 31 23 42 32</p>
                     </p>
                 </div>
                 <div className="subsol-flex">
@@ -28,6 +30,7 @@ const Contact = () => {
                 </div>
             </div>
             <div className="subsol-dec-hor"></div>
+            <div className="subsol-dec-ver1"></div>
             <div className="subsol-col">
                 <div className="subsol-flex">
                     <p className="subsol-schedule">
@@ -46,21 +49,22 @@ const Contact = () => {
                 </div>
             </div>
             <div className="subsol-dec-hor"></div>
+            <div className="subsol-dec-ver"></div>
             <div className="subsol-col">
                 <div className="subsol-flex">
-                    <img className="icon-socials" src={insta} alt="insta"/>
+                    {/*<img className="icon-socials" src={insta} alt="insta"/>*/}
                     <p className="subsol-socials">
                         consult-juridic.
                     </p>
                 </div>
                 <div className="subsol-flex">
-                    <img className="icon-socials" src={facebook} alt="insta"/>
+                    {/*<img className="icon-socials" src={facebook} alt="insta"/>*/}
                     <p className="subsol-socials">
                         consult-juridic.
                     </p>
                 </div>
                 <div className="subsol-flex">
-                    <img className="icon-socials" src={linkedin} alt="insta"/>
+                    {/*<img className="icon-socials" src={linkedin} alt="insta"/>*/}
                     <p className="subsol-socials">
                         consult-juridic.
                     </p>
@@ -68,7 +72,22 @@ const Contact = () => {
             </div>
             <div className="subsol-dec-hor"></div>
         </div>
+           <div className="subsol-row2">
+               <div className="subsol-col2">
+                   © 2024 Consult-Juridic.
+               </div>
+               <div className="subsol-col2">
+                   @generation salez
+               </div>
+               <div className="subsol-col2">
+                   terms & conditions
+               </div>
+               <div className="subsol-col2">
+                   impressum
+               </div>
+           </div>
+       </div>
    )
 }
 
-export default Contact;
+export default Subsol;

@@ -13,7 +13,7 @@
 
     .contact-form{
         width: 100%;
-        height: 700px;
+        height: 320px;
         background-color: black;
     }
 
@@ -139,6 +139,25 @@
     }
 
 
+    .text-cont, .link-email{
+        text-align: center;
+        width: 100%;
+        font-family: Montserrat;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .link-email{
+        color: #c1a267;
+    }
+
+    .text-cont{
+        color: white;
+    }
+
+
+
+
 }
 
 
@@ -158,7 +177,7 @@
 
     .contact-form{
         width: 100%;
-        height: 800px;
+        height: 450px;
         background-color: black;
     }
 
@@ -273,6 +292,22 @@
         font-family: Montserrat;
         border: 1px solid #c1a267;
         text-align: left;
+    }
+
+    .line-dec-cont {
+        background-color: #c1a267;
+        width: 60px;
+        height: 1px;
+        margin: 15px auto;
+    }
+
+    .text-cont, .link-email{
+        color: white;
+        text-align: left;
+        width: 100%;
+        font-family: Montserrat;
+        font-size: 20px;
+        text-decoration: none;
     }
 
 }

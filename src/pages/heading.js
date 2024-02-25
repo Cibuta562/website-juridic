@@ -87,14 +87,15 @@ function Heading() {
                     <div className="line-dec"></div>
                     <div className="brief-text">
                     <p>Asigurăm asistență juridică de specialitate atât în drept german cât și în drept român</p>
-                    <p>Pentru cazuri ce necesita urgentare va rog sa ne contactati telefonic. Altfel va rog sa folositi formularul de contact</p>
+                    <p>Pe site-ul nostru puteţi obţine rapid şi ieftin consultaţii juridice online privind dreptul german sau drept romanesc. Astfel, evitati timpul pierdut cu programarea intalnirii la birou, cu deplasarea si mai ales nu mai este nevoie sa va invoiti de la serviciu
+                        </p>
                     </div>
                     <div className="brief-btn">
-                        <button className="brief-btn-1">
-                            Contacteaza-ne >
-                        </button>
+                        {/*<button className="brief-btn-1">*/}
+                        {/*    Contacteaza-ne >*/}
+                        {/*</button>*/}
                         <button className="brief-btn-2">
-                            Catre Formular >
+                            Consult Juridic Online >
                         </button>
                     </div>
                     </div>

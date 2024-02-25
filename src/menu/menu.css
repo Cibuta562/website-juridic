@@ -1,4 +1,19 @@
-/* Your existing styles for .menu-container */
+
+
+.link-menu:visited,
+.link-menu:active,
+.link-menu:hover,
+.link-menu:focus {
+    text-decoration: none;
+    color: white;
+
+}
+
+.link-menu{
+    text-decoration: none;
+    color: white;
+}
+
 .menu-container {
     display: flex;
     justify-content: space-between;

@@ -86,7 +86,7 @@ function Consultanta() {
                         <a href="mailto:office@consult-juridic.eu" style={{textDecoration: "none", color: "black"}}>
                             <button className="btn-contact-consultanta" >
                                   <a href="https://buy.stripe.com/test_8wM4gJ8El5B31ag000" target="_blank" style={{textDecoration: "none", color: "white"}}>
-                                      Trimite Mail >
+                                      Trimite Email >
                                 </a>
                             </button>
                         </a>

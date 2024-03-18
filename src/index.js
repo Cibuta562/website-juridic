@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Navigate, Route, Routes, useNavigate} from "react-router-dom";
 import Despre from "./pages/despreNoi";
+import Consultanta from "./pages/consultanta";
 
 const Root = () => {
     const [isAuthenticated, setIsAuthenticated] = React.useState(false);
@@ -22,7 +23,7 @@ const Root = () => {
             <BrowserRouter>
                 <Routes>
                     <Route path="/despre/noi" element={<Despre/>} />
-                    {/*<Route path="/consultanta" element={<App />} />*/}
+                    <Route path="/consultanta" element={<Consultanta />} />
                     {/*<Route path="/admin" element={<Admin />} />*/}
                     <Route path="/" element={<App />} />
                 </Routes>

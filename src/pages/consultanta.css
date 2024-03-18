@@ -1,0 +1,203 @@
+@media screen and (min-width: 800px) {
+
+    .heading-quote-consultanta {
+        z-index: 1;
+        font-family: Montserrat;
+        width: 500px;
+        font-size: 26px;
+        padding-top: 250px;
+        margin-left: 25px;
+        margin-top: 0;
+        color: white;
+    }
+
+    .heading-quote-consultanta1 {
+        z-index: 1;
+        font-family: Montserrat;
+        width: 350px;
+        font-size: 24px;
+        padding-top: 10px;
+        margin-left: 25px;
+        margin-top: 0;
+        color: white;
+    }
+
+    .heading-cont-consultanta {
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.6);
+        background-image: url("../assets/consultanta2.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .btn-heading-consultanta {
+        font-size: 20px;
+        font-family: Montserrat;
+        padding: 10px 10px;
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
+        border: 1px solid white;
+        margin-left: 80px;
+        margin-top: 10px;
+    }
+
+    .consultanta-cont{
+        width: 100%;
+        background-color: black;
+        height: 1200px;
+    }
+
+
+    .consultanta-desc-text{
+        height: 200px;
+        color: white;
+        font-family: Montserrat;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 18px;
+    }
+
+    .consultanta-dec{
+        margin-top: 60px;
+        margin-left: 40%;
+        margin-right: 40%;
+        width: 20%;
+        height: 1px;
+        background-color: #c1a267;
+    }
+
+    .consultanta-desc-text2{
+        height: 400px;
+        color: white;
+        font-family: Montserrat;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 18px;
+    }
+
+    .btn-contact-consultanta{
+        height: 40px;
+        width: 180px;
+        font-family: Montserrat;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        font-size: 18px;
+    }
+
+
+
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+
+    .despre-heading-consultanta{
+        padding-top: 200px;
+    }
+
+
+
+    .heading-quote-consultanta {
+        z-index: 1;
+        font-family: Montserrat;
+        width: 300px;
+        font-size: 26px;
+        padding-top: 150px;
+        margin-left: 25px;
+        margin-top: 0;
+        color: white;
+    }
+
+    .heading-cont-consultanta {
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.6);
+        background-image: url("../assets/consultanta2.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .heading-quote-consultanta1 {
+        z-index: 1;
+        font-family: Montserrat;
+        width: 350px;
+        font-size: 24px;
+        padding-top: 100px;
+        margin-left: 25px;
+        margin-top: 0;
+        color: white;
+    }
+
+    .line-dec-ver-consultanta{
+        width: 0.5px;
+        height: 60px;
+        background-color: #C1A267FF;
+        position: absolute;
+        margin-left: 45%;
+        margin-top: 10px;
+        z-index: 0;
+    }
+
+    .btn-heading-consultanta {
+        font-size: 20px;
+        font-family: Montserrat;
+        padding: 10px 10px;
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
+        border: 1px solid white;
+        margin-left: 25px;
+        margin-top: 50vh;
+    }
+
+    .consultanta-cont{
+        width: 100%;
+        background-color: black;
+        height: 2000px;
+    }
+
+    .consultanta-desc-text{
+        height: 300px;
+        color: white;
+        font-family: Montserrat;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 18px;
+    }
+
+    .consultanta-dec{
+        margin-top: 60px;
+        margin-left: 40%;
+        margin-right: 40%;
+        width: 20%;
+        height: 1px;
+        background-color: #c1a267;
+    }
+
+    .consultanta-desc-text2{
+        height: 400px;
+        color: white;
+        font-family: Montserrat;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 18px;
+    }
+
+    .btn-contact-consultanta{
+        height: 40px;
+        width: 180px;
+        font-family: Montserrat;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        font-size: 18px;
+    }
+
+}

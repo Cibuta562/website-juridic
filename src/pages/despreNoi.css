@@ -2,7 +2,57 @@
 
     .despre-cont{
         width: 100%;
-        height: 900px;
+        height: 10px;
+        background-color: black;
+    }
+
+    .despre-cont-text{
+        width: 90%;
+        margin-right: 5%;
+        margin-left: 5%;
+        background-color: black;
+        color: white;font-family: Montserrat;
+    }
+
+    .despre-heading{
+        font-size: 22px;
+    }
+
+    .heading-quote-despre {
+        z-index: 1;
+        font-family: Montserrat;
+        width: 500px;
+        font-size: 26px;
+        padding-top: 250px;
+        margin-left: 25px;
+        margin-top: 0;
+        color: white;
+    }
+
+    .heading-quote-despre1 {
+        z-index: 1;
+        font-family: Montserrat;
+        width: 350px;
+        font-size: 24px;
+        padding-top: 10px;
+        margin-left: 25px;
+        margin-top: 0;
+        color: white;
+    }
+
+    .heading-cont-despre {
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.6);
+        background-image: url("../assets/despre.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+
+    .despre-heading{
+        text-align: center;
+        font-size: 30px;
     }
 
 }
@@ -11,10 +61,75 @@
 
 @media screen and (max-width: 800px) {
 
-    .despre-cont{
-        width: 100%;
-        height: 900px;
+
+    .text-despre{
+        padding-top: 100px;
     }
 
+    .despre-cont{
+        width: 100%;
+        height: 30px;
+        background-color: black;
+    }
+
+    .despre-heading{
+        font-size: 22px;
+    }
+
+    .despre-cont-text{
+        width: 90%;
+        margin-right: 5%;
+        margin-left: 5%;
+        background-color: black;
+        font-size: 18px;
+        color: white;font-family: Montserrat;
+    }
+
+    .heading-quote-despre {
+        z-index: 1;
+        font-family: Montserrat;
+        width: 350px;
+        font-size: 24px;
+        padding-top: 220px;
+        margin-left: 25px;
+        margin-top: 0;
+        color: white;
+    }
+
+    .heading-cont-despre {
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.6);
+        background-image: url("../assets/despre.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .heading-quote-despre1 {
+        z-index: 1;
+        font-family: Montserrat;
+        width: 350px;
+        font-size: 24px;
+        padding-top: 10px;
+        margin-left: 25px;
+        margin-top: 0;
+        color: white;
+    }
+
+    .line-dec-ver-despre{
+        width: 0.5px;
+        height: 60px;
+        background-color: #C1A267FF;
+        position: absolute;
+        margin-left: 45%;
+        margin-top: 10px;
+        z-index: 0;
+    }
+
+
+    .despre-heading{
+        text-align: center;
+        font-size: 30px;
+    }
 
 }

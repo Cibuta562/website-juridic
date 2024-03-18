@@ -2,6 +2,7 @@ import "./heading.css"
 import heading from "../assets/heading.jpg"
 import upArrow from "../assets/arrow.png"
 import briefImg from"../assets/brief-img.jpg"
+import {Link} from "react-router-dom";
 
 function Heading() {
 
@@ -30,9 +31,11 @@ function Heading() {
             </p>
 
             <div>
+                <Link className="link-menu" to="/consultanta">
                 <button className="btn-heading">
                     Consultanta Online >
                 </button>
+                </Link>
             </div>
 
                 <button className="btn-top" onClick={moveToTop}>
@@ -94,9 +97,11 @@ function Heading() {
                         {/*<button className="brief-btn-1">*/}
                         {/*    Contacteaza-ne >*/}
                         {/*</button>*/}
+                        <Link className="link-menu" to="/consultanta">
                         <button className="brief-btn-2">
                             Consult Juridic Online >
                         </button>
+                        </Link>
                     </div>
                     </div>
                 </div>

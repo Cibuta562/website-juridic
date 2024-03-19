@@ -1,17 +1,18 @@
 @media screen and (min-width: 800px) {
 
     .subsol-adv{
-        padding-top: 35px;
+        padding-top: 12px;
         font-family: Montserrat;
-        text-align: center;
+        text-align: left;
     }
 
     .subsol-row{
-        height: 250px;
+        height: 200px;
         background-color: #ffffff;
         display: flex;
         justify-content: center;
         align-items: center;
+        font-size: 14px;
     }
 
     .subsol-row2{
@@ -20,6 +21,7 @@
         background-color: #ffffff;
         justify-content: center;
         align-items: center;
+        font-size: 14px;
     }
 
     .subsol-flex{
@@ -66,7 +68,7 @@
         position: absolute;
         height: 50px;
         width: 1px;
-        margin-left: 35%;
+        margin-left: 40%;
     }
 
     .subsol-dec-ver1{
@@ -74,7 +76,7 @@
         position: absolute;
         height: 50px;
         width: 1px;
-        margin-left: -35%;
+        margin-left: -25%;
     }
 
 }

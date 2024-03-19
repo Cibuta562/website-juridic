@@ -5,6 +5,8 @@ import briefImg from '../assets/brief-img.jpg';
 import { Link } from 'react-router-dom';
 
 function Heading() {
+
+
   function moveToTop() {
     if ('scrollBehavior' in document.documentElement.style) {
       window.scrollTo({

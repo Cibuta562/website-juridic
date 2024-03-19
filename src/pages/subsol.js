@@ -6,8 +6,12 @@ import linkedin from "../assets/linkedin.svg"
 const Subsol = () => {
    return(
        <div style={{backgroundColor: "white"}}>
-           <p className="subsol-adv">Folositi numerele de telefon de mai jos, sau adresa de email, exclusiv in situatii de urgenta</p>
         <div className="subsol-row">
+            <div className="subsol-col">
+                <p className="subsol-adv" style={{paddingTop: "0px"}}>Folositi nr. de telefon de mai jos, sau adresa de email, exclusiv in situatii de urgenta</p>
+                <p className="subsol-adv">
+                    Pentru programari la sediu, va rugam folositi datele de contact de mai sus</p>
+            </div>
             <div className="subsol-col">
                 <div className="subsol-flex">
                     {/*<img className="icon-socials" src={insta} alt="insta"/>*/}
@@ -37,50 +41,34 @@ const Subsol = () => {
             <div className="subsol-dec-hor"></div>
             <div className="subsol-dec-ver1"></div>
             <div className="subsol-col">
-                {/*<div className="subsol-flex">*/}
-                {/*    <p className="subsol-schedule">*/}
-                {/*        luni - joi :  9:00 - 18:30*/}
-                {/*    </p>*/}
-                {/*</div>*/}
-                {/*<div className="subsol-flex">*/}
-                {/*    <p className="subsol-schedule">*/}
-                {/*        vineri :       8:00 - 18:00*/}
-                {/*    </p>*/}
-                {/*</div>*/}
-                {/*<div className="subsol-flex">*/}
-                {/*    <p className="subsol-schedule">*/}
-                {/*        sambata : 9:30 - 15:00*/}
-                {/*    </p>*/}
-                {/*</div>*/}
                 <div className="subsol-flex">
                     <p className="subsol-schedule">
-                        Pentru programari la sediu, va rugam
+                        luni - joi :  9:00 - 18:30
                     </p>
                 </div>
                 <div className="subsol-flex">
                     <p className="subsol-schedule">
-                        folositi datele de contact de mai sus
+                        vineri :       8:00 - 18:00
+                    </p>
+                </div>
+                <div className="subsol-flex">
+                    <p className="subsol-schedule">
+                        sambata : 9:30 - 15:00
                     </p>
                 </div>
             </div>
             <div className="subsol-dec-hor"></div>
             <div className="subsol-dec-ver"></div>
-            <div className="subsol-col">
-                <div className="subsol-flex">
-                    <img className="icon-socials" src={facebook} alt="insta"/>
-                    <a href="https://www.facebook.com/profile.php?id=100069100737162" target="_blank" style={{textDecoration: "none", color: "black"}}>
-                    <p className="subsol-socials">
-                        consult-juridic.
-                    </p>
-                    </a>
-                </div>
-                {/*<div className="subsol-flex">*/}
-                {/*    /!*<img className="icon-socials" src={facebook} alt="insta"/>*!/*/}
-                {/*    <p className="subsol-socials">*/}
-                {/*        consult-juridic.*/}
-                {/*    </p>*/}
-                {/*</div>*/}
-            </div>
+            {/*<div className="subsol-col">*/}
+            {/*    <div className="subsol-flex">*/}
+            {/*        <img className="icon-socials" src={facebook} alt="insta"/>*/}
+            {/*        <a href="https://www.facebook.com/profile.php?id=100069100737162" target="_blank" style={{textDecoration: "none", color: "black"}}>*/}
+            {/*        <p className="subsol-socials">*/}
+            {/*            consult-juridic.*/}
+            {/*        </p>*/}
+            {/*        </a>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
             <div className="subsol-dec-hor"></div>
         </div>
            <div className="subsol-row2">

@@ -10,6 +10,38 @@
         background-color: black;
     }
 
+    .file-input {
+        display: none; /* Hide the default file input */
+    }
+
+
+    .label-form{
+        font-family: 'Montserrat', serif;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .choose-file-button{
+        width: 200px;
+        font-size: 16px;
+        margin-top: 15px;
+        padding: 10px 8px;
+        margin-left: 20px;
+        background-color: rgba(0,0,0,0);
+        font-family: 'Montserrat', serif;
+        color: white;
+        border: 1px solid #c1a267;
+    }
+
+    .files-selected{
+        margin-left: 20px;
+        font-family: 'Montserrat', serif;
+    }
+
+    .files-selected-list{
+        font-family: 'Montserrat', serif;
+    }
+
 }
 
 

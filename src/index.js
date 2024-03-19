@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Navigate, Route, Routes, useNavigate} from "react-router-dom";
 import Despre from "./pages/despreNoi";
 import Consultanta from "./pages/consultanta";
+import Payment from "./pages/formPayment";
 
 const Root = () => {
     const [isAuthenticated, setIsAuthenticated] = React.useState(false);
@@ -25,6 +26,7 @@ const Root = () => {
                     <Route path="/despre/noi" element={<Despre/>} />
                     <Route path="/consultanta" element={<Consultanta />} />
                     {/*<Route path="/admin" element={<Admin />} />*/}
+                    <Route path="/secure/payment/completed" element={<Payment />} />
                     <Route path="/" element={<App />} />
                 </Routes>
             </BrowserRouter>

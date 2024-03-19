@@ -34,8 +34,8 @@
     font-size: 20px;
     font-family: Montserrat;
     padding: 10px 10px;
-    background-color: rgba(0, 0, 0, 0);
-    color: white;
+    background-color: transparent;
+    color: #fff;
     border: 1px solid white;
     margin-left: 80px;
     margin-top: 10px;
@@ -67,13 +67,18 @@
   }
 
   .consultanta-desc-text2 {
-    height: 400px;
+    /* height: 400px; */
+    height: auto;
     color: white;
     font-family: Montserrat;
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
     font-size: 18px;
+  }
+
+  .despre-cont-text {
+    padding-top: 100px;
   }
 
   .btn-contact-consultanta {

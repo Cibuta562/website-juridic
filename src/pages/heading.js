@@ -28,7 +28,9 @@ function Heading() {
 
         <div>
           <Link className="link-menu" to="/consultanta">
-            <button className="btn-heading">Consultanță Online</button>
+            <button className="btn-heading btn-hover">
+              Consultanță Online
+            </button>
           </Link>
         </div>
 
@@ -82,7 +84,9 @@ function Heading() {
               {/*    Contacteaza-ne >*/}
               {/*</button>*/}
               <Link className="link-menu" to="/consultanta">
-                <button className="brief-btn-2">Consult Juridic Online</button>
+                <button className="brief-btn-2 btn-hover">
+                  Consult Juridic Online
+                </button>
               </Link>
             </div>
           </div>

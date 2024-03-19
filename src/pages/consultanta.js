@@ -1,20 +1,15 @@
+import React, { useRef } from 'react';
 import './consultanta.css';
 import Menu from '../menu/menu';
 import Subsol from './subsol';
 import { Link } from 'react-router-dom';
 
 function Consultanta() {
-  function moveToConsultanta() {
-    if ('scrollBehavior' in document.documentElement.style) {
-      window.scrollTo({
-        top: 1200,
-        left: 0,
-        behavior: 'smooth',
-      });
-    } else {
-      window.scrollTo(0, 0);
-    }
-  }
+  const targetConsultantaOnline = useRef(null);
+
+  const scrollToConsultantaOnline = () => {
+    targetConsultantaOnline.current.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <div style={{ backgroundColor: 'black' }}>
@@ -29,8 +24,8 @@ function Consultanta() {
         <div>
           <Link className="link-menu" to="/consultanta">
             <button
-              className="btn-heading-consultanta"
-              onClick={moveToConsultanta}
+              className="btn-heading-consultanta btn-hover"
+              onClick={scrollToConsultantaOnline}
             >
               Consultanță Online
             </button>
@@ -76,11 +71,10 @@ function Consultanta() {
           </p>
           <div className="consultanta-dec"></div>
         </div>
-        <div className="despre-cont-text">
+        <div className="despre-cont-text" ref={targetConsultantaOnline}>
           <p
             style={{ fontSize: '24px' }}
             className="despre-heading-consultanta"
-            id="consJuridEmail"
           >
             Consultanță juridică pe E-mail
           </p>
@@ -124,7 +118,7 @@ function Consultanta() {
               href="mailto:office@consult-juridic.eu"
               style={{ textDecoration: 'none', color: 'black' }}
             >
-              <button className="btn-contact-consultanta">
+              <button className="btn-contact-consultanta btn-hover">
                 <a
                   href="https://buy.stripe.com/test_8wM4gJ8El5B31ag000"
                   target="_blank"

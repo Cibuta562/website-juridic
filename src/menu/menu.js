@@ -157,7 +157,7 @@ const Menu = () => {
             <div className="dec-line"></div>
           </div>
           <div style={{ marginTop: '15px' }}>
-            <div className="main-category">
+            <div className="main-category1">
               <Link className="link-menu" to="/">
                 Servicii
               </Link>
@@ -189,5 +189,4 @@ const Menu = () => {
     </div>
   );
 };
-
 export default Menu;

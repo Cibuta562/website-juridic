@@ -132,11 +132,15 @@
   }
   .brief-text p {
     line-height: 1.5rem;
-    text-indent: 1rem;
+    text-indent: 2rem;
   }
 }
 
 @media screen and (max-width: 800px) {
+  .desc-servicii {
+    width: 90%;
+    margin: auto;
+  }
   .brief-img-servicii {
     object-fit: cover;
     object-position: center;
@@ -174,7 +178,7 @@
   }
 
   .row-servicii {
-    padding-top: 120px;
+    padding-top: 55px;
     width: 100%;
     display: grid;
     height: 300px;
@@ -233,13 +237,14 @@
   }
 
   .line-dec-ver2 {
-    width: 0.5px;
-    height: 60px;
+    width: 20%;
+    height: 2px;
     background-color: #c1a267ff;
     position: absolute;
     z-index: 0;
-    margin-left: 50%;
-    margin-top: 1380px;
+    margin-left: 40%;
+    /* margin-top: 1380px; */
+    margin-top: 1440px;
   }
 
   .first-brief-servicii {
@@ -256,7 +261,7 @@
 
   .brief-servicii {
     display: grid;
-    padding-top: 1350px;
+    margin-top: 1400px;
   }
 
   .div-servicii {

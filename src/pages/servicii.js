@@ -185,7 +185,7 @@ const Servicii = () => {
                   <p>
                     Ne veți putea trimite documentul primit împreună cu datele
                     de identificare iar noi îl vom completa. Ulterior veți primi
-                    pe adresa dumneavoastră de email documentul împreuna cu
+                    pe adresa dumneavoastră de email documentul împreună cu
                     îndrumarile necesare.
                   </p>
                 </p>

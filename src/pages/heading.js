@@ -63,8 +63,10 @@ function Heading() {
           <img className="brief-img" src={briefImg} />
         </div>
         <div className="second-brief">
-          <div style={{ paddingLeft: '20px' }}>
-            <p className="brief-heading">Consultanță Juridică</p>
+          <div>
+            <p className="brief-heading" style={{ paddingLeft: '20px' }}>
+              Consultanță Juridică
+            </p>
             <div className="line-dec"></div>
             <div className="brief-text">
               <p>
@@ -82,7 +84,7 @@ function Heading() {
                 învoiți de la serviciu.
               </p>
             </div>
-            <div className="brief-btn">
+            <div className="brief-btn" style={{ paddingLeft: '20px' }}>
               {/*<button className="brief-btn-1">*/}
               {/*    Contacteaza-ne >*/}
               {/*</button>*/}

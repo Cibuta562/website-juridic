@@ -40,7 +40,7 @@ const Subsol = () => {
                 style={{
                   textDecoration: 'none',
                   color: 'black',
-                  fontWeight: 'bolder',
+                  // fontWeight: 'bolder',
                   marginLeft: '5px',
                 }}
               >
@@ -57,7 +57,7 @@ const Subsol = () => {
                 style={{
                   textDecoration: 'none',
                   color: 'black',
-                  fontWeight: 'bolder',
+                  // fontWeight: 'bolder',
                   marginLeft: '5px',
                 }}
               >

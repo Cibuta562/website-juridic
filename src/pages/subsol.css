@@ -72,7 +72,7 @@
     background-color: black;
     position: absolute;
     height: 50px;
-    width: 1px;
+    border: 1px solid black;
     margin-left: 40%;
   }
 
@@ -80,7 +80,7 @@
     background-color: black;
     position: absolute;
     height: 50px;
-    width: 1px;
+    border: 1px solid black;
     margin-left: -25%;
   }
 }
@@ -109,7 +109,7 @@
     text-align: center;
     font-family: Montserrat;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 0px;
     font-size: 18px;
   }
 
@@ -163,5 +163,8 @@
   .subsol-schedule {
     margin: 10px;
     white-space: pre;
+  }
+  .calendarIcon {
+    padding-top: 50px;
   }
 }

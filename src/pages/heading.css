@@ -259,6 +259,7 @@
     height: 1px;
     background-color: #c1a267ff;
     margin-bottom: 25px;
+    margin-left: 20px;
   }
 
   .brief-img {
@@ -270,6 +271,7 @@
 
   .brief-text {
     width: 80%;
+    margin: auto;
     font-size: 18px;
   }
 

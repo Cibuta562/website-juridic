@@ -59,11 +59,14 @@ function Consultanta() {
             Pentru a solicita o consultaţie juridică online, trebuie să
             completaţi un formular în care sa ne specificaţi numele, numărul de
             telefon pentru contact, adresa de email ale Dvs şi să ne descrieţi
-            problema juridică pe care o aveţi. * Puteţi ataşa pana la 4
-            documente scanate în format JPG *.
+            problema juridică pe care o aveţi.{' '}
+            <p style={{ fontWeight: 'lighter', padding: '0', margin: '0' }}>
+              * Puteţi ataşa până la 5 documente scanate în format JPG sau PDF
+              *.
+            </p>
           </p>
           <p className="despre-p">
-            Veți comunica cu un avocat, care va răspunde calificat întrebarilor
+            Veți comunica cu un avocat, care va răspunde clarificat întrebărilor
             dumneavoastră. În maxim 24 de ore veți primi o consultație scrisă,
             detaliată de la un avocat specializat. În timp, avocatul specializat
             va analiza situația juridică prezentată, va stabili legislația
@@ -88,8 +91,10 @@ function Consultanta() {
               3. Descrieți cat mai detaliat problema juridică.
             </p>
             <p className="despre-p">
-              4. După caz, atașați în format .pdf sau .jpg documentele (poze
-              cate mai lizibile).
+              4. După caz, atașați în format .pdf sau .jpg documentele{' '}
+              <span style={{ fontWeight: 'lighter' }}>
+                (poze cât mai lizibile).
+              </span>
             </p>
             <p className="despre-p">5. Achitați onorariul afișat.</p>
             <p className="despre-p">
@@ -106,7 +111,7 @@ function Consultanta() {
             <p className="despre-p">
               8. Într-o eventuală discuție telefonică, finală, toate întrebările
               restante privind situația juridică prezentată, pot fi discutate cu
-              avocatul care v-a raspuns.
+              avocatul care v-a răspuns.
             </p>
             <p className="despre-p">
               Biroul nostru va asigura consultanță juridică atât pentru

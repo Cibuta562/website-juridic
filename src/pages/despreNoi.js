@@ -14,7 +14,7 @@ function Despre() {
 
         <p className="heading-quote-despre">
           PRIETENUL ADEVĂRAT ESTE ACELA CARE TE SFĂTUIEŞTE DE BINE, NU CEL CARE
-          ÎŢI LAUDĂ NEBUNIILE.
+          ÎŢI LAUDĂ NEBUNIILE
         </p>
         <p className="heading-quote-despre1">- NOI TE SFĂTUIM DE BINE -</p>
       </div>
@@ -24,17 +24,17 @@ function Despre() {
         <div className="line-dec-ver-despre"></div>
         <div className="text-despre">
           <p className="despre-p">
-            Suntem specializați în domeniul consultanței si asistentei juridice
+            Suntem specializați în domeniul consultanței și asistenței juridice
             pentru persoane fizice și persoane juridice ce își desfașoară
-            activitatea profesională ori locuiesc în Germania sau Romania, ne
+            activitatea profesională ori locuiesc în Germania sau România, ne
             adresăm persoanelor fizice și juridice cu rezidenţă română de pe tot
             teritoriul Germaniei.
           </p>
           <p className="despre-p">
             De asemenea, preîntâmpinăm majoritatea situațiilor fiscale cu care
-            se confruntă cetățenii români în relația cu autoritățile germane dar
-            și a situațiilor fiscale cu care se confruntă cetățenii germani în
-            relația cu autoritățile române.
+            se confruntă cetățenii români în relația cu autoritățile germane,
+            dar și a situațiilor fiscale cu care se confruntă cetățenii germani
+            în relația cu autoritățile române.
           </p>
           <p className="despre-p">
             Asigurăm înființări de societăți comerciale în Germania. Scopul
@@ -59,9 +59,9 @@ function Despre() {
             Cloud, soluție pusă la dispoziție de către experții noștri.
           </p>
           <p className="despre-p">
-            Contactul cu biroul nostru se va putea realiza atât în limba româna
-            cat si în limba germană, prin toate căile de comunicație: Telefon,
-            Skype, Whatsapp, E-mail, cât și prin formularul de contact.
+            Contactul cu biroul nostru se va putea realiza atât în limba română
+            cât și în limba germană, prin toate căile de comunicație: Telefon,
+            Skype, WhatsApp, E-mail, cât și prin formularul de contact.
           </p>
           <p className="despre-p">
             Biroul nostru va asigura consultanță juridică atât pentru cetățenii
@@ -78,7 +78,7 @@ function Despre() {
               <div className="brief-text">
                 <p>
                   Peste 12 ani de experiență în avocatură internă și
-                  internațională
+                  internațională.
                 </p>
                 <p>
                   Noi îi ajutăm pe oameni să se lupte în mod eficient faţă de ce

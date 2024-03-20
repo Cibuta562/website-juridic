@@ -185,9 +185,8 @@
   }
 
   .form-cont {
-    width: 70%;
-    margin-left: 15%;
-    margin-right: 15%;
+    width: 80%;
+    margin: auto;
     margin-top: 60px;
     /*border: 1px solid white;*/
     height: 400px;
@@ -298,10 +297,14 @@
     height: 1px;
     margin: 15px auto;
   }
-
+  .text-cont {
+    color: #fff;
+  }
+  .link-email {
+    color: #c1a267;
+  }
   .text-cont,
   .link-email {
-    color: white;
     text-align: left;
     width: 100%;
     font-family: Montserrat;

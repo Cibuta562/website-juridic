@@ -98,17 +98,25 @@ const Menu = () => {
       {/* Desktop View */}
       <div className="desktop-menu">
         <div className="main-category">
-          <Link className="link-menu btn-menu-hover" to="/despre/noi">
+          <Link
+            className="link-menu btn-menu-hover"
+            to="/despre/noi"
+            onClick={moveToTop}
+          >
             Despre Noi
           </Link>
         </div>
         <div className="main-category">
-          <Link className="link-menu btn-menu-hover" to="/">
+          <Link className="link-menu btn-menu-hover" to="/" onClick={moveToTop}>
             Servicii
           </Link>
         </div>
         <div className="main-category">
-          <Link className="link-menu btn-menu-hover" to="/consultanta">
+          <Link
+            className="link-menu btn-menu-hover"
+            to="/consultanta"
+            onClick={moveToTop}
+          >
             Consultanță
           </Link>
         </div>

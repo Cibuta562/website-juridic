@@ -14,7 +14,7 @@ const Servicii = () => {
     <div>
       <div className="servicii-cont">
         <p className="servicii-title">Servicii Juridice</p>
-        <p className="servicii-subtitle">drept roman/german</p>
+        <p className="servicii-subtitle">drept român / german</p>
         <div className="line-dec-ver"></div>
         <div className="row-servicii">
           <div className="col-servicii">
@@ -24,9 +24,20 @@ const Servicii = () => {
             <div className="text-servicii">
               <p className="heading-servicii"> Drept Penal </p>
               <p className="desc-servicii">
-                {' '}
+                {/* old version */}
+                {/* {' '}
                 asistență cu reprezentare mandate internaționale de extrădare,
-                recunoașteri sentințe penale, asistență infracțiuni economice{' '}
+                recunoașteri sentințe penale, asistență infracțiuni economice{' '} */}
+
+                {/* updated */}
+                <ul type="square">
+                  <li>
+                    asistență cu reprezentare mandate internaționale de
+                    extrădare
+                  </li>
+                  <li>recunoașteri sentințe penale</li>
+                  <li>asistență infracțiuni economice</li>
+                </ul>
               </p>
               <button className="btn-servicii btn-hover">
                 Mai multe detalii >
@@ -40,9 +51,16 @@ const Servicii = () => {
             <div className="text-servicii">
               <p className="heading-servicii"> Drept Civil </p>
               <p className="desc-servicii">
-                {' '}
-                recuperari creanțe, pretenții financiare, partaj succesoral,
-                contracte comerciale{' '}
+                {/* old version */}
+                {/* recuperari creanțe, pretenții financiare,
+                partaj succesoral, contracte comerciale  */}
+                {/* updated */}
+                <ul type="square">
+                  <li>recuperari creanțe</li>
+                  <li>pretenții financiare</li>
+                  <li>partaj succesoral</li>
+                  <li>contracte comerciale</li>
+                </ul>
               </p>
               <button className="btn-servicii btn-hover">
                 Mai multe detalii >
@@ -56,9 +74,17 @@ const Servicii = () => {
             <div className="text-servicii">
               <p className="heading-servicii"> Drept Rutier </p>
               <p className="desc-servicii">
-                {' '}
+                {/* old version */}
+                {/* {' '}
                 sancțiuni contravenționale cu elemente de externitate,
-                infracțiuni la regimul rutier, accidente rutiere{' '}
+                infracțiuni la regimul rutier, accidente rutiere{' '} */}
+
+                {/* updated */}
+                <ul type="square">
+                  <li>sancțiuni contravenționale cu elemente de externitate</li>
+                  <li>infracțiuni la regimul rutier</li>
+                  <li>accidente rutiere</li>
+                </ul>
               </p>
               <button className="btn-servicii btn-hover">
                 Mai multe detalii >
@@ -74,9 +100,16 @@ const Servicii = () => {
             <div className="text-servicii">
               <p className="heading-servicii"> Declarații Fiscale </p>
               <p className="desc-servicii">
-                {' '}
+                {/* old version */}
+                {/* {' '}
                 depunere acte contabile la timp, corespondența cu autoritățile
-                fiscale germane{' '}
+                fiscale germane{' '} */}
+
+                {/* updated */}
+                <ul type="square">
+                  <li>depunere acte contabile la timp</li>
+                  <li>corespondența cu autoritățile fiscale germane</li>
+                </ul>
               </p>
               <button className="btn-servicii btn-hover">
                 Mai multe detalii >
@@ -90,9 +123,18 @@ const Servicii = () => {
             <div className="text-servicii">
               <p className="heading-servicii"> Dreptul Familiei </p>
               <p className="desc-servicii">
-                {' '}
+                {/* old version */}
+                {/* {' '}
                 divorț, partaj, exercitare autoritate părintească,
-                stabilire/recuperare pensie de întreținere{' '}
+                stabilire/recuperare pensie de întreținere{' '} */}
+
+                {/* updated */}
+                <ul type="square">
+                  <li>divorț</li>
+                  <li>partaj</li>
+                  <li>exercitare autoritate părintească</li>
+                  <li>stabilire/recuperare pensie de întreținere</li>
+                </ul>
               </p>
               <button className="btn-servicii btn-hover">
                 Mai multe detalii >
@@ -106,9 +148,19 @@ const Servicii = () => {
             <div className="text-servicii">
               <p className="heading-servicii"> Dreptul Muncii </p>
               <p className="desc-servicii">
-                {' '}
+                {/* old version */}
+                {/* {' '}
                 detașări pe teritoriul UE, formulare A1, contracte de muncă
-                internaționale, recuperări salarii, munca fără forme legale{' '}
+                internaționale, recuperări salarii, munca fără forme legale{' '} */}
+
+                {/* updated */}
+                <ul type="square">
+                  <li>detașări pe teritoriul UE</li>
+                  <li>formulare A1</li>
+                  <li>contracte de muncă internaționale</li>
+                  <li>recuperări salarii</li>
+                  <li>munca fără forme legale</li>
+                </ul>
               </p>
               <button className="btn-servicii btn-hover">
                 Mai multe detalii >
@@ -129,11 +181,13 @@ const Servicii = () => {
                   Dacă ați primit un formular de la o instituție germană, cum ar
                   fi: Finanțe (Finazamt), Primărie (Rathaus), Poliție
                   (Polizeiamt), Înregistrare firme (Gewerbeamt) și nu știți să-l
-                  completați sau unde să-l trimiteți, vă putem ajuta noi. Ne
-                  veți putea trimite documentul primit împreună cu datele de
-                  identificare iar noi îl vom completa. Ulterior veți primi pe
-                  adresa dumneavoastră de email documentul împreuna cu
-                  îndrumarile necesare.
+                  completați sau unde să-l trimiteți, vă putem ajuta noi.
+                  <p>
+                    Ne veți putea trimite documentul primit împreună cu datele
+                    de identificare iar noi îl vom completa. Ulterior veți primi
+                    pe adresa dumneavoastră de email documentul împreuna cu
+                    îndrumarile necesare.
+                  </p>
                 </p>
               </div>
             </div>

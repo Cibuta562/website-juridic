@@ -1,319 +1,311 @@
 @media screen and (min-width: 800px) {
+  .contact-img-cont {
+    width: 100%;
+    height: 400px;
+  }
 
-    .contact-img-cont{
-        width: 100%;
-        height: 400px;
-    }
+  .contact-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
 
-    .contact-img{
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-    }
+  .contact-form {
+    width: 100%;
+    height: 320px;
+    background-color: black;
+  }
 
-    .contact-form{
-        width: 100%;
-        height: 320px;
-        background-color: black;
-    }
+  .contact-heading {
+    margin: 0;
+    padding-top: 50px;
+    color: white;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 28px;
+  }
 
-    .contact-heading{
-        margin: 0;
-        padding-top: 50px;
-        color: white;
-        text-align: center;
-        font-family: Montserrat;
-        font-size: 28px;
-    }
+  .line-dec-cont {
+    margin-top: 8px;
+    background-color: #c1a267;
+    width: 50px;
+    height: 1px;
+    position: absolute;
+    left: 48%;
+  }
 
-    .line-dec-cont{
-        margin-top: 8px;
-        background-color: #c1a267;
-        width: 50px;
-        height: 1px;
-        position: absolute;
-        left: 48%;
-    }
+  .form-cont {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 60px;
+    /*border: 1px solid white;*/
+    height: 400px;
+  }
 
-    .form-cont{
-        width: 70%;
-        margin-left: 15%;
-        margin-right: 15%;
-        margin-top: 60px;
-        /*border: 1px solid white;*/
-        height: 400px;
-    }
+  .form-line {
+    display: flex;
+    color: white;
+  }
 
-    .form-line{
-        display: flex;
-        color: white;
-    }
+  .form-group {
+    margin-bottom: 20px;
+    color: white;
+  }
 
-    .form-group {
-        margin-bottom: 20px;
-        color: white;
-    }
+  .form-control::placeholder {
+    color: white;
+    font-family: Montserrat;
+    text-align: left;
+  }
 
-    .form-control::placeholder {
-        color: white;
-        font-family: Montserrat;
-        text-align: left;
-    }
+  .form-control:focus {
+    border-color: transparent;
+    outline: none; /* Remove the default outline */
+  }
 
-    .form-control:focus {
-        border-color: transparent;
-        outline: none; /* Remove the default outline */
-    }
+  .form-control {
+    width: 95%;
+    padding: 10px;
+    font-size: 16px;
+    /*border: 1px solid #ccc;*/
+    /*border-radius: 5px;*/
+    color: white;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Montserrat;
+    text-align: left;
+  }
 
-    .form-control {
-        width: 95%;
-        padding: 10px;
-        font-size: 16px;
-        /*border: 1px solid #ccc;*/
-        /*border-radius: 5px;*/
-        color: white;
-        border: none;
-        background-color: rgba(0,0,0,0);
-        font-family: Montserrat;
-        text-align: left;
-    }
+  .form-row {
+    display: flex;
+    width: 64%;
+    margin-left: 18%;
+    margin-right: 18%;
+    justify-content: space-between;
+  }
 
-    .form-row {
-        display: flex;
-        width: 64%;
-        margin-left: 18%;
-        margin-right: 18%;
-        justify-content: space-between;
-    }
+  .decoration-line {
+    border: none;
+    border-top: 1px solid #c1a267;
+    margin-top: 5px;
+    margin-left: 10px;
+  }
 
-    .decoration-line {
-        border: none;
-        border-top: 1px solid #c1a267;
-        margin-top: 5px;
-        margin-left: 10px;
-    }
+  .textarea-title {
+    width: 62%;
+    margin-left: 19%;
+    margin-right: 19%;
+    color: white;
+    font-family: Montserrat;
+  }
 
-    .textarea-title{
-        width: 62%;
-        margin-left: 19%;
-        margin-right: 19%;
-        color: white;
-        font-family: Montserrat;
-    }
+  .form-group-area {
+    width: 62%;
+    margin-left: 19%;
+    margin-right: 19%;
+    padding: 5px;
+    margin-top: 20px;
+    font-size: 16px;
+    border: 1px solid #c1a267;
+    border-radius: 2px;
+    resize: vertical;
+  }
 
-    .form-group-area {
-        width: 62%;
-        margin-left: 19%;
-        margin-right: 19%;
-        padding: 5px;
-        margin-top: 20px;
-        font-size: 16px;
-        border: 1px solid #c1a267;
-        border-radius: 2px;
-        resize: vertical;
-    }
+  textarea:focus {
+    border-color: transparent;
+    outline: none;
+  }
 
-    textarea:focus {
-        border-color: transparent;
-        outline: none;
-    }
+  .form-group input[type='text']::placeholder {
+    text-align: left;
+  }
 
-    .form-group input[type="text"]::placeholder {
-        text-align: left;
-    }
+  .btn {
+    font-size: 17px;
+    margin-top: 40px;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: rgba(0, 123, 255, 0);
+    color: #fff;
+    margin-left: 19%;
+    width: 150px;
+    height: 38px;
+    font-family: Montserrat;
+    border: 1px solid #c1a267;
+    text-align: left;
+  }
 
+  .text-cont,
+  .link-email {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    font-family: Montserrat;
+    font-size: 18px;
+    text-decoration: none;
+    line-height: 1.5rem;
+  }
 
-    .btn {
-        font-size: 17px;
-        margin-top: 40px;
-        border-radius: 2px;
-        cursor: pointer;
-        background-color: rgba(0, 123, 255, 0);
-        color: #fff;
-        margin-left: 19%;
-        width: 150px;
-        height: 38px;
-        font-family: Montserrat;
-        border: 1px solid #c1a267;
-        text-align: left;
-    }
+  .link-email {
+    color: #c1a267;
+  }
 
-
-    .text-cont, .link-email{
-        text-align: center;
-        width: 100%;
-        font-family: Montserrat;
-        font-size: 18px;
-        text-decoration: none;
-    }
-
-    .link-email{
-        color: #c1a267;
-    }
-
-    .text-cont{
-        color: white;
-    }
-
-
-
-
+  .text-cont {
+    color: white;
+  }
 }
 
-
-
 @media screen and (max-width: 800px) {
+  .contact-img-cont {
+    width: 100%;
+    height: 400px;
+  }
 
-    .contact-img-cont{
-        width: 100%;
-        height: 400px;
-    }
+  .contact-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
 
-    .contact-img{
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-    }
+  .contact-form {
+    width: 100%;
+    height: 450px;
+    font-size: 16px;
+    background-color: black;
+  }
 
-    .contact-form{
-        width: 100%;
-        height: 450px;
-        font-size: 16px;
-        background-color: black;
-    }
+  .contact-heading {
+    margin: 0;
+    padding-top: 50px;
+    color: white;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 28px;
+  }
 
-    .contact-heading{
-        margin: 0;
-        padding-top: 50px;
-        color: white;
-        text-align: center;
-        font-family: Montserrat;
-        font-size: 28px;
-    }
+  .form-cont {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 60px;
+    /*border: 1px solid white;*/
+    height: 400px;
+  }
 
-    .form-cont{
-        width: 70%;
-        margin-left: 15%;
-        margin-right: 15%;
-        margin-top: 60px;
-        /*border: 1px solid white;*/
-        height: 400px;
-    }
+  .form-line {
+    color: white;
+  }
 
-    .form-line{
-        color: white;
-    }
+  .form-group {
+    margin-bottom: 20px;
+    color: white;
+    font-size: 16px;
+  }
 
-    .form-group {
-        margin-bottom: 20px;
-        color: white;
-        font-size: 16px;
-    }
+  .form-control::placeholder {
+    color: white;
+    font-family: Montserrat;
+    text-align: left;
+  }
 
-    .form-control::placeholder {
-        color: white;
-        font-family: Montserrat;
-        text-align: left;
-    }
+  .form-control:focus {
+    border-color: transparent;
+    outline: none; /* Remove the default outline */
+  }
 
-    .form-control:focus {
-        border-color: transparent;
-        outline: none; /* Remove the default outline */
-    }
+  .form-control {
+    margin-left: 10px;
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    /*border: 1px solid #ccc;*/
+    /*border-radius: 5px;*/
+    color: white;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Montserrat;
+    text-align: left;
+  }
 
-    .form-control {
-        margin-left: 10px;
-        width: 90%;
-        padding: 10px;
-        font-size: 16px;
-        /*border: 1px solid #ccc;*/
-        /*border-radius: 5px;*/
-        color: white;
-        border: none;
-        background-color: rgba(0,0,0,0);
-        font-family: Montserrat;
-        text-align: left;
-    }
+  /*.form-row {*/
+  /*    display: flex;*/
+  /*    width: 64%;*/
+  /*    margin-left: 18%;*/
+  /*    margin-right: 18%;*/
+  /*    justify-content: space-between;*/
+  /*}*/
 
-    /*.form-row {*/
-    /*    display: flex;*/
-    /*    width: 64%;*/
-    /*    margin-left: 18%;*/
-    /*    margin-right: 18%;*/
-    /*    justify-content: space-between;*/
-    /*}*/
+  .decoration-line {
+    border: none;
+    border-top: 1px solid #c1a267;
+    margin-top: 5px;
+    width: 90%;
+    margin-left: 20px;
+  }
 
-    .decoration-line {
-        border: none;
-        border-top: 1px solid #c1a267;
-        margin-top: 5px;
-        width: 90%;
-        margin-left: 20px;
-    }
+  .textarea-title {
+    margin-bottom: 5px;
+    padding-top: 5px;
+    width: 95%;
+    margin-left: 20px;
+    margin-right: 2%;
+    color: white;
+    font-size: 16px;
+    font-family: Montserrat;
+  }
 
-    .textarea-title{
-        margin-bottom: 5px;
-        padding-top: 5px;
-        width: 95%;
-        margin-left: 20px;
-        margin-right: 2%;
-        color: white;
-        font-size: 16px;
-        font-family: Montserrat;
-    }
+  .form-group-area {
+    width: 88%;
+    margin-left: 5%;
+    margin-right: 2%;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+    border: 1px solid #c1a267;
+    border-radius: 2px;
+    resize: vertical;
+  }
 
-    .form-group-area {
-        width: 88%;
-        margin-left: 5%;
-        margin-right: 2%;
-        padding: 5px;
-        margin-top: 10px;
-        font-size: 16px;
-        border: 1px solid #c1a267;
-        border-radius: 2px;
-        resize: vertical;
-    }
+  textarea:focus {
+    border-color: transparent;
+    outline: none;
+  }
 
-    textarea:focus {
-        border-color: transparent;
-        outline: none;
-    }
+  .form-group input[type='text']::placeholder {
+    text-align: left;
+  }
 
-    .form-group input[type="text"]::placeholder {
-        text-align: left;
-    }
+  .btn {
+    font-size: 17px;
+    margin-top: 40px;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: rgba(0, 123, 255, 0);
+    color: #fff;
+    margin-left: 3%;
+    width: 150px;
+    height: 38px;
+    font-family: Montserrat;
+    border: 1px solid #c1a267;
+    margin-left: 20px;
+    text-align: left;
+  }
 
+  .line-dec-cont {
+    background-color: #c1a267;
+    width: 60px;
+    height: 1px;
+    margin: 15px auto;
+  }
 
-    .btn {
-        font-size: 17px;
-        margin-top: 40px;
-        border-radius: 2px;
-        cursor: pointer;
-        background-color: rgba(0, 123, 255, 0);
-        color: #fff;
-        margin-left: 3%;
-        width: 150px;
-        height: 38px;
-        font-family: Montserrat;
-        border: 1px solid #c1a267;
-        margin-left: 20px;
-        text-align: left;
-    }
-
-    .line-dec-cont {
-        background-color: #c1a267;
-        width: 60px;
-        height: 1px;
-        margin: 15px auto;
-    }
-
-    .text-cont, .link-email{
-        color: white;
-        text-align: left;
-        width: 100%;
-        font-family: Montserrat;
-        font-size: 20px;
-        text-decoration: none;
-    }
-
+  .text-cont,
+  .link-email {
+    color: white;
+    text-align: left;
+    width: 100%;
+    font-family: Montserrat;
+    font-size: 20px;
+    text-decoration: none;
+  }
 }

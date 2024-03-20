@@ -1,80 +1,97 @@
 import './despreNoi.css';
-import Menu from "../menu/menu";
-import Subsol from "./subsol";
-import briefImg from "../assets/brief-img.jpg";
-import {Link} from "react-router-dom";
-import despre2 from "../assets/despre2.jpg";
+import Menu from '../menu/menu';
+import Subsol from './subsol';
+import briefImg from '../assets/brief-img.jpg';
+import { Link } from 'react-router-dom';
+import despre2 from '../assets/despre2.jpg';
 
 function Despre() {
-    return (
-        <div style={{backgroundColor: "black"}}>
-            <Menu/>
-            <div className="heading-cont-despre">
+  return (
+    <div style={{ backgroundColor: 'black' }}>
+      <Menu />
+      <div className="heading-cont-despre">
+        <div className="dark-overlay"></div>
 
-                <div className="dark-overlay"></div>
-
-                <p className="heading-quote-despre">
-                    PRIETENUL ADEVĂRAT ESTE ACELA CARE TE SFĂTUIEŞTE DE BINE, NU CEL CARE ÎŢI LAUDĂ NEBUNIILE.
-                </p>
-                <p className="heading-quote-despre1">
-                    - NOI TE SFĂTUIM DE BINE -
-                </p>
-
-
-
-            </div>
-            <div className="despre-cont"></div>
-            <div className="despre-cont-text">
-                <p className="despre-heading">Despre Noi</p>
-                <div className="line-dec-ver-despre"></div>
-                <div className="text-despre">
-                    <p className="despre-p">
-                        Suntem specializați în domeniul consultanței si asistentei juridice pentru persoane fizice și persoane juridice ce își desfașoară activitatea profesională ori locuiesc în Germania sau Romania, ne adresăm persoanelor fizice și juridice cu rezidenţă română de pe tot teritoriul Germaniei.
-                    </p>
-                    <p className="despre-p">
-                        De asemenea, preîntâmpinăm majoritatea situațiilor fiscale cu care se confruntă cetățenii români în relația cu autoritățile germane dar și a situațiilor fiscale cu care se confruntă cetățenii germani în relația cu autoritățile române.
-                    </p>
-                    <p className="despre-p">
-                        Asigurăm înființări de societăți comerciale în Germania. Scopul nostru este să asigurăm clienților noștri soluțiile cele mai bune din legea fiscală germană și română.
-                    </p>
-                    <p className="despre-p">
-                        Întocmim pentru dumneavoastră toate declarațiile fiscale necesare pentru persoane fizice, persoane fizice autorizate sau persoane juridice.
-                    </p>
-                    <p className="despre-p">
-                        Obținem numărul de impozitare pentru dumneavoastră, asigurăm asistență la înființarea persoanei juridice.
-                    </p>
-                    <p className="despre-p">
-                        Folosim mijloace tehnice moderne, astfel încat deplasarea la biroul nostru să nu devină o necesitate.
-                    </p>
-                    <p className="despre-p">
-                        Se vor putea transmite documentele necesare prin servicii de tip Cloud, soluție pusă la dispoziție de către experții noștri.
-                    </p>
-                    <p className="despre-p">
-                        Contactul cu biroul nostru se va putea realiza atât în limba româna cat si în limba germană, prin toate căile de comunicație: Telefon, Skype, Whatsapp, E-mail, cât și prin formularul de contact.
-                    </p>
-                    <p className="despre-p">
-                        Biroul nostru va asigura consultanță juridică atât pentru cetățenii români rezidenți în Germania cât și pentru cetățenii nemți care se confruntă cu situații juridice în România.
-                    </p>
-                </div>
-                <div className="brief">
-                    <div className="first-brief">
-                        <img className="brief-img" src={despre2}/>
-                    </div>
-                    <div className="second-brief">
-                        <div >
-                            <div className="brief-text">
-                                <p>Peste 12 ani de experiență în avocatură internă și internațională</p>
-                                <p>
-                                    Noi îi ajutăm pe oameni să se lupte în mod eficient faţă de ce este greşit și să-și apere cu succes drepturile fundamentale.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <Subsol/>
+        <p className="heading-quote-despre">
+          PRIETENUL ADEVĂRAT ESTE ACELA CARE TE SFĂTUIEŞTE DE BINE, NU CEL CARE
+          ÎŢI LAUDĂ NEBUNIILE.
+        </p>
+        <p className="heading-quote-despre1">- NOI TE SFĂTUIM DE BINE -</p>
+      </div>
+      <div className="despre-cont"></div>
+      <div className="despre-cont-text">
+        <p className="despre-heading">Despre Noi</p>
+        <div className="line-dec-ver-despre"></div>
+        <div className="text-despre">
+          <p className="despre-p">
+            Suntem specializați în domeniul consultanței si asistentei juridice
+            pentru persoane fizice și persoane juridice ce își desfașoară
+            activitatea profesională ori locuiesc în Germania sau Romania, ne
+            adresăm persoanelor fizice și juridice cu rezidenţă română de pe tot
+            teritoriul Germaniei.
+          </p>
+          <p className="despre-p">
+            De asemenea, preîntâmpinăm majoritatea situațiilor fiscale cu care
+            se confruntă cetățenii români în relația cu autoritățile germane dar
+            și a situațiilor fiscale cu care se confruntă cetățenii germani în
+            relația cu autoritățile române.
+          </p>
+          <p className="despre-p">
+            Asigurăm înființări de societăți comerciale în Germania. Scopul
+            nostru este să asigurăm clienților noștri soluțiile cele mai bune
+            din legea fiscală germană și română.
+          </p>
+          <p className="despre-p">
+            Întocmim pentru dumneavoastră toate declarațiile fiscale necesare
+            pentru persoane fizice, persoane fizice autorizate sau persoane
+            juridice.
+          </p>
+          <p className="despre-p">
+            Obținem numărul de impozitare pentru dumneavoastră, asigurăm
+            asistență la înființarea persoanei juridice.
+          </p>
+          <p className="despre-p">
+            Folosim mijloace tehnice moderne, astfel încat deplasarea la biroul
+            nostru să nu devină o necesitate.
+          </p>
+          <p className="despre-p">
+            Se vor putea transmite documentele necesare prin servicii de tip
+            Cloud, soluție pusă la dispoziție de către experții noștri.
+          </p>
+          <p className="despre-p">
+            Contactul cu biroul nostru se va putea realiza atât în limba româna
+            cat si în limba germană, prin toate căile de comunicație: Telefon,
+            Skype, Whatsapp, E-mail, cât și prin formularul de contact.
+          </p>
+          <p className="despre-p">
+            Biroul nostru va asigura consultanță juridică atât pentru cetățenii
+            români rezidenți în Germania cât și pentru cetățenii nemți care se
+            confruntă cu situații juridice în România.
+          </p>
         </div>
-    );
+        <div className="brief">
+          <div className="first-brief">
+            <img className="brief-img" src={despre2} />
+          </div>
+          <div className="second-brief">
+            <div>
+              <div className="brief-text">
+                <p>
+                  Peste 12 ani de experiență în avocatură internă și
+                  internațională
+                </p>
+                <p>
+                  Noi îi ajutăm pe oameni să se lupte în mod eficient faţă de ce
+                  este greşit și să-și apere cu succes drepturile fundamentale.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Subsol />
+    </div>
+  );
 }
 
 export default Despre;

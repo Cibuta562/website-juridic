@@ -85,6 +85,10 @@
     border-bottom: 1px solid white;
   } */
 
+  .btn-menu-hover:hover {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0.3rem;
+  }
   .mobile-menu {
     display: none;
   }

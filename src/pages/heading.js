@@ -5,8 +5,6 @@ import briefImg from '../assets/brief-img.jpg';
 import { Link } from 'react-router-dom';
 
 function Heading() {
-
-
   function moveToTop() {
     if ('scrollBehavior' in document.documentElement.style) {
       window.scrollTo({
@@ -29,7 +27,7 @@ function Heading() {
         </p>
 
         <div>
-          <Link className="link-menu" to="/consultanta">
+          <Link className="link-menu" to="/consultanta" onClick={moveToTop}>
             <button className="btn-heading btn-hover">
               Consultanță Online
             </button>
@@ -71,11 +69,14 @@ function Heading() {
             <div className="brief-text">
               <p>
                 Asigurăm asistență juridică de specialitate atât în drept german
-                cât și în drept român
+                cât și în drept român.
               </p>
               <p>
                 Pe site-ul nostru puteţi obţine rapid şi ieftin consultaţii
                 juridice online privind dreptul german sau dreptul românesc.
+              </p>
+              <p>
+                {' '}
                 Astfel, evitați timpul pierdut cu programarea întâlnirii la
                 birou, cu deplasarea și mai ales nu mai este nevoie să vă
                 învoiți de la serviciu.
@@ -85,7 +86,7 @@ function Heading() {
               {/*<button className="brief-btn-1">*/}
               {/*    Contacteaza-ne >*/}
               {/*</button>*/}
-              <Link className="link-menu" to="/consultanta">
+              <Link className="link-menu" to="/consultanta" onClick={moveToTop}>
                 <button className="brief-btn-2 btn-hover">
                   Consult Juridic Online
                 </button>

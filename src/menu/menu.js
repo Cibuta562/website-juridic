@@ -98,17 +98,17 @@ const Menu = () => {
       {/* Desktop View */}
       <div className="desktop-menu">
         <div className="main-category">
-          <Link className="link-menu" to="/despre/noi">
+          <Link className="link-menu btn-menu-hover" to="/despre/noi">
             Despre Noi
           </Link>
         </div>
         <div className="main-category">
-          <Link className="link-menu" to="/">
+          <Link className="link-menu btn-menu-hover" to="/">
             Servicii
           </Link>
         </div>
         <div className="main-category">
-          <Link className="link-menu" to="/consultanta">
+          <Link className="link-menu btn-menu-hover" to="/consultanta">
             Consultanță
           </Link>
         </div>

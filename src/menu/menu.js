@@ -1,21 +1,20 @@
-// Inside YourMenuComponent.js
-import React, { useRef, useState } from 'react';
-import './menu.css';
-import ro_img from '../assets/romania-flag-square-icon-32.png';
-import de_img from '../assets/germany-flag-square-icon-32.png';
-import menu_hamburger from '../assets/menu.png';
-import { Link } from 'react-router-dom';
+import React, { useRef, useState } from "react";
+import "./menu.css";
+import ro_img from "../assets/romania-flag-square-icon-32.png";
+import de_img from "../assets/germany-flag-square-icon-32.png";
+import menu_hamburger from "../assets/menu.png";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
   const scrollRef = useRef(null);
   const [isMobileMenuVisible, setMobileMenuVisible] = useState(false);
 
   function moveToTop() {
-    if ('scrollBehavior' in document.documentElement.style) {
+    if ("scrollBehavior" in document.documentElement.style) {
       window.scrollTo({
         top: 0,
         left: 0,
-        behavior: 'smooth',
+        behavior: "smooth",
       });
     } else {
       window.scrollTo(0, 0);
@@ -23,11 +22,11 @@ const Menu = () => {
   }
 
   function moveToServicii() {
-    if ('scrollBehavior' in document.documentElement.style) {
+    if ("scrollBehavior" in document.documentElement.style) {
       window.scrollTo({
         top: 0,
         left: 0,
-        behavior: 'smooth',
+        behavior: "smooth",
       });
     } else {
       window.scrollTo(0, 0);
@@ -35,11 +34,11 @@ const Menu = () => {
   }
 
   function moveToContact() {
-    if ('scrollBehavior' in document.documentElement.style) {
+    if ("scrollBehavior" in document.documentElement.style) {
       window.scrollTo({
         top: 0,
         left: 0,
-        behavior: 'smooth',
+        behavior: "smooth",
       });
     } else {
       window.scrollTo(0, 0);
@@ -87,34 +86,34 @@ const Menu = () => {
   // }
 
   return (
-    <div className={`menu-container ${isMobileMenuVisible ? 'active' : ''}`}>
-      <div className="home-button" onClick={moveToTop}>
-        <Link className="link-menu" style={{ display: 'flex' }} to="/">
-          <p style={{ color: '#C1A267' }}>Consult - </p>
-          <p style={{ paddingLeft: '3px' }}> Juridic</p>
+    <div className={`menu-container ${isMobileMenuVisible ? "active" : ""}`}>
+      <div className='home-button' onClick={moveToTop}>
+        <Link className='link-menu' style={{ display: "flex" }} to='/'>
+          <p style={{ color: "#C1A267" }}>Consult - </p>
+          <p style={{ paddingLeft: "3px" }}> Juridic</p>
         </Link>
       </div>
 
       {/* Desktop View */}
-      <div className="desktop-menu">
-        <div className="main-category">
+      <div className='desktop-menu'>
+        <div className='main-category'>
           <Link
-            className="link-menu btn-menu-hover"
-            to="/despre/noi"
+            className='link-menu btn-menu-hover'
+            to='/despre/noi'
             onClick={moveToTop}
           >
             Despre Noi
           </Link>
         </div>
-        <div className="main-category">
-          <Link className="link-menu btn-menu-hover" to="/" onClick={moveToTop}>
+        <div className='main-category'>
+          <Link className='link-menu btn-menu-hover' to='/' onClick={moveToTop}>
             Servicii
           </Link>
         </div>
-        <div className="main-category">
+        <div className='main-category'>
           <Link
-            className="link-menu btn-menu-hover"
-            to="/consultanta"
+            className='link-menu btn-menu-hover'
+            to='/consultanta'
             onClick={moveToTop}
           >
             Consultanță
@@ -123,73 +122,73 @@ const Menu = () => {
         {/*<div className="main-category">*/}
         {/*    <Link className="link-menu" to="/">Contact*/}
         {/*    </Link></div>*/}
-        <div className="menu-lng">
-          <div className="main-category-img">
-            <img className="img-ro-pc" src={ro_img} alt="Romanian flag" />
+        <div className='menu-lng'>
+          <div className='main-category-img'>
+            <img className='img-ro-pc' src={ro_img} alt='Romanian flag' />
           </div>
-          <div className="main-category-img1">
-            <img className="img-de-pc" src={de_img} alt="German flag" />
+          <div className='main-category-img1'>
+            <img className='img-de-pc' src={de_img} alt='German flag' />
           </div>
         </div>
       </div>
 
       {/* Mobile View */}
-      <div className="mobile-menu">
+      <div className='mobile-menu'>
         <div
           className={`menu-toggle-button ${
-            isMobileMenuVisible ? 'active' : ''
+            isMobileMenuVisible ? "active" : ""
           }`}
           onClick={() => setMobileMenuVisible(!isMobileMenuVisible)}
         >
           <img
-            className="menu-hamburger"
+            className='menu-hamburger'
             src={menu_hamburger}
-            alt="menu icon"
+            alt='menu icon'
           />
         </div>
-        <div className="mobile-categories">
-          <div style={{ marginTop: '15px' }} onClick={moveToTop}>
-            <div className="main-category1">
-              <Link className="link-menu" to="/">
+        <div className='mobile-categories'>
+          <div style={{ marginTop: "15px" }} onClick={moveToTop}>
+            <div className='main-category1'>
+              <Link className='link-menu' to='/'>
                 Home
               </Link>
             </div>
-            <div className="dec-line"></div>
+            <div className='dec-line'></div>
           </div>
-          <div style={{ marginTop: '15px' }} onClick={moveToTop}>
-            <div className="main-category1">
-              <Link className="link-menu" to="/despre/noi">
+          <div style={{ marginTop: "15px" }} onClick={moveToTop}>
+            <div className='main-category1'>
+              <Link className='link-menu' to='/despre/noi'>
                 Despre Noi
               </Link>
             </div>
-            <div className="dec-line"></div>
+            <div className='dec-line'></div>
           </div>
-          <div style={{ marginTop: '15px' }}>
-            <div className="main-category1">
-              <Link className="link-menu" to="/">
+          <div style={{ marginTop: "15px" }}>
+            <div className='main-category1'>
+              <Link className='link-menu' to='/'>
                 Servicii
               </Link>
             </div>
-            <div className="dec-line"></div>
+            <div className='dec-line'></div>
           </div>
-          <div style={{ marginTop: '15px' }} onClick={moveToTop}>
-            <div className="main-category1">
-              <Link className="link-menu" to="/consultanta">
+          <div style={{ marginTop: "15px" }} onClick={moveToTop}>
+            <div className='main-category1'>
+              <Link className='link-menu' to='/consultanta'>
                 Consultanta
               </Link>
             </div>
-            <div className="dec-line"></div>
+            <div className='dec-line'></div>
           </div>
           {/*<div style={{ marginTop: "15px" }}>*/}
           {/*    <div className="main-category">Contact</div>*/}
           {/*    <div className="dec-line"></div>*/}
           {/*</div>*/}
-          <div className="menu-lng">
-            <div className="main-category-img">
-              <img className="img-ro" src={ro_img} alt="Romanian flag" />
+          <div className='menu-lng'>
+            <div className='main-category-img'>
+              <img className='img-ro' src={ro_img} alt='Romanian flag' />
             </div>
-            <div className="main-category-img1">
-              <img className="img-de" src={de_img} alt="German flag" />
+            <div className='main-category-img1'>
+              <img className='img-de' src={de_img} alt='German flag' />
             </div>
           </div>
         </div>

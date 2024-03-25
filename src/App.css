@@ -1,8 +1,9 @@
+* {
+  font-family: Montserrat;
+}
+
 .btn-hover:hover {
   background-color: #4e3912;
   color: #fff !important;
   cursor: pointer;
 }
-/* * {
-  border: 1px solid pink;
-} */

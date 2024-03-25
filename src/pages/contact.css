@@ -117,7 +117,7 @@
     outline: none;
   }
 
-  .form-group input[type='text']::placeholder {
+  .form-group input[type="text"]::placeholder {
     text-align: left;
   }
 
@@ -189,7 +189,7 @@
     margin: auto;
     margin-top: 60px;
     /*border: 1px solid white;*/
-    height: 400px;
+    height: 250px;
   }
 
   .form-line {
@@ -271,7 +271,7 @@
     outline: none;
   }
 
-  .form-group input[type='text']::placeholder {
+  .form-group input[type="text"]::placeholder {
     text-align: left;
   }
 

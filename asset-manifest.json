@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/website-juridic/static/css/main.f47d9612.css",
-    "main.js": "/website-juridic/static/js/main.97a44e20.js",
+    "main.css": "/website-juridic/static/css/main.8e8fdce1.css",
+    "main.js": "/website-juridic/static/js/main.ff66f87e.js",
     "static/js/592.36d6c253.chunk.js": "/website-juridic/static/js/592.36d6c253.chunk.js",
     "static/media/servicii1.jpg": "/website-juridic/static/media/servicii1.6e0b29cf618780820432.jpg",
     "static/media/servicii2.jpg": "/website-juridic/static/media/servicii2.a81c29ec774c5ce846e7.jpg",
@@ -10,23 +10,25 @@
     "static/media/brief-img.jpg": "/website-juridic/static/media/brief-img.b5aed0138596e04d308a.jpg",
     "static/media/contact.jpg": "/website-juridic/static/media/contact.a893a51fb3a830d99de5.jpg",
     "static/media/servicii5.jpg": "/website-juridic/static/media/servicii5.3f4a18f38872f137108a.jpg",
+    "static/media/despre2.jpg": "/website-juridic/static/media/despre2.5cd12b9dd872e9b62c25.jpg",
     "static/media/servicii4.jpg": "/website-juridic/static/media/servicii4.d7c2ad093ee30648d125.jpg",
     "static/media/heading3.jpg": "/website-juridic/static/media/heading3.a2f2cc307fd54ae11c89.jpg",
     "static/media/lawyer.jpg": "/website-juridic/static/media/lawyer.f2db5af12f04a582e517.jpg",
     "static/media/servicii6.jpg": "/website-juridic/static/media/servicii6.d9078cca43442b4cdb05.jpg",
     "static/media/heading2.jpg": "/website-juridic/static/media/heading2.ee2b93ffc2fb17f9415a.jpg",
     "static/media/servicii3.jpg": "/website-juridic/static/media/servicii3.ee2b93ffc2fb17f9415a.jpg",
+    "static/media/consultanta2.jpg": "/website-juridic/static/media/consultanta2.149f82cb4e75c6e9dbfd.jpg",
+    "static/media/despre.jpg": "/website-juridic/static/media/despre.0778adb8ab226afa8e0b.jpg",
     "static/media/insta.png": "/website-juridic/static/media/insta.efbdce80d42fe6e6a1ea.png",
-    "static/media/mike.webp": "/website-juridic/static/media/mike.ec360eaab848d200699f.webp",
     "static/media/facebook.svg": "/website-juridic/static/media/facebook.cb9d562bb28087fa38683c6fcb6fab2a.svg",
     "index.html": "/website-juridic/index.html",
     "static/media/linkedin.svg": "/website-juridic/static/media/linkedin.a1af7e1ec675d2c0c95fd948249da8c7.svg",
-    "main.f47d9612.css.map": "/website-juridic/static/css/main.f47d9612.css.map",
-    "main.97a44e20.js.map": "/website-juridic/static/js/main.97a44e20.js.map",
+    "main.8e8fdce1.css.map": "/website-juridic/static/css/main.8e8fdce1.css.map",
+    "main.ff66f87e.js.map": "/website-juridic/static/js/main.ff66f87e.js.map",
     "592.36d6c253.chunk.js.map": "/website-juridic/static/js/592.36d6c253.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f47d9612.css",
-    "static/js/main.97a44e20.js"
+    "static/css/main.8e8fdce1.css",
+    "static/js/main.ff66f87e.js"
   ]
 }

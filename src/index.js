@@ -27,6 +27,7 @@ const Root = () => {
                     <Route path="/consultanta" element={<Consultanta />} />
                     {/*<Route path="/admin" element={<Admin />} />*/}
                     <Route path="/secure/payment/completed" element={<Payment />} />
+                    <Route path="/website-juridic" element={<App />} />
                     <Route path="/" element={<App />} />
                 </Routes>
             </BrowserRouter>

@@ -396,7 +396,7 @@
     z-index: 0;
     margin-left: 40%;
     /* margin-top: 1380px; */
-    margin-top: 1440px;
+    /* margin-top: 1440px; */
   }
 
   .first-brief-servicii {
@@ -423,10 +423,10 @@
   #mobile-detalii-content {
     position: relative;
     color: #fff;
-    max-width: 80%;
+    max-width: 90%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2rem;
+    margin-top: 32px;
     padding: 1rem;
     border-radius: 6px;
     border: 1px solid #c1a267ff;

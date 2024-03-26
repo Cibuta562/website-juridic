@@ -178,7 +178,7 @@ const Menu = () => {
           <div style={{ marginTop: "15px" }} onClick={moveToTop}>
             <div className='main-category1'>
               <Link className='link-menu' to='/consultanta'>
-                Consultanta
+                Consultanță
               </Link>
             </div>
             <div className='dec-line'></div>

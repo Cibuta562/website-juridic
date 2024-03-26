@@ -393,7 +393,7 @@ const Servicii = () => {
         {/* row - servicii - 1 : Declarații Fiscale / Dreptul Familiei / Dreptul Muncii */}
         <div>{detaliiServiciiContentRowOne}</div>
 
-        <div className='line-dec-ver2'></div>
+        {/* <div className='line-dec-ver2'></div> */}
 
         <div className='brief-servicii'>
           <div className='second-brief-servicii'>

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/website-juridic/static/css/main.65e67640.css",
-    "main.js": "/website-juridic/static/js/main.f6b90e1e.js",
+    "main.js": "/website-juridic/static/js/main.bde27c84.js",
     "static/js/592.36d6c253.chunk.js": "/website-juridic/static/js/592.36d6c253.chunk.js",
     "static/media/servicii1.jpg": "/website-juridic/static/media/servicii1.6e0b29cf618780820432.jpg",
     "static/media/servicii2.jpg": "/website-juridic/static/media/servicii2.a81c29ec774c5ce846e7.jpg",
@@ -25,11 +25,11 @@
     "index.html": "/website-juridic/index.html",
     "static/media/linkedin.svg": "/website-juridic/static/media/linkedin.a1af7e1ec675d2c0c95fd948249da8c7.svg",
     "main.65e67640.css.map": "/website-juridic/static/css/main.65e67640.css.map",
-    "main.f6b90e1e.js.map": "/website-juridic/static/js/main.f6b90e1e.js.map",
+    "main.bde27c84.js.map": "/website-juridic/static/js/main.bde27c84.js.map",
     "592.36d6c253.chunk.js.map": "/website-juridic/static/js/592.36d6c253.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.65e67640.css",
-    "static/js/main.f6b90e1e.js"
+    "static/js/main.bde27c84.js"
   ]
 }

@@ -19,7 +19,7 @@ function Despre() {
         <p className='heading-quote-despre1'>- NOI TE SFĂTUIM DE BINE -</p>
       </div>
       <div className='despre-cont'></div>
-      <div className='despre-cont-text'>
+      <div className='despreCont-text'>
         <p className='despre-heading'>Despre Noi</p>
         <div className='line-dec-ver-despre'></div>
         <div className='text-despre'>
@@ -69,13 +69,13 @@ function Despre() {
             confruntă cu situații juridice în România.
           </p>
         </div>
-        <div className='brief brief-despre-noi'>
+        <div className='brief-despre-noi'>
           <div className='first-brief'>
-            <img className='brief-img' src={despre2} />
+            <img className='brief-img despre-img' src={despre2} />
           </div>
           <div className='second-brief'>
             <div>
-              <div className='brief-text'>
+              <div className='briefText'>
                 <p>
                   Peste 12 ani de experiență în avocatură internă și
                   internațională.

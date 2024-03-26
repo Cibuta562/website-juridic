@@ -14,18 +14,18 @@ const Subsol = () => {
         <div className='subsol-col'>
           <p className='subsol-adv' style={{ paddingTop: "0px" }}>
             Folosiți numărul de telefon de mai jos sau adresa de email, exclusiv
-            în situații de urgență
+            în situații de urgență.
           </p>
           <p className='subsol-adv'>
             Pentru programari la sediu, vă rugam folosiți datele de contact de
-            mai sus
+            mai sus.
           </p>
         </div>
-        <div className='subsol-col'>
+        <div className='subsol-col subsol-padding'>
           <div className='subsol-flex'>
             {/*<img className="icon-socials" src={insta} alt="insta"/>*/}
             <p className='subsol-socials'>
-              București/România; Speyer/Deutschland
+              București/România <br /> Speyer/Deutschland
             </p>
           </div>
           <div className='subsol-flex'>
@@ -69,7 +69,7 @@ const Subsol = () => {
         <div className='subsol-dec-hor'></div>
         <div className='subsol-dec-ver1'></div>
         <div className='subsol-col calendarIcon'>
-          <FontAwesomeIcon icon={faCalendarAlt} />
+          {/* <FontAwesomeIcon icon={faCalendarAlt} /> */}
           <div className='subsol-flex'>
             <p className='subsol-schedule'>luni - joi : 9:00 - 18:30</p>
           </div>

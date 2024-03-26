@@ -1,9 +1,7 @@
-/* .link-menu:visited,
-.link-menu:focus {
-  text-decoration: none;
-  color: white;
+.img-ro-pc:hover,
+.img-de-pc:hover {
+  cursor: pointer;
 }
- */
 
 .link-menu {
   text-decoration: none;
@@ -19,7 +17,7 @@
   width: 100%;
   color: white;
   background-color: black;
-  font-family: 'Montserrat', serif;
+  font-family: "Montserrat", serif;
   transition: background-color 0.3s ease, color 0.3s ease;
   z-index: 3;
 }

@@ -10,7 +10,8 @@ import servicii6 from "../assets/servicii6.jpg";
 import briefDown from "../assets/brief-down.jpg";
 import { useState } from "react";
 import TapButton from "./TapServicii";
-import { DETALII_SERVICII } from "./data";
+import { DETALII_SERVICII } from "../lang/data-ro";
+import React, { useRef } from "react";
 
 const Servicii = () => {
   const [selectedServiciuRowZero, setSelectedServiciuRowZero] = useState();
@@ -72,6 +73,57 @@ const Servicii = () => {
       </div>
     );
   }
+  const isMobile = window.innerWidth < 800;
+
+  const [selectedServiciiMobile, setSelectedServiciiMobile] = useState({
+    dreptPenal: false,
+    dreptCivil: false,
+    dreptRutier: false,
+    declaratiiFiscale: false,
+    dreptulFamiliei: false,
+    dreptulMuncii: false,
+  });
+
+  function handleSelectServiciuDreptPenal() {
+    setSelectedServiciiMobile((prevState) => ({
+      ...prevState,
+      dreptPenal: !prevState.dreptPenal,
+    }));
+  }
+
+  function handleSelectServiciuDreptCivil() {
+    setSelectedServiciiMobile((prevState) => ({
+      ...prevState,
+      dreptCivil: !prevState.dreptCivil,
+    }));
+  }
+
+  function handleSelectServiciuDreptRutier() {
+    setSelectedServiciiMobile((prevState) => ({
+      ...prevState,
+      dreptRutier: !prevState.dreptRutier,
+    }));
+  }
+  function handleSelectServiciuDeclaratiiFiscale() {
+    setSelectedServiciiMobile((prevState) => ({
+      ...prevState,
+      declaratiiFiscale: !prevState.declaratiiFiscale,
+    }));
+  }
+
+  function handleSelectServiciuDreptulFamiliei() {
+    setSelectedServiciiMobile((prevState) => ({
+      ...prevState,
+      dreptulFamiliei: !prevState.dreptulFamiliei,
+    }));
+  }
+
+  function handleSelectServiciuDreptulMuncii() {
+    setSelectedServiciiMobile((prevState) => ({
+      ...prevState,
+      dreptulMuncii: !prevState.dreptulMuncii,
+    }));
+  }
 
   return (
     <div>
@@ -103,11 +155,28 @@ const Servicii = () => {
               <TapButton
                 className='butonDetaliiServicii'
                 isSelected={selectedServiciuRowZero === "btnDreptPenal"}
-                onSelect={() => handleSelectServiciuRowZero("btnDreptPenal")}
+                eMobil={isMobile}
+                onSelect={() => {
+                  handleSelectServiciuRowZero("btnDreptPenal");
+                  handleSelectServiciuDreptPenal();
+                }}
               >
                 Mai multe detalii
               </TapButton>
             </div>
+            {/* {dreptPenalMobile} */}
+            {isMobile && selectedServiciiMobile.dreptPenal && (
+              <div id='mobile-detalii-content'>
+                <h3>{DETALII_SERVICII.btnDreptPenal.title}</h3>
+                <div className='line-dec-ver10'></div>
+                <p>{DETALII_SERVICII.btnDreptPenal.description}</p>
+                <p>{DETALII_SERVICII.btnDreptPenal.info}</p>
+                {/* <button
+                  className='close-detaliiServicii'
+                  onClick={() => handleSelectServiciuDreptPenal}
+                ></button> */}
+              </div>
+            )}
           </div>
           <div className='col-servicii'>
             <div>
@@ -128,11 +197,28 @@ const Servicii = () => {
               <TapButton
                 className='butonDetaliiServicii'
                 isSelected={selectedServiciuRowZero === "btnDreptCivil"}
-                onSelect={() => handleSelectServiciuRowZero("btnDreptCivil")}
+                eMobil={isMobile}
+                onSelect={() => {
+                  handleSelectServiciuRowZero("btnDreptCivil");
+                  handleSelectServiciuDreptCivil();
+                }}
               >
                 Mai multe detalii
               </TapButton>
             </div>
+            {/* {dreptCivilMobile} */}
+            {isMobile && selectedServiciiMobile.dreptCivil && (
+              <div id='mobile-detalii-content'>
+                <h3>{DETALII_SERVICII.btnDreptCivil.title}</h3>
+                <div className='line-dec-ver10'></div>
+                <p>{DETALII_SERVICII.btnDreptCivil.description}</p>
+                <p>{DETALII_SERVICII.btnDreptCivil.info}</p>
+                {/* <button
+                  className='close-detaliiServicii'
+                  onClick={handleSelectServiciuDreptCivil}
+                ></button> */}
+              </div>
+            )}
           </div>
           <div className='col-servicii'>
             <div>
@@ -152,12 +238,29 @@ const Servicii = () => {
               <TapButton
                 className='butonDetaliiServicii'
                 isSelected={selectedServiciuRowZero === "btnDreptRutier"}
-                onSelect={() => handleSelectServiciuRowZero("btnDreptRutier")}
+                eMobil={isMobile}
+                onSelect={() => {
+                  handleSelectServiciuRowZero("btnDreptRutier");
+                  handleSelectServiciuDreptRutier();
+                }}
               >
                 Mai multe detalii
               </TapButton>
             </div>
           </div>
+          {/* {dreptRutierMobile} */}
+          {isMobile && selectedServiciiMobile.dreptRutier && (
+            <div id='mobile-detalii-content'>
+              <h3>{DETALII_SERVICII.btnDreptRutier.title}</h3>
+              <div className='line-dec-ver10'></div>
+              <p>{DETALII_SERVICII.btnDreptRutier.description}</p>
+              <p>{DETALII_SERVICII.btnDreptRutier.info}</p>
+              {/* <button
+                className='close-detaliiServicii'
+                onClick={handleSelectServiciuDreptRutier}
+              ></button> */}
+            </div>
+          )}
         </div>
 
         {/* row - servicii - 0 : Drept Penal / Drept Civil / Drept Rutier */}
@@ -182,13 +285,27 @@ const Servicii = () => {
               <TapButton
                 className='butonDetaliiServicii'
                 isSelected={selectedServiciuRowOne === "btnDeclaratiiFiscale"}
-                onSelect={() =>
-                  handleSelectServiciuRowOne("btnDeclaratiiFiscale")
-                }
+                eMobil={isMobile}
+                onSelect={() => {
+                  handleSelectServiciuRowOne("btnDeclaratiiFiscale");
+                  handleSelectServiciuDeclaratiiFiscale();
+                }}
               >
                 Mai multe detalii
               </TapButton>
             </div>
+            {isMobile && selectedServiciiMobile.declaratiiFiscale && (
+              <div id='mobile-detalii-content'>
+                <h3>{DETALII_SERVICII.btnDeclaratiiFiscale.title}</h3>
+                <div className='line-dec-ver10'></div>
+                <p>{DETALII_SERVICII.btnDeclaratiiFiscale.description}</p>
+                <p>{DETALII_SERVICII.btnDeclaratiiFiscale.info}</p>
+                {/* <button
+                  className='close-detaliiServicii'
+                  onClick={handleSelectServiciuDeclaratiiFiscale}
+                ></button> */}
+              </div>
+            )}
           </div>
           <div className='col-servicii'>
             <div>
@@ -208,13 +325,27 @@ const Servicii = () => {
               <TapButton
                 className='butonDetaliiServicii'
                 isSelected={selectedServiciuRowOne === "btnDreptulFamiliei"}
-                onSelect={() =>
-                  handleSelectServiciuRowOne("btnDreptulFamiliei")
-                }
+                eMobil={isMobile}
+                onSelect={() => {
+                  handleSelectServiciuRowOne("btnDreptulFamiliei");
+                  handleSelectServiciuDreptulFamiliei();
+                }}
               >
                 Mai multe detalii
               </TapButton>
             </div>
+            {isMobile && selectedServiciiMobile.dreptulFamiliei && (
+              <div id='mobile-detalii-content'>
+                <h3>{DETALII_SERVICII.btnDreptulFamiliei.title}</h3>
+                <div className='line-dec-ver10'></div>
+                <p>{DETALII_SERVICII.btnDreptulFamiliei.description}</p>
+                <p>{DETALII_SERVICII.btnDreptulFamiliei.info}</p>
+                {/* <button
+                  className='close-detaliiServicii'
+                  onClick={handleSelectServiciuDreptulFamiliei}
+                ></button> */}
+              </div>
+            )}
           </div>
           <div className='col-servicii'>
             <div>
@@ -235,12 +366,28 @@ const Servicii = () => {
               <TapButton
                 className='butonDetaliiServicii'
                 isSelected={selectedServiciuRowOne === "btnDreptulMuncii"}
-                onSelect={() => handleSelectServiciuRowOne("btnDreptulMuncii")}
+                eMobil={isMobile}
+                onSelect={() => {
+                  handleSelectServiciuRowOne("btnDreptulMuncii");
+                  handleSelectServiciuDreptulMuncii();
+                }}
               >
                 Mai multe detalii
               </TapButton>
             </div>
           </div>
+          {isMobile && selectedServiciiMobile.dreptulMuncii && (
+            <div id='mobile-detalii-content'>
+              <h3>{DETALII_SERVICII.btnDreptulMuncii.title}</h3>
+              <div className='line-dec-ver10'></div>
+              <p>{DETALII_SERVICII.btnDreptulMuncii.description}</p>
+              <p>{DETALII_SERVICII.btnDreptulMuncii.info}</p>
+              {/* <button
+                className='close-detaliiServicii'
+                onClick={handleSelectServiciuDreptulMuncii}
+              ></button> */}
+            </div>
+          )}
         </div>
 
         {/* row - servicii - 1 : Declarații Fiscale / Dreptul Familiei / Dreptul Muncii */}
@@ -248,33 +395,31 @@ const Servicii = () => {
 
         <div className='line-dec-ver2'></div>
 
-
-          <div className='brief-servicii'>
-            <div className='second-brief-servicii'>
-              <div className='div-servicii'>
-                <p className='brief-heading'>Cum te putem ajuta</p>
-                <div className='line-dec'></div>
-                <div className='brief-text'>
+        <div className='brief-servicii'>
+          <div className='second-brief-servicii'>
+            <div className='div-servicii'>
+              <p className='brief-heading'>Cum te putem ajuta</p>
+              <div className='line-dec'></div>
+              <div className='brief-text'>
+                <p>
+                  Dacă ați primit un formular de la o instituție germană, cum ar
+                  fi: Finanțe (Finazamt), Primărie (Rathaus), Poliție
+                  (Polizeiamt), Înregistrare firme (Gewerbeamt) și nu știți să-l
+                  completați sau unde să-l trimiteți, vă putem ajuta noi.
                   <p>
-                    Dacă ați primit un formular de la o instituție germană, cum
-                    ar fi: Finanțe (Finazamt), Primărie (Rathaus), Poliție
-                    (Polizeiamt), Înregistrare firme (Gewerbeamt) și nu știți
-                    să-l completați sau unde să-l trimiteți, vă putem ajuta noi.
-                    <p>
-                      Ne veți putea trimite documentul primit împreună cu datele
-                      de identificare iar noi îl vom completa. Ulterior veți
-                      primi pe adresa dumneavoastră de email documentul împreună
-                      cu îndrumarile necesare.
-                    </p>
+                    Ne veți putea trimite documentul primit împreună cu datele
+                    de identificare iar noi îl vom completa. Ulterior veți primi
+                    pe adresa dumneavoastră de email documentul împreună cu
+                    îndrumarile necesare.
                   </p>
-                </div>
+                </p>
               </div>
             </div>
-            <div className='first-brief-servicii'>
-              <img className='brief-img-servicii' src={briefDown} />
-            </div>
           </div>
-   
+          <div className='first-brief-servicii'>
+            <img className='brief-img-servicii' src={briefDown} />
+          </div>
+        </div>
       </div>
 
       <div></div>

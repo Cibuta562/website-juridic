@@ -1,3 +1,5 @@
+import { default as ro } from "../lang/data-ro.js";
+import translationsDE from "../lang/data-de";
 import React, { useRef, useState } from "react";
 import "./menu.css";
 import ro_img from "../assets/romania-flag-square-icon-32.png";
@@ -6,6 +8,8 @@ import menu_hamburger from "../assets/menu.png";
 import { Link } from "react-router-dom";
 
 const Menu = () => {
+  console.log(ro.pageTitleConsult);
+
   const scrollRef = useRef(null);
   const [isMobileMenuVisible, setMobileMenuVisible] = useState(false);
 
@@ -89,8 +93,8 @@ const Menu = () => {
     <div className={`menu-container ${isMobileMenuVisible ? "active" : ""}`}>
       <div className='home-button' onClick={moveToTop}>
         <Link className='link-menu' style={{ display: "flex" }} to='/'>
-          <p style={{ color: "#C1A267" }}>Consult - </p>
-          <p style={{ paddingLeft: "3px" }}> Juridic</p>
+          <p style={{ color: "#C1A267" }}>{ro.pageTitleConsult}</p>
+          <p style={{ paddingLeft: "3px" }}>{ro.pageTitleJuridic}</p>
         </Link>
       </div>
 

@@ -1,14 +1,41 @@
+.despre-p {
+  font-size: 1rem;
+}
+
 @media screen and (min-width: 800px) {
+  .line-dec-ver-despre {
+    width: 1px;
+    height: 60px;
+    background-color: #c1a267ff;
+    /* position: absolute; */
+    margin-left: 50%;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    z-index: 0;
+  }
+  .despre-img {
+    border: 2px solid #c1a267ff;
+    padding: 0px;
+  }
+  .brief-despre-noi {
+    /* height: 400px; */
+    padding-bottom: 150px;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    /* font-weight: bolder; */
+  }
   .despre-cont {
     width: 100%;
     height: 10px;
     background-color: black;
   }
-  .despre-p {
-    text-indent: 2rem;
+  .text-despre {
+    width: 90%;
+    margin: auto;
   }
-
-  .despre-cont-text {
+  .despreCont-text {
+    margin-top: 100px;
     width: 90%;
     margin-right: 5%;
     margin-left: 5%;
@@ -18,7 +45,13 @@
   }
 
   .despre-heading {
+    width: 200px;
+    margin: auto;
+    /* border: 1px solid #c1a267ff; */
     font-size: 22px;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px 0px;
   }
 
   .heading-quote-despre {
@@ -29,7 +62,9 @@
     padding-top: 300px;
     margin-left: 80px;
     margin-top: 0;
+    margin-bottom: 0;
     color: white;
+    padding-bottom: 30px;
   }
 
   .heading-quote-despre1 {
@@ -37,9 +72,10 @@
     font-family: Montserrat;
     width: 350px;
     font-size: 24px;
-    padding-top: 10px;
+    padding-top: 0px;
     margin-left: 80px;
     margin-top: 0;
+    margin-bottom: 0;
     color: white;
   }
 
@@ -51,17 +87,12 @@
     background-repeat: no-repeat;
     background-position: center;
   }
-
-  .despre-heading {
-    text-align: center;
-    font-size: 30px;
-  }
 }
 
 @media screen and (max-width: 800px) {
-  .brief-despre-noi {
+  /* .brief-despre-noi {
     height: 500px !important;
-  }
+  } */
   .text-despre {
     padding-top: 100px;
   }
@@ -76,14 +107,21 @@
     font-size: 22px;
   }
 
-  .despre-cont-text {
+  .despreCont-text {
     width: 90%;
     margin-right: 5%;
     margin-left: 5%;
     background-color: black;
-    font-size: 18px;
+    font-size: 1rem;
     color: white;
     font-family: Montserrat;
+    padding-bottom: 75px;
+  }
+  .briefText {
+    font-size: Montserrat;
+    text-align: left;
+    width: 100%;
+    font-size: 1rem;
   }
 
   .heading-quote-despre {
@@ -105,6 +143,11 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+  .despre-img {
+    border: 2px solid #c1a267ff;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
 
   .heading-quote-despre1 {
     z-index: 1;
@@ -118,7 +161,7 @@
   }
 
   .line-dec-ver-despre {
-    width: 0.5px;
+    width: 1px;
     height: 60px;
     background-color: #c1a267ff;
     position: absolute;

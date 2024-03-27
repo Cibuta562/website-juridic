@@ -16,6 +16,9 @@
   .despre-img {
     border: 2px solid #c1a267ff;
     padding: 0px;
+    width: 80%;
+    height: auto;
+    margin: auto;
   }
   .brief-despre-noi {
     /* height: 400px; */
@@ -79,6 +82,14 @@
     color: white;
   }
 
+  .briefText {
+    font-size: Montserrat;
+    text-align: left;
+    width: 80%;
+    margin: auto;
+    font-size: 1rem;
+  }
+
   .heading-cont-despre {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.6);
@@ -127,8 +138,12 @@
   .heading-quote-despre {
     z-index: 1;
     font-family: Montserrat;
-    width: 350px;
-    font-size: 24px;
+    /* width: 350px; */
+    /* width: 200px; */
+    /* 350 + 25  */
+    font-size: 25px;
+    max-width: 80%;
+
     padding-top: 220px;
     margin-left: 25px;
     margin-top: 0;
@@ -152,8 +167,9 @@
   .heading-quote-despre1 {
     z-index: 1;
     font-family: Montserrat;
-    width: 350px;
-    font-size: 24px;
+    max-width: 80%;
+    /* width: 200px; */
+    font-size: 25px;
     padding-top: 10px;
     margin-left: 25px;
     margin-top: 0;

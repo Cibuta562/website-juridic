@@ -4,8 +4,20 @@ import Subsol from "./subsol";
 import briefImg from "../assets/brief-img.jpg";
 import { Link } from "react-router-dom";
 import despre2 from "../assets/despre2.jpg";
+import upArrow from "../assets/arrow.png";
 
 function Despre() {
+  function moveToTop() {
+    if ("scrollBehavior" in document.documentElement.style) {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }
   return (
     <div style={{ backgroundColor: "black" }}>
       <Menu />
@@ -90,6 +102,9 @@ function Despre() {
         </div>
       </div>
       <Subsol />
+      <button className='btn-top' onClick={moveToTop}>
+        <img className='img-arrow' src={upArrow} alt={"btn-top"} />
+      </button>
     </div>
   );
 }

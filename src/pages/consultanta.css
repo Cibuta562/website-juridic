@@ -4,7 +4,7 @@
     font-family: Montserrat;
     width: 500px;
     font-size: 26px;
-    padding-top: 300px;
+    padding-top: 30vh;
     margin-left: 80px;
     margin-top: 0;
     margin-bottom: 0;
@@ -92,7 +92,8 @@
 
   .despre-cont-text {
     padding-top: 100px;
-    height: 100vh;
+    height: auto;
+    padding-bottom: 100px;
     width: 90%;
     margin-right: 5%;
     margin-left: 5%;
@@ -162,11 +163,11 @@
     font-size: 20px;
     font-family: Montserrat;
     padding: 10px 10px;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: 1px solid white;
     margin-left: 25px;
-    margin-top: 50vh;
+    margin-top: 30px;
   }
 
   .consultanta-cont {

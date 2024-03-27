@@ -3,6 +3,7 @@ import "./consultanta.css";
 import Menu from "../menu/menu";
 import Subsol from "./subsol";
 import { Link } from "react-router-dom";
+import upArrow from "../assets/arrow.png";
 
 function Consultanta() {
   const targetConsultantaOnline = useRef(null);
@@ -11,6 +12,17 @@ function Consultanta() {
     targetConsultantaOnline.current.scrollIntoView({ behavior: "smooth" });
   };
 
+  function moveToTop() {
+    if ("scrollBehavior" in document.documentElement.style) {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }
   return (
     <div style={{ backgroundColor: "black" }}>
       <Menu />
@@ -136,6 +148,9 @@ function Consultanta() {
           </div>
         </div>
       </div>
+      <button className='btn-top' onClick={moveToTop}>
+        <img className='img-arrow' src={upArrow} alt={"btn-top"} />
+      </button>
       <Subsol />
     </div>
   );

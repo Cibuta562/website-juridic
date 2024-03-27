@@ -1,6 +1,6 @@
-import { default as ro } from "../lang/data-ro.js";
-import translationsDE from "../lang/data-de";
-import React, { useRef, useState } from "react";
+import translationsRO from "../lang/data-ro.js";
+import translationsDE from "../lang/data-de.js";
+import React, { useRef, useState, useEffect } from "react";
 import "./menu.css";
 import ro_img from "../assets/romania-flag-square-icon-32.png";
 import de_img from "../assets/germany-flag-square-icon-32.png";
@@ -8,7 +8,30 @@ import menu_hamburger from "../assets/menu.png";
 import { Link } from "react-router-dom";
 
 const Menu = () => {
-  console.log(ro.pageTitleConsult);
+  // const [language, setLanguage] = useState("ro"); // Limba implicită este româna
+  // // Funcție pentru schimbarea limbii
+  // const switchLanguage = (lang) => {
+  //   setLanguage(lang);
+  //   // localStorage.setItem("selectedLanguage", lang); // Salvăm limba în localStorage
+  //   console.log("Limba schimbata in " + lang);
+  // };
+  // // useEffect(() => {
+  // //   const selectedLanguage = localStorage.getItem("selectedLanguage");
+  // //   if (selectedLanguage) {
+  // //     setLanguage(selectedLanguage);
+  // //   }
+  // // }, []);
+  // const getText = (key) => {
+  //   // Verificați limba selectată și returnați textul corespunzător din obiectul de traducere
+  //   if (language === "ro") {
+  //     return translationsRO[key] || "";
+  //   } else if (language === "de") {
+  //     return translationsDE[key] || "";
+  //   } else {
+  //     console.log("Limba nerecunoscuta sau neselectata");
+  //     return ""; // În cazul în care limba nu este recunoscută, returnăm un șir gol
+  //   }
+  // };
 
   const scrollRef = useRef(null);
   const [isMobileMenuVisible, setMobileMenuVisible] = useState(false);
@@ -93,8 +116,8 @@ const Menu = () => {
     <div className={`menu-container ${isMobileMenuVisible ? "active" : ""}`}>
       <div className='home-button' onClick={moveToTop}>
         <Link className='link-menu' style={{ display: "flex" }} to='/'>
-          <p style={{ color: "#C1A267" }}>{ro.pageTitleConsult}</p>
-          <p style={{ paddingLeft: "3px" }}>{ro.pageTitleJuridic}</p>
+          <p style={{ color: "#C1A267" }}>Consult - </p>
+          <p style={{ paddingLeft: "3px" }}>Juridic</p>
         </Link>
       </div>
 
@@ -128,10 +151,20 @@ const Menu = () => {
         {/*    </Link></div>*/}
         <div className='menu-lng'>
           <div className='main-category-img'>
-            <img className='img-ro-pc' src={ro_img} alt='Romanian flag' />
+            <img
+              className='img-ro-pc'
+              src={ro_img}
+              alt='Romanian flag'
+              // onClick={() => switchLanguage("ro")}
+            />
           </div>
           <div className='main-category-img1'>
-            <img className='img-de-pc' src={de_img} alt='German flag' />
+            <img
+              className='img-de-pc'
+              src={de_img}
+              alt='German flag'
+              // onClick={() => switchLanguage("de")}
+            />
           </div>
         </div>
       </div>
@@ -189,10 +222,20 @@ const Menu = () => {
           {/*</div>*/}
           <div className='menu-lng'>
             <div className='main-category-img'>
-              <img className='img-ro' src={ro_img} alt='Romanian flag' />
+              <img
+                className='img-ro'
+                src={ro_img}
+                alt='Romanian flag'
+                // onClick={() => switchLanguage("ro")}
+              />
             </div>
             <div className='main-category-img1'>
-              <img className='img-de' src={de_img} alt='German flag' />
+              <img
+                className='img-de'
+                src={de_img}
+                alt='German flag'
+                // onClick={() => switchLanguage("de")}
+              />
             </div>
           </div>
         </div>

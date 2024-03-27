@@ -3,6 +3,8 @@ export const translationsRO = {
   // menu.js
   pageTitleConsult: "Consult - ",
   pageTitleJuridic: "Juridic",
+  text: "Random",
+  homeHeadingQuote: " UN DREPT NEDOVEDIT ESTE PRECUM UN DREPT INEXISTENT",
 };
 
 export const DETALII_SERVICII = {

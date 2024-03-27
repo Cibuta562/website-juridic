@@ -1,7 +1,9 @@
 // data-de.js
 const translationsDE = {
-  pageTitle: "Startseite",
-  welcomeMessage: "Willkommen auf unserer Website!",
+  pageTitleConsult: "Startseite",
+  pageTitleJuridic: "Willkommen auf unserer Website!",
+  text: "GERMANA",
+  homeHeadingQuote: "GErr",
   // alte traduceri...
 };
 

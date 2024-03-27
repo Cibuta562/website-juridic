@@ -1,14 +1,3 @@
-/* .btn-servicii p {
-  background-color: rgba(0, 0, 0, 0);
-  border: 1px solid #c1a267ff;
-  color: white;
-  font-family: Montserrat;
-  height: 37px;
-  width: 190px;
-  text-align: left;
-  font-size: 16px;
-} */
-
 /* TEST MIKE */
 .edit-detalii-servicii button {
   margin-top: 1rem;
@@ -132,21 +121,25 @@
   }
 
   .desc-servicii {
-    height: 100px;
+    height: 6em;
     font-size: 1rem;
   }
   .desc-servicii ul {
     list-style-type: none; /* Remove default list item markers */
     margin-top: 0;
-    margin-bottom: 0;
+    /* margin-bottom: 0; */
+    padding-left: 1em;
+    text-indent: -1em;
+  }
+  .desc-servicii ul li {
+    padding-left: 1em;
+    text-indent: -1em;
   }
 
   .desc-servicii ul li::before {
-    content: "•"; /* Use a bullet character as content */
+    content: "»"; /* Use a bullet character as content */
     color: #c1a267ff; /* Change the color of the bullet */
-    display: inline-block;
-    width: 1em; /* Adjust the width of the bullet */
-    margin-right: 0.5em; /* Adjust the spacing between the bullet and the list item text */
+    padding-right: 5px;
   }
 
   .brief {
@@ -285,8 +278,10 @@
 
 @media screen and (max-width: 800px) {
   .desc-servicii {
-    width: 90%;
-    margin: auto;
+    width: 100%;
+    padding-left: 0px;
+    margin-left: 0px;
+    padding-right: 10px;
   }
   .brief-img-servicii {
     object-fit: cover;
@@ -471,18 +466,27 @@
   .close-detaliiServicii:hover {
     background-color: #4e3912;
   }
+
   .desc-servicii ul {
     list-style-type: none; /* Remove default list item markers */
     margin-top: 0;
-    margin-bottom: 20px;
-    padding-left: 0;
+    /* margin-bottom: 0; */
+    padding-left: 1em;
+    text-indent: -1em;
+  }
+  .desc-servicii ul li {
+    padding-left: 1em;
+    text-indent: -1em;
   }
 
   .desc-servicii ul li::before {
-    content: "•"; /* Use a bullet character as content */
+    content: "»"; /* Use a bullet character as content */
     color: #c1a267ff; /* Change the color of the bullet */
-    display: inline-block;
-    width: 1em; /* Adjust the width of the bullet */
-    margin-right: 0.5em; /* Adjust the spacing between the bullet and the list item text */
+    padding-right: 5px;
+  }
+}
+@media screen and (max-height: 450px) {
+  .desc-servicii {
+    height: 10em;
   }
 }

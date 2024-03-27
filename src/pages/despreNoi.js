@@ -5,8 +5,19 @@ import briefImg from "../assets/brief-img.jpg";
 import { Link } from "react-router-dom";
 import despre2 from "../assets/despre2.jpg";
 import upArrow from "../assets/arrow.png";
+import React, { useEffect, useState } from "react";
 
 function Despre() {
+  // const [language, setLanguage] = useState("ro"); // Limba implicită este româna
+
+  // Verifica limba selectată și setează limba implicită dacă nu există o limbă selectată
+  // useEffect(() => {
+  //   const selectedLanguage = localStorage.getItem("selectedLanguage");
+  //   if (selectedLanguage) {
+  //     setLanguage(selectedLanguage);
+  //   }
+  // }, []);
+
   function moveToTop() {
     if ("scrollBehavior" in document.documentElement.style) {
       window.scrollTo({

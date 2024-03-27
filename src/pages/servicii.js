@@ -171,10 +171,10 @@ const Servicii = () => {
                 <div className='line-dec-ver10'></div>
                 <p>{DETALII_SERVICII.btnDreptPenal.description}</p>
                 <p>{DETALII_SERVICII.btnDreptPenal.info}</p>
-                {/* <button
+                <button
                   className='close-detaliiServicii'
-                  onClick={() => handleSelectServiciuDreptPenal}
-                ></button> */}
+                  onClick={handleSelectServiciuDreptPenal}
+                ></button>
               </div>
             )}
           </div>
@@ -213,10 +213,10 @@ const Servicii = () => {
                 <div className='line-dec-ver10'></div>
                 <p>{DETALII_SERVICII.btnDreptCivil.description}</p>
                 <p>{DETALII_SERVICII.btnDreptCivil.info}</p>
-                {/* <button
+                <button
                   className='close-detaliiServicii'
                   onClick={handleSelectServiciuDreptCivil}
-                ></button> */}
+                ></button>
               </div>
             )}
           </div>
@@ -255,10 +255,10 @@ const Servicii = () => {
               <div className='line-dec-ver10'></div>
               <p>{DETALII_SERVICII.btnDreptRutier.description}</p>
               <p>{DETALII_SERVICII.btnDreptRutier.info}</p>
-              {/* <button
+              <button
                 className='close-detaliiServicii'
                 onClick={handleSelectServiciuDreptRutier}
-              ></button> */}
+              ></button>
             </div>
           )}
         </div>
@@ -300,10 +300,10 @@ const Servicii = () => {
                 <div className='line-dec-ver10'></div>
                 <p>{DETALII_SERVICII.btnDeclaratiiFiscale.description}</p>
                 <p>{DETALII_SERVICII.btnDeclaratiiFiscale.info}</p>
-                {/* <button
+                <button
                   className='close-detaliiServicii'
                   onClick={handleSelectServiciuDeclaratiiFiscale}
-                ></button> */}
+                ></button>
               </div>
             )}
           </div>
@@ -340,10 +340,10 @@ const Servicii = () => {
                 <div className='line-dec-ver10'></div>
                 <p>{DETALII_SERVICII.btnDreptulFamiliei.description}</p>
                 <p>{DETALII_SERVICII.btnDreptulFamiliei.info}</p>
-                {/* <button
+                <button
                   className='close-detaliiServicii'
                   onClick={handleSelectServiciuDreptulFamiliei}
-                ></button> */}
+                ></button>
               </div>
             )}
           </div>
@@ -382,10 +382,10 @@ const Servicii = () => {
               <div className='line-dec-ver10'></div>
               <p>{DETALII_SERVICII.btnDreptulMuncii.description}</p>
               <p>{DETALII_SERVICII.btnDreptulMuncii.info}</p>
-              {/* <button
+              <button
                 className='close-detaliiServicii'
                 onClick={handleSelectServiciuDreptulMuncii}
-              ></button> */}
+              ></button>
             </div>
           )}
         </div>

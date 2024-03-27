@@ -3,8 +3,24 @@ import heading from "../assets/heading.jpg";
 import upArrow from "../assets/arrow.png";
 import briefImg from "../assets/brief-img.jpg";
 import { Link } from "react-router-dom";
+import React, { useState } from "react";
+
+import translationsRO from "../lang/data-ro.js";
+import translationsDE from "../lang/data-de.js";
 
 function Heading() {
+  // const [language, setLanguage] = useState("ro"); // Limba implicită este româna
+  // const getText = (key) => {
+  //   // Verificați limba selectată și returnați textul corespunzător din obiectul de traducere
+  //   if (language === "ro") {
+  //     return translationsRO[key] || "";
+  //   } else if (language === "de") {
+  //     return translationsDE[key] || "";
+  //   } else {
+  //     console.log("Limba nerecunoscuta sau neselectata");
+  //     return ""; // În cazul în care limba nu este recunoscută, returnăm un șir gol
+  //   }
+  // };
   function moveToTop() {
     if ("scrollBehavior" in document.documentElement.style) {
       window.scrollTo({
@@ -24,6 +40,7 @@ function Heading() {
 
         <p className='heading-quote'>
           UN DREPT NEDOVEDIT ESTE PRECUM UN DREPT INEXISTENT
+          {/* {getText("homeHeadingQuote")} */}
         </p>
 
         <div>

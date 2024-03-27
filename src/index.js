@@ -7,6 +7,7 @@ import {BrowserRouter, Navigate, Route, Routes, useNavigate} from "react-router-
 import Despre from "./pages/despreNoi";
 import Consultanta from "./pages/consultanta";
 import Payment from "./pages/formPayment";
+import Terms from "./pages/terms";
 
 const Root = () => {
     const [isAuthenticated, setIsAuthenticated] = React.useState(false);
@@ -25,6 +26,7 @@ const Root = () => {
                 <Routes>
                     <Route path="/despre/noi" element={<Despre/>} />
                     <Route path="/consultanta" element={<Consultanta />} />
+                    <Route path="/termeni/si/conditii" element={<Terms />} />
                     {/*<Route path="/admin" element={<Admin />} />*/}
                     {/*<Route path="https://cibuta562.github.io/secure/payment/completed" element={<Payment />} />*/}
                     <Route path="/secure/payment/completed" element={<Payment />} />

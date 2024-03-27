@@ -6,6 +6,20 @@ import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
 import insta from "../assets/insta.png";
 import facebook from "../assets/facebook.svg";
 import linkedin from "../assets/linkedin.svg";
+import {Link} from "react-router-dom";
+import Terms from "./terms";
+
+function moveToTop() {
+  if ("scrollBehavior" in document.documentElement.style) {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  } else {
+    window.scrollTo(0, 0);
+  }
+}
 
 const Subsol = () => {
   return (
@@ -99,7 +113,11 @@ const Subsol = () => {
           © 2024 Consult-Juridic.
         </div>
         <div className='subsol-col2'>@generation salez</div>
-        <div className='subsol-col2'>terms & conditions</div>
+        <div className='subsol-col2'>
+          <Link to="/termeni/si/conditii" onClick={moveToTop} style={{textDecoration: "none", color: "black"}}>
+          terms & conditions
+          </Link>
+        </div>
         <div className='subsol-col2'>impressum</div>
       </div>
     </div>

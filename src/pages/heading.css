@@ -272,7 +272,7 @@
     height: 1px;
     background-color: #c1a267ff;
     margin-bottom: 25px;
-    margin-left: 20px;
+    margin-left: 25px;
   }
 
   .brief-img {
@@ -297,6 +297,7 @@
     padding-top: 30px;
     font-size: 24px;
     margin-bottom: 10px;
+    margin-left: 25px;
   }
 
   .brief-btn-1 {
@@ -320,7 +321,7 @@
     color: white;
     margin-top: 10px;
     font-size: 18px;
-    text-align: left;
-    padding-left: 15px;
+    text-align: CENTER;
+    margin-left: 25px;
   }
 }

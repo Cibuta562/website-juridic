@@ -101,7 +101,7 @@ function Heading() {
                 învoiți de la serviciu.
               </p>
             </div>
-            <div className='brief-btn' style={{ paddingLeft: "20px" }}>
+            <div className='brief-btn'>
               {/*<button className="brief-btn-1">*/}
               {/*    Contacteaza-ne >*/}
               {/*</button>*/}

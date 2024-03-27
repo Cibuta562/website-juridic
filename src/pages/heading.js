@@ -81,7 +81,7 @@ function Heading() {
         </div>
         <div className='second-brief'>
           <div>
-            <p className='brief-heading' style={{ paddingLeft: "20px" }}>
+            <p className='brief-heading' style={{ paddingLeft: "0px" }}>
               Consultanță Juridică
             </p>
             <div className='line-dec'></div>

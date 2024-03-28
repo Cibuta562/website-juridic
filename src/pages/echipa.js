@@ -15,7 +15,7 @@ const Echipa = () => {
           <div className="desc-echipa">
             <p className="membru-title">Lucian Niculescu</p>
             <p className="membru-desc">
-              avocat CNSA, membru al UNBR și BRAO Germania
+              avocat CNSA, membru al UNBR și BRAK Germania
             </p>
           </div>
         </div>

@@ -29,7 +29,7 @@ function Payment() {
             <div className="heading-payment">
                 <h1 className="payment-conf">Plata Dumneavoastra a fost procesata!</h1>
                 {/*<img className="img-check" src={check}/>*/}
-                <p className="payment-conf-p">Faceti click pe buton pentru a completa formularul pe email despre cazul dumneavostra</p>
+                <p className="payment-conf-p">Faceti click pe buton pentru a completa formularul pe email despre necesitatea dumneavostra</p>
                 <p className="payment-conf-p">Veti fi contactat de unul dinte avocatii nostri in maximum 24 de ore de la primirea mail-ului</p>
                 <button className="payment-btn" onClick={handleButtonClick}>
                     Catre formular

@@ -8,6 +8,7 @@ import Despre from "./pages/despreNoi";
 import Consultanta from "./pages/consultanta";
 import Payment from "./pages/formPayment";
 import Terms from "./pages/terms";
+import Soon from "./pages/soon";
 
 const Root = () => {
     const [isAuthenticated, setIsAuthenticated] = React.useState(false);
@@ -31,7 +32,7 @@ const Root = () => {
                     {/*<Route path="https://cibuta562.github.io/secure/payment/completed" element={<Payment />} />*/}
                     <Route path="/secure/payment/completed" element={<Payment />} />
                     <Route path="/website-juridic" element={<App />} />
-                    <Route path="/" element={<App />} />
+                    <Route path="/" element={<Soon />} />
                 </Routes>
             </BrowserRouter>
         </React.StrictMode>

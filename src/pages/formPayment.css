@@ -88,6 +88,31 @@
 
 @media screen and (min-width: 800px) {
 
+
+    .payment-conf-p{
+        color: white;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .payment-conf{
+        margin: 0;
+        padding-top: 80px;
+        font-family: 'Montserrat', serif;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 28px;
+        color: white;
+    }
+
+    .payment-btn{
+        margin-top: 40px;
+        margin-left: 20px;
+        padding: 8px 15px;
+        font-size: 18px;
+    }
+
     .payment-form{
         padding-bottom: 50px;
     }

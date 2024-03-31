@@ -39,8 +39,6 @@
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 60px;
-    /*border: 1px solid white;*/
-    /* height: 400px; */
   }
 
   .form-line {
@@ -218,22 +216,12 @@
     width: 90%;
     padding: 10px;
     font-size: 16px;
-    /*border: 1px solid #ccc;*/
-    /*border-radius: 5px;*/
     color: white;
     border: none;
     background-color: rgba(0, 0, 0, 0);
     font-family: Montserrat;
     text-align: left;
   }
-
-  /*.form-row {*/
-  /*    display: flex;*/
-  /*    width: 64%;*/
-  /*    margin-left: 18%;*/
-  /*    margin-right: 18%;*/
-  /*    justify-content: space-between;*/
-  /*}*/
 
   .decoration-line {
     border: none;

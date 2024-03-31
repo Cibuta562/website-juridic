@@ -1,46 +1,58 @@
-import './contact.css';
-import contact from '../assets/contact.jpg';
-import { useState } from 'react';
+import "./contact.css";
+import contact from "../assets/contact.jpg";
+
+import translationsRO from "../lang/data-ro.js"; // obiect de traducere RO
+import translationsDE from "../lang/data-de.js"; // obict de traducere GER
+import { useLanguage } from "../lang/LanguageContext"; // hook pentru LanguageContext
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    input1: '',
-    input2: '',
-    input3: '',
-    input4: '',
-    message: '',
-  });
+  // Importă hook-ul useLanguage pentru a accesa contextul limbii și funcțiile asociate
+  const { getText, language } = useLanguage();
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
+  // Alege fișierul de traducere corespunzător limbii selectate
+  let translations;
+  if (language === "ro") {
+    translations = translationsRO; // foloseste textul in RO
+  } else if (language === "de") {
+    translations = translationsDE; // foloseste textul in GER
+  }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-  };
+  // const [formData, setFormData] = useState({
+  //   input1: "",
+  //   input2: "",
+  //   input3: "",
+  //   input4: "",
+  //   message: "",
+  // });
+
+  // const handleInputChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData((prevState) => ({
+  //     ...prevState,
+  //     [name]: value,
+  //   }));
+  // };
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log(formData);
+  // };
 
   return (
     <div>
-      <div className="contact-img-cont">
-        <img className="contact-img" src={contact} alt="contact" />
+      <div className='contact-img-cont'>
+        <img className='contact-img' src={contact} alt='contact' />
       </div>
-      <div className="contact-form">
-        <p className="contact-heading">Contact</p>
-        <div className="line-dec-cont"></div>
-        <div className="form-cont">
-          <p className="text-cont">
-            Pentru programari la sediu din Romania, București, vă rugăm să ne
-            trimiteți un e-mail cu nume, prenume, domeniul de drept (civil
-            penal, etc) la adresa:
-          </p>
+      <div className='contact-form'>
+        <p className='contact-heading'>
+          {getText(translations, "contactTitle")}
+        </p>
+        <div className='line-dec-cont'></div>
+        <div className='form-cont'>
+          <p className='text-cont'>{getText(translations, "contactText")}</p>
 
-          <p className="text-cont">
-            <a className="link-email" href="mailto:romania@consult-juridic.eu">
+          <p className='text-cont'>
+            <a className='link-email' href='mailto:romania@consult-juridic.eu'>
               romania@consult-juridic.eu
             </a>
           </p>

@@ -6,8 +6,12 @@ import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
 import insta from "../assets/insta.png";
 import facebook from "../assets/facebook.svg";
 import linkedin from "../assets/linkedin.svg";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Terms from "./terms";
+import { useLanguage } from "../lang/LanguageContext";
+
+import translationsRO from "../lang/data-ro.js";
+import translationsDE from "../lang/data-de.js";
 
 function moveToTop() {
   if ("scrollBehavior" in document.documentElement.style) {
@@ -22,18 +26,24 @@ function moveToTop() {
 }
 
 const Subsol = () => {
+  const { getText, language } = useLanguage();
+  let translations;
+
+  // Alege fișierul de traducere corespunzător limbii selectate
+  if (language === "ro") {
+    translations = translationsRO;
+  } else if (language === "de") {
+    translations = translationsDE;
+  }
+
   return (
     <div style={{ backgroundColor: "white" }}>
       <div className='subsol-row'>
         <div className='subsol-col'>
           <p className='subsol-adv' style={{ paddingTop: "0px" }}>
-            Folosiți numărul de telefon de mai jos sau adresa de email, exclusiv
-            în situații de urgență.
+            {getText(translations, "subsolText1")}
           </p>
-          <p className='subsol-adv'>
-            Pentru programari la sediu, vă rugam folosiți datele de contact de
-            mai sus.
-          </p>
+          <p className='subsol-adv'>{getText(translations, "subsolText2")}</p>
         </div>
         <div className='subsol-col subsol-padding'>
           <div className='subsol-flex'>
@@ -85,13 +95,19 @@ const Subsol = () => {
         <div className='subsol-col calendarIcon'>
           {/* <FontAwesomeIcon icon={faCalendarAlt} /> */}
           <div className='subsol-flex'>
-            <p className='subsol-schedule'>luni - joi : 9:00 - 18:30</p>
+            <p className='subsol-schedule'>
+              {getText(translations, "subsolSchedule1")}
+            </p>
           </div>
           <div className='subsol-flex'>
-            <p className='subsol-schedule'>vineri : 8:00 - 18:00</p>
+            <p className='subsol-schedule'>
+              {getText(translations, "subsolSchedule2")}
+            </p>
           </div>
           <div className='subsol-flex'>
-            <p className='subsol-schedule'>sambata : 9:30 - 15:00</p>
+            <p className='subsol-schedule'>
+              {getText(translations, "subsolSchedule3")}
+            </p>
           </div>
         </div>
         <div className='subsol-dec-hor'></div>
@@ -114,8 +130,12 @@ const Subsol = () => {
         </div>
         <div className='subsol-col2'>@generation salez</div>
         <div className='subsol-col2'>
-          <Link to="/termeni/si/conditii" onClick={moveToTop} style={{textDecoration: "none", color: "black"}}>
-          terms & conditions
+          <Link
+            to='/termeni/si/conditii'
+            onClick={moveToTop}
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            terms & conditions
           </Link>
         </div>
         <div className='subsol-col2'>impressum</div>

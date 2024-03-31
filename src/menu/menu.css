@@ -1,25 +1,25 @@
-.img-ro-pc:hover,
-.img-de-pc:hover {
-  cursor: pointer;
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  color: #c1a267;
+  background-color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 3;
 }
 
 .link-menu {
   text-decoration: none;
   color: white;
-}
-
-.menu-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 0px;
-  position: fixed;
-  width: 100%;
-  color: white;
-  background-color: black;
-  font-family: "Montserrat", serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  z-index: 3;
+}
+.link-menu .meniu-consult {
+  color: #c1a267;
+}
+.link-menu .meniu-juridic {
+  padding-left: 5px;
 }
 
 .home-button {
@@ -32,7 +32,13 @@
 
 .menu-lng {
   display: flex;
-  padding-right: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.img-ro-pc:hover,
+.img-de-pc:hover {
+  cursor: pointer;
 }
 
 .img-ro {
@@ -48,7 +54,7 @@
 
 .img-ro-pc {
   margin: 5px;
-  margin-left: 15px;
+  /* margin-left: 15px; */
   border: 1px solid white;
   height: 25px;
   width: 25px;
@@ -62,11 +68,6 @@
   width: 25px;
 }
 
-.img-depc {
-  margin: 5px;
-  border: 1px solid white;
-}
-
 .home-button {
   margin-right: 10px;
   display: flex;
@@ -78,11 +79,13 @@
 
 /* Desktop styles - visible when screen width is 768px or more */
 @media screen and (min-width: 800px) {
-  /* .link-menu:hover {
+  .desktop-menu {
+    display: flex;
+  }
+  .active {
+    border-bottom: 1px solid #fff;
     padding-bottom: 0.3rem;
-    border-bottom: 1px solid white;
-  } */
-
+  }
   .btn-menu-hover:hover {
     border-bottom: 1px solid #fff;
     padding-bottom: 0.3rem;
@@ -91,22 +94,18 @@
     display: none;
   }
 
-  .desktop-menu {
-    display: flex;
-  }
-
   .main-category {
     margin-right: 15px;
-    margin-top: 9px;
+    margin-top: 10px;
   }
 }
 
 /* Mobile styles - visible when screen width is less than 768px */
 @media screen and (max-width: 800px) {
+  /* ... */
   .menu-container {
-    transition: background-color 0.3s ease, color 0.3s ease;
     border: none;
-    height: 55px;
+    font-size: 24px;
   }
 
   .desktop-menu {
@@ -133,7 +132,7 @@
     top: calc(100% + 0px);
     left: 0;
     width: 100%;
-    background-color: #000000;
+    background-color: #000;
     z-index: 3;
     color: #ffffff;
     transition: max-height 0.7s ease-out, background-color 0.3s ease,
@@ -146,7 +145,7 @@
 
   .main-category {
     padding: 15px;
-    /*border-bottom: 1px solid #ccc;*/
+    /* border-bottom: 1px solid #ccc; */
     transition: background-color 0.5s ease, color 0.5s ease;
   }
 
@@ -157,8 +156,8 @@
 
   .dec-line {
     display: block;
-    height: 1px;
-    background-color: #c1a267ff;
+    height: 2px;
+    background-color: #c1a267;
     width: 50px;
     margin-left: 15px;
     margin-top: -5px;
@@ -166,13 +165,11 @@
 
   .menu-lng {
     margin-top: 30px;
+    margin-right: 0;
+    margin-left: 0;
   }
 
   .mobile-menu {
-    font-size: 24px;
-  }
-
-  .menu-container {
     font-size: 24px;
   }
 }

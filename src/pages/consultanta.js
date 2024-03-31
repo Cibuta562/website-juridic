@@ -1,11 +1,24 @@
-import React, { useRef } from "react";
 import "./consultanta.css";
-import Menu from "../menu/menu";
-import Subsol from "./subsol";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import upArrow from "../assets/arrow.png";
 
+import translationsRO from "../lang/data-ro.js"; // obiect de traducere RO
+import translationsDE from "../lang/data-de.js"; // obict de traducere GER
+import { useLanguage } from "../lang/LanguageContext"; // hook pentru LanguageContext
+
 function Consultanta() {
+  // Importă hook-ul useLanguage pentru a accesa contextul limbii și funcțiile asociate
+  const { getText, language } = useLanguage();
+
+  // Alege fișierul de traducere corespunzător limbii selectate
+  let translations;
+  if (language === "ro") {
+    translations = translationsRO; // foloseste textul in RO
+  } else if (language === "de") {
+    translations = translationsDE; // foloseste textul in GER
+  }
+
   const targetConsultantaOnline = useRef(null);
 
   const scrollToConsultantaOnline = () => {
@@ -25,12 +38,11 @@ function Consultanta() {
   }
   return (
     <div style={{ backgroundColor: "black" }}>
-      <Menu />
       <div className='heading-cont-consultanta'>
         <div className='dark-overlay'></div>
 
         <p className='heading-quote-consultanta'>
-          - CONSULTANȚĂ JURIDICĂ PE EMAIL -
+          {getText(translations, "consultantaHeading")}
         </p>
 
         <div>
@@ -39,7 +51,7 @@ function Consultanta() {
               className='btn-heading-consultanta btn-hover'
               onClick={scrollToConsultantaOnline}
             >
-              Consultanță Online
+              {getText(translations, "btnHeadingText")}
             </button>
           </Link>
         </div>
@@ -48,87 +60,67 @@ function Consultanta() {
         <div className='consultanta-desc-text'>
           <div className='consultanta-dec-text'>
             <p className='despre-p' style={{ paddingTop: "20px" }}>
-              Respectăm confidențialitatea și aplicăm permanent măsuri de
-              securitate în ceea ce privește informațiile personale și cele de
-              business ale clienților. Solicităm aceste informații pentru a
-              îmbunătăți calitatea serviciilor pe care le oferim.
+              {getText(translations, "consultantaText1")}
             </p>
             <p className='despre-p'>
-              Nu împărtășim informațiile personale cu alte companii, organizații
-              sau indivizi.
+              {getText(translations, "consultantaText2")}
             </p>
           </div>
           <div className='consultanta-dec'></div>
         </div>
         <div className='consultanta-desc-text2'>
           <p className='despre-p'>
-            Pe site-ul nostru puteţi obţine rapid şi ieftin consultaţii juridice
-            online privind dreptul german sau drept romanesc. Astfel, evitați
-            timpul pierdut cu programarea întâlnirii la birou, cu deplasarea și
-            mai ales nu mai este nevoie să vă învoiți de la serviciu.
+            {getText(translations, "consultantaText3")}
           </p>
           <p className='despre-p'>
-            Pentru a solicita o consultaţie juridică online, trebuie să
-            completaţi un formular în care sa ne specificaţi numele, numărul de
-            telefon pentru contact, adresa de email ale Dvs şi să ne descrieţi
-            problema juridică pe care o aveţi.{" "}
+            {getText(translations, "consultantaText4")}
             <p style={{ fontWeight: "lighter", padding: "0", margin: "0" }}>
-              * Puteţi ataşa până la 5 documente scanate în format JPG sau PDF
-              *.
+              {getText(translations, "consultantaText5")}
             </p>
           </p>
           <p className='despre-p'>
-            Veți comunica cu un avocat, care va răspunde clarificat întrebărilor
-            dumneavoastră. În maxim 24 de ore veți primi o consultație scrisă,
-            detaliată de la un avocat specializat. În timp, avocatul specializat
-            va analiza situația juridică prezentată, va stabili legislația
-            aplicabilă, iar ulterior va oferi informații juridice temeinice.
+            {getText(translations, "consultantaText6")}
           </p>
-          <div className='consultanta-dec'></div>
+          <div className='consultanta-dec2'></div>
         </div>
         <div className='despre-cont-text' ref={targetConsultantaOnline}>
           <p
             style={{ fontSize: "24px" }}
             className='despre-heading-consultanta'
           >
-            Consultanță juridică pe E-mail
+            {getText(translations, "consultantaText7")}
           </p>
           <div className='dec-consultanta'></div>
           <div className='text-despre-consultanta'>
             <p className='despre-p'>
-              1. Alegeți domeniul de drept al problemei dumneavoastră.
-            </p>
-            <p className='despre-p'>2. Introduceți datele de contact.</p>
-            <p className='despre-p'>
-              3. Descrieți cat mai detaliat problema juridică.
+              {getText(translations, "consultantaText8")}
             </p>
             <p className='despre-p'>
-              4. După caz, atașați în format .pdf sau .jpg documentele{" "}
+              {getText(translations, "consultantaText9")}
+            </p>
+            <p className='despre-p'>
+              {getText(translations, "consultantaText10")}
+            </p>
+            <p className='despre-p'>
+              {getText(translations, "consultantaText11")}
               <span style={{ fontWeight: "lighter" }}>
-                (poze cât mai lizibile).
+                {getText(translations, "consultantaLizibil")}
               </span>
             </p>
-            <p className='despre-p'>5. Achitați onorariul afișat.</p>
             <p className='despre-p'>
-              6. Imediat dupa procesarea plății situația juridică prezentată de
-              dumneavoastră va fi analizată de unul din specialiștii noștri.
+              {getText(translations, "consultantaText12")}
             </p>
             <p className='despre-p'>
-              7. În maxim 12 de ore de la procesarea plații unul din
-              specialiștii noștri va răspunde pe emailul indicat de dvs, iar
-              după caz, veți primi documentele solicitate. De asemenea, veți
-              primi datele de contact ale avocatului pentru eventuale detalii
-              finale.
+              {getText(translations, "consultantaText13")}
             </p>
             <p className='despre-p'>
-              8. Într-o eventuală discuție telefonică, finală, toate întrebările
-              restante privind situația juridică prezentată, pot fi discutate cu
-              avocatul care v-a răspuns.
+              {getText(translations, "consultantaText14")}
             </p>
             <p className='despre-p'>
-              Biroul nostru va asigura consultanță juridică atât pentru
-              cetățenii români rezidenți în Germania, cât și pentru cetățenii
-              nemți care se confruntă cu situații juridice în România.
+              {getText(translations, "consultantaText15")}
+            </p>
+            <p className='despre-p'>
+              {getText(translations, "consultantaText16")}
             </p>
             <br />
             <a
@@ -141,7 +133,7 @@ function Consultanta() {
                   target='_blank'
                   style={{ textDecoration: "none", color: "white" }}
                 >
-                  TRIMITE EMAIL
+                  {getText(translations, "consultantaTrimiteEmail")}
                 </a>
               </button>
             </a>
@@ -151,7 +143,7 @@ function Consultanta() {
       <button className='btn-top' onClick={moveToTop}>
         <img className='img-arrow' src={upArrow} alt={"btn-top"} />
       </button>
-      <Subsol />
+      {/* <Subsol /> */}
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import "./servicii.css";
-import penal from "../assets/heading.jpg";
-import briefImg from "../assets/brief-img.jpg";
+import React, { useState } from "react";
 import servicii1 from "../assets/servicii1.jpg";
 import servicii2 from "../assets/servicii2.jpg";
 import servicii3 from "../assets/servicii3.jpg";
@@ -8,25 +7,37 @@ import servicii4 from "../assets/servicii4.jpg";
 import servicii5 from "../assets/servicii5.jpg";
 import servicii6 from "../assets/servicii6.jpg";
 import briefDown from "../assets/brief-down.jpg";
-import { useState } from "react";
+
 import TapButton from "./TapServicii";
 import { DETALII_SERVICII } from "../lang/data-ro";
-import React, { useRef } from "react";
+
+import translationsRO from "../lang/data-ro.js"; // obiect de traducere RO
+import translationsDE from "../lang/data-de.js"; // obict de traducere GER
+import { useLanguage } from "../lang/LanguageContext"; // hook pentru LanguageContext
 
 const Servicii = () => {
-  const [selectedServiciuRowZero, setSelectedServiciuRowZero] = useState();
-  {
-    /* useState pentru selectarea butonului din meniul de servicii de pe randul 0 */
+  // Importă hook-ul useLanguage pentru a accesa contextul limbii și funcțiile asociate
+  const { getText, language } = useLanguage();
+
+  // Alege fișierul de traducere corespunzător limbii selectate
+  let translations;
+  if (language === "ro") {
+    translations = translationsRO; // foloseste textul in RO
+  } else if (language === "de") {
+    translations = translationsDE; // foloseste textul in GER
   }
+
+  /* useState pentru selectarea butonului din meniul de servicii de pe randul 0 */
+  const [selectedServiciuRowZero, setSelectedServiciuRowZero] = useState();
+
   // functie care seteaza butonul ca `activ` din meniul de servicii de pe randul 0
   function handleSelectServiciuRowZero(selectedButtonRowZero) {
     setSelectedServiciuRowZero(selectedButtonRowZero);
   }
 
+  /* useState pentru selectarea butonului din meniul de servicii de pe randul 1 */
   const [selectedServiciuRowOne, setSelectedServiciuRowOne] = useState();
-  {
-    /* useState pentru selectarea butonului din meniul de servicii de pe randul 1 */
-  }
+
   // functie care seteaza butonul ca `activ` din meniul de servicii de pe randul 1
   function handleSelectServiciuRowOne(selectedButtonRowOne) {
     setSelectedServiciuRowOne(selectedButtonRowOne);
@@ -74,7 +85,7 @@ const Servicii = () => {
     );
   }
   const isMobile = window.innerWidth < 800;
-
+  // mobile states
   const [selectedServiciiMobile, setSelectedServiciiMobile] = useState({
     dreptPenal: false,
     dreptCivil: false,
@@ -83,41 +94,42 @@ const Servicii = () => {
     dreptulFamiliei: false,
     dreptulMuncii: false,
   });
-
+  // drept penal mobile
   function handleSelectServiciuDreptPenal() {
     setSelectedServiciiMobile((prevState) => ({
       ...prevState,
       dreptPenal: !prevState.dreptPenal,
     }));
   }
-
+  // drept civil mobile
   function handleSelectServiciuDreptCivil() {
     setSelectedServiciiMobile((prevState) => ({
       ...prevState,
       dreptCivil: !prevState.dreptCivil,
     }));
   }
-
+  // drept rutier mobile
   function handleSelectServiciuDreptRutier() {
     setSelectedServiciiMobile((prevState) => ({
       ...prevState,
       dreptRutier: !prevState.dreptRutier,
     }));
   }
+  // declaratii fiscale mobile
   function handleSelectServiciuDeclaratiiFiscale() {
     setSelectedServiciiMobile((prevState) => ({
       ...prevState,
       declaratiiFiscale: !prevState.declaratiiFiscale,
     }));
   }
-
+  // dreptul familiei mobile
   function handleSelectServiciuDreptulFamiliei() {
     setSelectedServiciiMobile((prevState) => ({
       ...prevState,
       dreptulFamiliei: !prevState.dreptulFamiliei,
     }));
   }
-
+  // dreptul muncii mobile
   function handleSelectServiciuDreptulMuncii() {
     setSelectedServiciiMobile((prevState) => ({
       ...prevState,
@@ -128,8 +140,13 @@ const Servicii = () => {
   return (
     <div>
       <div className='servicii-cont'>
-        <p className='servicii-title'>Servicii Juridice</p>
-        <p className='servicii-subtitle'>drept român / german</p>
+        <p className='servicii-title'>
+          {getText(translations, "serviciiTitle")}
+        </p>
+        <p className='servicii-subtitle'>
+          {" "}
+          {getText(translations, "serviciiSubtitle")}
+        </p>
         <div className='line-dec-ver'></div>
 
         {/* row - servicii - 0 : Drept Penal / Drept Civil / Drept Rutier */}
@@ -139,15 +156,15 @@ const Servicii = () => {
               <img src={servicii1} alt='img penal' className='img-serv' />
             </div>
             <div className='text-servicii'>
-              <p className='heading-servicii'> Drept Penal </p>
+              <p className='heading-servicii'>
+                {" "}
+                {getText(translations, "dreptPenalTitle")}
+              </p>
               <p className='desc-servicii'>
                 <ul>
-                  <li>
-                    asistență cu reprezentare mandate internaționale de
-                    extrădare
-                  </li>
-                  <li>recunoașteri sentințe penale</li>
-                  <li>asistență infracțiuni economice</li>
+                  <li>{getText(translations, "dreptPenalLi1")}</li>
+                  <li>{getText(translations, "dreptPenalLi2")}</li>
+                  <li>{getText(translations, "dreptPenalLi3")}</li>
                 </ul>
               </p>
 
@@ -161,7 +178,7 @@ const Servicii = () => {
                   handleSelectServiciuDreptPenal();
                 }}
               >
-                Mai multe detalii
+                {getText(translations, "btnMaiMulteDetalii")}
               </TapButton>
             </div>
             {/* {dreptPenalMobile} */}
@@ -180,16 +197,18 @@ const Servicii = () => {
           </div>
           <div className='col-servicii'>
             <div>
-              <img src={servicii2} alt='img penal' className='img-serv' />
+              <img src={servicii2} alt='img civil' className='img-serv' />
             </div>
             <div className='text-servicii'>
-              <p className='heading-servicii'> Drept Civil </p>
+              <p className='heading-servicii'>
+                {getText(translations, "dreptCivilTitle")}
+              </p>
               <p className='desc-servicii'>
                 <ul type='square'>
-                  <li>recuperari creanțe</li>
-                  <li>pretenții financiare</li>
-                  <li>partaj succesoral</li>
-                  <li>contracte comerciale</li>
+                  <li>{getText(translations, "dreptCivilLi1")}</li>
+                  <li>{getText(translations, "dreptCivilLi2")}</li>
+                  <li>{getText(translations, "dreptCivilLi3")}</li>
+                  <li>{getText(translations, "dreptCivilLi4")}</li>
                 </ul>
               </p>
 
@@ -203,7 +222,7 @@ const Servicii = () => {
                   handleSelectServiciuDreptCivil();
                 }}
               >
-                Mai multe detalii
+                {getText(translations, "btnMaiMulteDetalii")}
               </TapButton>
             </div>
             {/* {dreptCivilMobile} */}
@@ -222,15 +241,18 @@ const Servicii = () => {
           </div>
           <div className='col-servicii'>
             <div>
-              <img src={servicii3} alt='img penal' className='img-serv' />
+              <img src={servicii3} alt='img rutier' className='img-serv' />
             </div>
             <div className='text-servicii'>
-              <p className='heading-servicii'> Drept Rutier </p>
+              <p className='heading-servicii'>
+                {" "}
+                {getText(translations, "dreptRutierTitle")}
+              </p>
               <p className='desc-servicii'>
                 <ul type='square'>
-                  <li>sancțiuni contravenționale cu elemente de externitate</li>
-                  <li>infracțiuni la regimul rutier</li>
-                  <li>accidente rutiere</li>
+                  <li>{getText(translations, "dreptRutierLi1")}</li>
+                  <li>{getText(translations, "dreptRutierLi2")}</li>
+                  <li>{getText(translations, "dreptRutierLi3")}</li>
                 </ul>
               </p>
 
@@ -244,7 +266,7 @@ const Servicii = () => {
                   handleSelectServiciuDreptRutier();
                 }}
               >
-                Mai multe detalii
+                {getText(translations, "btnMaiMulteDetalii")}
               </TapButton>
             </div>
           </div>
@@ -270,14 +292,20 @@ const Servicii = () => {
         <div className='row-servicii1 edit-detalii-servicii'>
           <div className='col-servicii'>
             <div>
-              <img src={servicii4} alt='img penal' className='img-serv' />
+              <img
+                src={servicii4}
+                alt='img declaratii fiscale'
+                className='img-serv'
+              />
             </div>
             <div className='text-servicii'>
-              <p className='heading-servicii'> Declarații Fiscale </p>
+              <p className='heading-servicii'>
+                {getText(translations, "declaratiiFiscaleTitle")}
+              </p>
               <p className='desc-servicii'>
                 <ul type='square'>
-                  <li>depunere acte contabile la timp</li>
-                  <li>corespondența cu autoritățile fiscale germane</li>
+                  <li>{getText(translations, "declaratiiFiscaleLi1")}</li>
+                  <li>{getText(translations, "declaratiiFiscaleLi2")}</li>
                 </ul>
               </p>
 
@@ -291,7 +319,7 @@ const Servicii = () => {
                   handleSelectServiciuDeclaratiiFiscale();
                 }}
               >
-                Mai multe detalii
+                {getText(translations, "btnMaiMulteDetalii")}
               </TapButton>
             </div>
             {isMobile && selectedServiciiMobile.declaratiiFiscale && (
@@ -309,16 +337,23 @@ const Servicii = () => {
           </div>
           <div className='col-servicii'>
             <div>
-              <img src={servicii5} alt='img penal' className='img-serv' />
+              <img
+                src={servicii5}
+                alt='img dreptul familiei'
+                className='img-serv'
+              />
             </div>
             <div className='text-servicii'>
-              <p className='heading-servicii'> Dreptul Familiei </p>
+              <p className='heading-servicii'>
+                {" "}
+                {getText(translations, "dreptulFamilieiTitle")}
+              </p>
               <p className='desc-servicii'>
                 <ul type='square'>
-                  <li>divorț</li>
-                  <li>partaj</li>
-                  <li>exercitare autoritate părintească</li>
-                  <li>stabilire/recuperare pensie de întreținere</li>
+                  <li>{getText(translations, "dreptulFamilieiLi1")}</li>
+                  <li>{getText(translations, "dreptulFamilieiLi2")}</li>
+                  <li>{getText(translations, "dreptulFamilieiLi3")}</li>
+                  <li>{getText(translations, "dreptulFamilieiLi4")}</li>
                 </ul>
               </p>
               {/* buton mai multe detalii pentru `Dreptul Familiei` */}
@@ -331,7 +366,7 @@ const Servicii = () => {
                   handleSelectServiciuDreptulFamiliei();
                 }}
               >
-                Mai multe detalii
+                {getText(translations, "btnMaiMulteDetalii")}
               </TapButton>
             </div>
             {isMobile && selectedServiciiMobile.dreptulFamiliei && (
@@ -349,17 +384,24 @@ const Servicii = () => {
           </div>
           <div className='col-servicii'>
             <div>
-              <img src={servicii6} alt='img penal' className='img-serv' />
+              <img
+                src={servicii6}
+                alt='img dreptul muncii'
+                className='img-serv'
+              />
             </div>
             <div className='text-servicii'>
-              <p className='heading-servicii'> Dreptul Muncii </p>
+              <p className='heading-servicii'>
+                {" "}
+                {getText(translations, "dreptulMunciiTitle")}
+              </p>
               <p className='desc-servicii'>
                 <ul type='square'>
-                  <li>detașări pe teritoriul UE</li>
-                  <li>formulare A1</li>
-                  <li>contracte de muncă internaționale</li>
-                  <li>recuperări salarii</li>
-                  <li>munca fără forme legale</li>
+                  <li>{getText(translations, "dreptulMunciiLi1")}</li>
+                  <li>{getText(translations, "dreptulMunciiLi2")}</li>
+                  <li>{getText(translations, "dreptulMunciiLi3")}</li>
+                  <li>{getText(translations, "dreptulMunciiLi4")}</li>
+                  <li>{getText(translations, "dreptulMunciiLi5")}</li>
                 </ul>
               </p>
               {/* buton mai multe detalii pentru `Dreptul Muncii` */}
@@ -372,7 +414,7 @@ const Servicii = () => {
                   handleSelectServiciuDreptulMuncii();
                 }}
               >
-                Mai multe detalii
+                {getText(translations, "btnMaiMulteDetalii")}
               </TapButton>
             </div>
           </div>
@@ -398,26 +440,20 @@ const Servicii = () => {
         <div className='brief-servicii'>
           <div className='second-brief-servicii'>
             <div className='div-servicii'>
-              <p className='brief-heading'>Cum te putem ajuta</p>
+              <p className='brief-heading'>
+                {getText(translations, "briefServiciiHeading")}
+              </p>
               <div className='line-dec'></div>
               <div className='brief-text'>
                 <p>
-                  Dacă ați primit un formular de la o instituție germană, cum ar
-                  fi: Finanțe (Finazamt), Primărie (Rathaus), Poliție
-                  (Polizeiamt), Înregistrare firme (Gewerbeamt) și nu știți să-l
-                  completați sau unde să-l trimiteți, vă putem ajuta noi.
-                  <p>
-                    Ne veți putea trimite documentul primit împreună cu datele
-                    de identificare iar noi îl vom completa. Ulterior veți primi
-                    pe adresa dumneavoastră de email documentul împreună cu
-                    îndrumarile necesare.
-                  </p>
+                  {getText(translations, "briefServiciiText1")}
+                  <p>{getText(translations, "briefServiciiText2")}</p>
                 </p>
               </div>
             </div>
           </div>
           <div className='first-brief-servicii'>
-            <img className='brief-img-servicii' src={briefDown} />
+            <img className='brief-img-servicii' src={briefDown} alt='' />
           </div>
         </div>
       </div>

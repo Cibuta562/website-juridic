@@ -21,12 +21,9 @@
     margin: auto;
   }
   .brief-despre-noi {
-    /* height: 400px; */
-    padding-bottom: 150px;
     padding-top: 50px;
     display: flex;
     align-items: center;
-    /* font-weight: bolder; */
   }
   .despre-cont {
     width: 100%;
@@ -38,7 +35,8 @@
     margin: auto;
   }
   .despreCont-text {
-    margin-top: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     width: 90%;
     margin-right: 5%;
     margin-left: 5%;
@@ -83,7 +81,7 @@
   }
 
   .briefText {
-    font-size: Montserrat;
+    /* font-size: Montserrat; */
     text-align: left;
     width: 80%;
     margin: auto;
@@ -101,9 +99,6 @@
 }
 
 @media screen and (max-width: 800px) {
-  /* .brief-despre-noi {
-    height: 500px !important;
-  } */
   .text-despre {
     padding-top: 100px;
   }
@@ -126,28 +121,18 @@
     font-size: 1rem;
     color: white;
     font-family: Montserrat;
-    padding-bottom: 75px;
+    padding-bottom: 50px;
+    padding-top: 50px;
   }
   .briefText {
-    font-size: Montserrat;
+    /* font-size: Montserrat; */
     text-align: left;
     width: 100%;
     font-size: 1rem;
   }
 
-  .heading-quote-despre {
-    z-index: 1;
-    font-family: Montserrat;
-    /* width: 350px; */
-    /* width: 200px; */
-    /* 350 + 25  */
-    font-size: 25px;
-    max-width: 80%;
-
-    padding-top: 220px;
-    margin-left: 25px;
+  .second-brief-despre {
     margin-top: 0;
-    color: white;
   }
 
   .heading-cont-despre {
@@ -161,14 +146,27 @@
   .despre-img {
     border: 2px solid #c1a267ff;
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+  }
+
+  .heading-quote-despre {
+    z-index: 1;
+    font-family: Montserrat;
+    font-size: 25px;
+    max-width: 80%;
+    padding-top: 20vh;
+    margin-left: 25px;
+    margin-right: 15px;
+    margin-bottom: 0;
+    padding-bottom: 30px;
+    margin-top: 0;
+    color: white;
   }
 
   .heading-quote-despre1 {
     z-index: 1;
     font-family: Montserrat;
-    max-width: 80%;
-    /* width: 200px; */
+    max-width: 100%;
     font-size: 25px;
     padding-top: 10px;
     margin-left: 25px;

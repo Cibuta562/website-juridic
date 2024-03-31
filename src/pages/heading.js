@@ -1,26 +1,27 @@
 import "./heading.css";
-import heading from "../assets/heading.jpg";
+import React from "react";
+// import heading from "../assets/heading.jpg";
 import upArrow from "../assets/arrow.png";
 import briefImg from "../assets/brief-img.jpg";
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
 
-import translationsRO from "../lang/data-ro.js";
-import translationsDE from "../lang/data-de.js";
+import translationsRO from "../lang/data-ro.js"; // obiect de traducere RO
+import translationsDE from "../lang/data-de.js"; // obict de traducere GER
+import { useLanguage } from "../lang/LanguageContext"; // hook pentru LanguageContext
 
 function Heading() {
-  // const [language, setLanguage] = useState("ro"); // Limba implicită este româna
-  // const getText = (key) => {
-  //   // Verificați limba selectată și returnați textul corespunzător din obiectul de traducere
-  //   if (language === "ro") {
-  //     return translationsRO[key] || "";
-  //   } else if (language === "de") {
-  //     return translationsDE[key] || "";
-  //   } else {
-  //     console.log("Limba nerecunoscuta sau neselectata");
-  //     return ""; // În cazul în care limba nu este recunoscută, returnăm un șir gol
-  //   }
-  // };
+  // Importă hook-ul useLanguage pentru a accesa contextul limbii și funcțiile asociate
+  const { getText, language } = useLanguage();
+
+  // Alege fișierul de traducere corespunzător limbii selectate
+  let translations;
+  if (language === "ro") {
+    translations = translationsRO; // foloseste textul in RO
+  } else if (language === "de") {
+    translations = translationsDE; // foloseste textul in GER
+  }
+
+  // functie pentru derularea la inceputul paginii
   function moveToTop() {
     if ("scrollBehavior" in document.documentElement.style) {
       window.scrollTo({
@@ -34,86 +35,84 @@ function Heading() {
   }
 
   return (
+    // Heading
     <div className='heading'>
       <div className='heading-cont'>
         <div className='dark-overlay'></div>
 
         <p className='heading-quote'>
-          UN DREPT NEDOVEDIT ESTE PRECUM UN DREPT INEXISTENT
-          {/* {getText("homeHeadingQuote")} */}
+          {getText(translations, "homeHeadingQuote")}
         </p>
 
         <div>
           <Link className='link-menu' to='/consultanta' onClick={moveToTop}>
             <button className='btn-heading btn-hover'>
-              Consultanță Online
+              {getText(translations, "btnHeadingText")}
             </button>
           </Link>
         </div>
-
-        <button className='btn-top' onClick={moveToTop}>
-          <img className='img-arrow' src={upArrow} alt={"btn-top"} />
-        </button>
       </div>
 
+      {/* stats-column */}
       <div className='stats-column'>
         <div className='stats-row'>
           <p className='heading-stats-number'>121</p>
-          <p className='heading-stats-title'>Colaboratori externi</p>
+          <p className='heading-stats-title'>
+            {getText(translations, "headingStatsTitles1")}
+          </p>
         </div>
         <div className='stats-row'>
           <p className='heading-stats-number'>779</p>
-          <p className='heading-stats-title'>Clienți</p>
+          <p className='heading-stats-title'>
+            {" "}
+            {getText(translations, "headingStatsTitles2")}
+          </p>
         </div>
         <div className='stats-row'>
           <p className='heading-stats-number'>2750</p>
-          <p className='heading-stats-title'>Cauze Instrumentate</p>
+          <p className='heading-stats-title'>
+            {" "}
+            {getText(translations, "headingStatsTitles3")}
+          </p>
         </div>
         <div className='stats-row'>
           <p className='heading-stats-number'>547</p>
-          <p className='heading-stats-title'>Seminarii si Stagii</p>
+          <p className='heading-stats-title'>
+            {" "}
+            {getText(translations, "headingStatsTitles4")}
+          </p>
         </div>
       </div>
 
       <div className='brief'>
         <div className='first-brief'>
-          <img className='brief-img' src={briefImg} />
+          <img className='brief-img' src={briefImg} alt='' />
         </div>
         <div className='second-brief'>
           <div>
-            <p className='brief-heading' style={{ paddingLeft: "0px" }}>
-              Consultanță Juridică
+            <p className='brief-heading'>
+              {/* Consultanță Juridică */}
+              {getText(translations, "briefHeadingHeading")}
             </p>
             <div className='line-dec'></div>
             <div className='brief-text'>
-              <p>
-                Asigurăm asistență juridică de specialitate atât în drept german
-                cât și în drept român.
-              </p>
-              <p>
-                Pe site-ul nostru puteţi obţine rapid şi ieftin consultaţii
-                juridice online privind dreptul german sau dreptul românesc.
-              </p>
-              <p>
-                {" "}
-                Astfel, evitați timpul pierdut cu programarea întâlnirii la
-                birou, cu deplasarea și mai ales nu mai este nevoie să vă
-                învoiți de la serviciu.
-              </p>
+              <p>{getText(translations, "briefHeadingText1")}</p>
+              <p>{getText(translations, "briefHeadingText2")}</p>
+              <p>{getText(translations, "briefHeadingText3")}</p>
             </div>
             <div className='brief-btn'>
-              {/*<button className="brief-btn-1">*/}
-              {/*    Contacteaza-ne >*/}
-              {/*</button>*/}
               <Link className='link-menu' to='/consultanta' onClick={moveToTop}>
                 <button className='brief-btn-2 btn-hover'>
-                  Consult Juridic Online
+                  {getText(translations, "briefHeadingButton")}
                 </button>
               </Link>
             </div>
           </div>
         </div>
       </div>
+      <button className='btn-top' onClick={moveToTop}>
+        <img className='img-arrow' src={upArrow} alt={"btn-top"} />
+      </button>
     </div>
   );
 }

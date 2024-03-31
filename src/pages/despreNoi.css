@@ -81,7 +81,7 @@
   }
 
   .briefText {
-    /* font-size: Montserrat; */
+    font-family: Montserrat;
     text-align: left;
     width: 80%;
     margin: auto;

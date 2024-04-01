@@ -129,7 +129,7 @@ function Consultanta() {
             >
               <button className='btn-contact-consultanta btn-hover'>
                 <a
-                  href='https://buy.stripe.com/test_3cscOdbFB8ws0mc8ww'
+                  href='https://buy.stripe.com/14kaHN0jn5u98s8aEF'
                   target='_blank'
                   style={{ textDecoration: "none", color: "white" }}
                 >

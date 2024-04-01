@@ -124,7 +124,7 @@ function Consultanta() {
             </p>
             <br />
             <a
-              href='mailto:office@consult-juridic.eu'
+              // href='mailto:office@consult-juridic.eu'
               style={{ textDecoration: "none", color: "black" }}
             >
               <button className='btn-contact-consultanta btn-hover'>

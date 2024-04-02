@@ -133,7 +133,8 @@ const Menu = () => {
           }`}
         >
           <div
-            style={{ marginTop: "15px" }}
+            className='btnMobilez'
+            // style={{ marginTop: "15px" }}
             onClick={() => {
               setMobileMenuVisible(false);
               // inchidere dupa apasare Home
@@ -148,7 +149,8 @@ const Menu = () => {
             <div className='dec-line'></div>
           </div>
           <div
-            style={{ marginTop: "15px" }}
+            className='btnMobilez'
+            // style={{ marginTop: "15px" }}
             onClick={() => {
               setMobileMenuVisible(false);
               moveToTop();
@@ -161,7 +163,10 @@ const Menu = () => {
             </div>
             <div className='dec-line'></div>
           </div>
-          <div style={{ marginTop: "15px" }}>
+          <div
+            className='btnMobilez'
+            // style={{ marginTop: "15px" }}
+          >
             <div className='main-category1'>
               <Link
                 className='link-menu'
@@ -177,7 +182,8 @@ const Menu = () => {
             <div className='dec-line'></div>
           </div>
           <div
-            style={{ marginTop: "15px" }}
+            className='btnMobilez'
+            // style={{ marginTop: "15px" }}
             onClick={() => {
               setMobileMenuVisible(false);
               moveToTop();

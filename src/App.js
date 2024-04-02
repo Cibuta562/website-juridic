@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React, {useEffect} from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "./lang/LanguageContext";
 
@@ -18,6 +18,18 @@ import Soon from "./pages/soon";
 import { CookieConsent } from "react-cookie-consent";
 
 function App() {
+
+    useEffect(() => {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href =
+            "https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap";
+        document.head.appendChild(link);
+        return () => {
+            document.head.removeChild(link);
+        };
+    }, []);
+
   return (
     <LanguageProvider>
       <BrowserRouter>

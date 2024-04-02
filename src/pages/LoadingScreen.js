@@ -15,7 +15,7 @@ const LoadingScreen = () => {
       initial='initial'
       animate='animate'
       exit='exit'
-      transition={{ duration: 1, delay: 2 }}
+      transition={{ duration: 0.5, delay: 2.5 }}
       className='loading-div'
     >
       <img src={loadingImage} alt='loading' className='loading-image' />

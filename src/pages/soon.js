@@ -2,7 +2,7 @@ import "./soon.css";
 
 const Soon = () => {
   return (
-    <div className='soon-div' data-aos='flip-up'>
+    <div className='soon-div' data-aos='fade-right'>
       <div className='soon-cont'>
         <p className='soon-p'>Pagina este in constructie!</p>
         <p className='soon-p'>

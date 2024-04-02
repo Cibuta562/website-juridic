@@ -1,5 +1,4 @@
-
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1200px) {
   .subsol-adv {
     padding-top: 12px;
     font-family: Montserrat;
@@ -86,7 +85,7 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
   .subsol-adv {
     padding-top: 0px;
     font-family: Montserrat;

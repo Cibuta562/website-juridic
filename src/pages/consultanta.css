@@ -101,8 +101,7 @@
   }
 
   .btn-contact-consultanta {
-    height: 40px;
-    width: 180px;
+    padding: 10px 20px;
     font-family: Montserrat;
     background-color: transparent;
     border: 1px solid white;
@@ -225,8 +224,7 @@
   }
 
   .btn-contact-consultanta {
-    height: 40px;
-    width: 180px;
+    padding: 5px 20px;
     font-family: Montserrat;
     background-color: transparent;
     border: 1px solid white;

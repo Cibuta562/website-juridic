@@ -44,7 +44,7 @@ const Menu = () => {
 
   // returnare meniu
   return (
-    <div className={"menu-container"}>
+    <div className='menu-container'>
       {/* Home button : Consult - Juridic */}
       <div className='home-button' onClick={moveToTop}>
         <Link className='link-menu' to='/website-juridic'>

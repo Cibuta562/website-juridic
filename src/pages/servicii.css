@@ -1,31 +1,15 @@
-.edit-detalii-servicii button {
-  margin-top: 1rem;
-  font-family: Montserrat;
-  border: 1px solid #c1a267ff;
-  color: #fff;
-  padding: 0.3rem 1rem;
-  border-radius: 1px;
-  background-color: transparent;
+.desc-servicii {
   font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  margin: 0;
+  padding-top: 10px;
 }
 
-.edit-detalii-servicii button:hover {
-  background-color: #4e3912;
-}
-
-.edit-detalii-servicii button.active {
-  background-color: #4e3912;
-  color: #fff;
-}
-
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 801px) {
   #mobile-detalii-content {
     display: none;
   }
   .edit-detalii-servicii button {
-    margin-top: 2rem;
+    margin: 0;
     font-family: Montserrat;
     border: 1px solid #c1a267ff;
     color: #fff;
@@ -115,7 +99,7 @@
   }
 
   .desc-servicii {
-    height: 6em;
+    height: 20vh;
     font-size: 1rem;
   }
   .desc-servicii ul {
@@ -164,7 +148,9 @@
   }
 
   .heading-servicii {
-    font-size: 22px;
+    padding-top: 20px;
+    font-size: 20px;
+    margin: 0;
   }
 
   .btn-servicii {
@@ -398,6 +384,27 @@
     margin: 0;
   }
 
+  .edit-detalii-servicii button {
+    margin-top: 1rem;
+    font-family: Montserrat;
+    border: 1px solid #c1a267ff;
+    color: #fff;
+    padding: 0.3rem 1rem;
+    border-radius: 1px;
+    background-color: transparent;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .edit-detalii-servicii button:hover {
+    background-color: #4e3912;
+  }
+
+  .edit-detalii-servicii button.active {
+    background-color: #4e3912;
+    color: #fff;
+  }
   #mobile-detalii-content code {
     font-size: 1rem;
   }
@@ -449,15 +456,23 @@
     padding-right: 5px;
   }
 }
-@media screen and (max-height: 450px) {
+
+@media screen and (min-width: 801px) and (max-height: 500px) {
   .desc-servicii {
-    height: 10em;
+    height: 250px;
+  }
+  .heading-servicii {
+    font-size: 16px;
+  }
+  .col-servicii {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
-@media screen and (max-width: 1024px) and (max-height: 450px) {
+@media screen and (min-width: 801px) and (max-height: 800px) and (min-height: 551px) {
   .desc-servicii {
-    height: 10em;
+    height: 30vh;
   }
   .col-servicii {
     margin-left: 0;

@@ -1,13 +1,38 @@
-.soon-p{
-    font-family: 'Montserrat', serif;
-    text-align: center;
-    font-size: 24px;
-    margin-left: 25px;
-    margin-right: 25px;
+.soon-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  /* animation: fade-in 2s forwards;
+  background-color: rgba(#fff, 0.25);
+  opacity: 0;
+  transform: translateY(50vh); */
+}
+/* 
+@keyframes fade-in {
+  from {
+    background-color: rgba(#fff, 0, 25);
+    opacity: 0;
+    transform: translateY(50vh);
+  }
+  to {
+    background-color: rgba(#fff, 0);
+    opacity: 1;
+    transform: translateY(0vh);
+  }
+} */
+
+.soon-p {
+  font-family: "Montserrat", serif;
+  text-align: center;
+  font-size: 24px;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
-.soon-cont{
-    margin: 0;
-    justify-content: center;
-    align-items: center;
+.soon-cont {
+  margin: 0;
+  justify-content: center;
+  align-items: center;
 }

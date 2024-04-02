@@ -65,7 +65,7 @@ const Menu = () => {
           <NavLink
             className='link-menu btn-menu-hover'
             to='/despre/noi'
-            onClick={moveToTop}
+            onClick={() => moveToTop()}
           >
             {/* Despre Noi */}
             {getText(translations, "meniuDespreNoi")}
@@ -75,7 +75,7 @@ const Menu = () => {
           <NavLink
             className='link-menu btn-menu-hover'
             to='/website-juridic'
-            onClick={moveToTop}
+            onClick={() => moveToTop()}
           >
             {/* Servicii */}
             {getText(translations, "meniuServicii")}
@@ -85,7 +85,7 @@ const Menu = () => {
           <NavLink
             className='link-menu btn-menu-hover'
             to='/consultanta'
-            onClick={moveToTop}
+            onClick={() => moveToTop()}
           >
             {/* Consultanta */}
             {getText(translations, "meniuConsultanta")}

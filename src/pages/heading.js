@@ -9,9 +9,7 @@ import translationsDE from "../lang/data-de.js";
 import { useLanguage } from "../lang/LanguageContext";
 
 function Heading() {
-
   const { getText, language } = useLanguage();
-
 
   let translations;
   if (language === "ro") {
@@ -19,7 +17,6 @@ function Heading() {
   } else if (language === "de") {
     translations = translationsDE;
   }
-
 
   function moveToTop() {
     if ("scrollBehavior" in document.documentElement.style) {
@@ -34,9 +31,8 @@ function Heading() {
   }
 
   return (
-
     <div className='heading'>
-      <div className='heading-cont'>
+      <div className='heading-cont' data-aos='fade'>
         <div className='dark-overlay'></div>
 
         <p className='heading-quote'>
@@ -53,27 +49,27 @@ function Heading() {
       </div>
 
       <div className='stats-column'>
-        <div className='stats-row'>
+        <div className='stats-row' data-aos='fade-up'>
           <p className='heading-stats-number'>121</p>
           <p className='heading-stats-title'>
             {getText(translations, "headingStatsTitles1")}
           </p>
         </div>
-        <div className='stats-row'>
+        <div className='stats-row' data-aos='fade-up'>
           <p className='heading-stats-number'>779</p>
           <p className='heading-stats-title'>
             {" "}
             {getText(translations, "headingStatsTitles2")}
           </p>
         </div>
-        <div className='stats-row'>
+        <div className='stats-row' data-aos='fade-up'>
           <p className='heading-stats-number'>2750</p>
           <p className='heading-stats-title'>
             {" "}
             {getText(translations, "headingStatsTitles3")}
           </p>
         </div>
-        <div className='stats-row'>
+        <div className='stats-row' data-aos='fade-up'>
           <p className='heading-stats-number'>547</p>
           <p className='heading-stats-title'>
             {" "}
@@ -83,10 +79,10 @@ function Heading() {
       </div>
 
       <div className='brief'>
-        <div className='first-brief'>
+        <div className='first-brief' data-aos='fade-up'>
           <img className='brief-img' src={briefImg} alt='' />
         </div>
-        <div className='second-brief'>
+        <div className='second-brief' data-aos='fade-up'>
           <div>
             <p className='brief-heading'>
               {/* Consultanță Juridică */}

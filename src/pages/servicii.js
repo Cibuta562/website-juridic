@@ -1,5 +1,5 @@
 import "./servicii.css";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import servicii1 from "../assetsMin/servicii1.jpg";
 import servicii2 from "../assetsMin/servicii2.jpg";
 import servicii3 from "../assetsMin/servicii3.jpg";
@@ -11,32 +11,41 @@ import briefDown from "../assetsMin/brief-down.jpg";
 import TapButton from "./TapServicii";
 import { DETALII_SERVICII } from "../lang/data-ro";
 
-import translationsRO from "../lang/data-ro.js";
-import translationsDE from "../lang/data-de.js";
-import { useLanguage } from "../lang/LanguageContext";
+import translationsRO from "../lang/data-ro.js"; // obiect de traducere RO
+import translationsDE from "../lang/data-de.js"; // obict de traducere GER
+import { useLanguage } from "../lang/LanguageContext"; // hook pentru LanguageContext
 
 const Servicii = () => {
-
-  const { getText, language } = useLanguage();
-
-  let translations;
-  if (language === "ro") {
-    translations = translationsRO;
-  } else if (language === "de") {
-    translations = translationsDE;
+  const detaliiServiciuRefZero = useRef(null);
+  const detaliiServiciuRefOne = useRef(null);
+  // Funcție pentru a realiza scroll către conținutul detaliat dorit
+  function scrollLaDetalii(ref) {
+    ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
+  // Importă hook-ul useLanguage pentru a accesa contextul limbii și funcțiile asociate
+  const { getText, language } = useLanguage();
+
+  // Alege fișierul de traducere corespunzător limbii selectate
+  let translations;
+  if (language === "ro") {
+    translations = translationsRO; // foloseste textul in RO
+  } else if (language === "de") {
+    translations = translationsDE; // foloseste textul in GER
+  }
+
+  /* useState pentru selectarea butonului din meniul de servicii de pe randul 0 */
   const [selectedServiciuRowZero, setSelectedServiciuRowZero] = useState();
 
-
+  // functie care seteaza butonul ca `activ` din meniul de servicii de pe randul 0
   function handleSelectServiciuRowZero(selectedButtonRowZero) {
     setSelectedServiciuRowZero(selectedButtonRowZero);
   }
 
-
+  /* useState pentru selectarea butonului din meniul de servicii de pe randul 1 */
   const [selectedServiciuRowOne, setSelectedServiciuRowOne] = useState();
 
-
+  // functie care seteaza butonul ca `activ` din meniul de servicii de pe randul 1
   function handleSelectServiciuRowOne(selectedButtonRowOne) {
     setSelectedServiciuRowOne(selectedButtonRowOne);
   }
@@ -55,7 +64,7 @@ const Servicii = () => {
   ];
   if (selectedServiciuOptionsZero.includes(selectedServiciuRowZero)) {
     detaliiServiciiContentRowZero = (
-      <div id='detalii-content'>
+      <div id='detalii-content' data-aos='fade-up'>
         <h3>{DETALII_SERVICII[selectedServiciuRowZero].title}</h3>
         <div className='line-dec-ver10'></div>
         <p>{DETALII_SERVICII[selectedServiciuRowZero].description}</p>
@@ -70,7 +79,7 @@ const Servicii = () => {
 
   if (selectedServiciuOptionsOne.includes(selectedServiciuRowOne)) {
     detaliiServiciiContentRowOne = (
-      <div id='detalii-content'>
+      <div id='detalii-content' data-aos='fade-up'>
         <h3>{DETALII_SERVICII[selectedServiciuRowOne].title}</h3>
         <div className='line-dec-ver10'></div>
         <p>{DETALII_SERVICII[selectedServiciuRowOne].description}</p>
@@ -83,7 +92,7 @@ const Servicii = () => {
     );
   }
   const isMobile = window.innerWidth < 800;
-
+  // mobile states
   const [selectedServiciiMobile, setSelectedServiciiMobile] = useState({
     dreptPenal: false,
     dreptCivil: false,
@@ -92,42 +101,42 @@ const Servicii = () => {
     dreptulFamiliei: false,
     dreptulMuncii: false,
   });
-
+  // drept penal mobile
   function handleSelectServiciuDreptPenal() {
     setSelectedServiciiMobile((prevState) => ({
       ...prevState,
       dreptPenal: !prevState.dreptPenal,
     }));
   }
-
+  // drept civil mobile
   function handleSelectServiciuDreptCivil() {
     setSelectedServiciiMobile((prevState) => ({
       ...prevState,
       dreptCivil: !prevState.dreptCivil,
     }));
   }
-
+  // drept rutier mobile
   function handleSelectServiciuDreptRutier() {
     setSelectedServiciiMobile((prevState) => ({
       ...prevState,
       dreptRutier: !prevState.dreptRutier,
     }));
   }
-
+  // declaratii fiscale mobile
   function handleSelectServiciuDeclaratiiFiscale() {
     setSelectedServiciiMobile((prevState) => ({
       ...prevState,
       declaratiiFiscale: !prevState.declaratiiFiscale,
     }));
   }
-
+  // dreptul familiei mobile
   function handleSelectServiciuDreptulFamiliei() {
     setSelectedServiciiMobile((prevState) => ({
       ...prevState,
       dreptulFamiliei: !prevState.dreptulFamiliei,
     }));
   }
-
+  // dreptul muncii mobile
   function handleSelectServiciuDreptulMuncii() {
     setSelectedServiciiMobile((prevState) => ({
       ...prevState,
@@ -138,17 +147,17 @@ const Servicii = () => {
   return (
     <div>
       <div className='servicii-cont'>
-        <p className='servicii-title'>
+        <p className='servicii-title' data-aos='fade-up'>
           {getText(translations, "serviciiTitle")}
         </p>
-        <p className='servicii-subtitle'>
-          {" "}
+        <p className='servicii-subtitle' data-aos='fade-up'>
           {getText(translations, "serviciiSubtitle")}
         </p>
-        <div className='line-dec-ver'></div>
+        <div className='line-dec-ver' data-aos='fade-up'></div>
 
+        {/* row - servicii - 0 : Drept Penal / Drept Civil / Drept Rutier */}
         <div className='row-servicii edit-detalii-servicii'>
-          <div className='col-servicii'>
+          <div className='col-servicii' data-aos='fade-up'>
             <div>
               <img src={servicii1} alt='img penal' className='img-serv' />
             </div>
@@ -165,7 +174,7 @@ const Servicii = () => {
                 </ul>
               </p>
 
-
+              {/* buton mai multe detalii pentru `Drept Penal` */}
               <TapButton
                 className='butonDetaliiServicii'
                 isSelected={selectedServiciuRowZero === "btnDreptPenal"}
@@ -178,9 +187,9 @@ const Servicii = () => {
                 {getText(translations, "btnMaiMulteDetalii")}
               </TapButton>
             </div>
-
+            {/* {dreptPenalMobile} */}
             {isMobile && selectedServiciiMobile.dreptPenal && (
-              <div id='mobile-detalii-content'>
+              <div id='mobile-detalii-content' data-aos='fade-up'>
                 <h3>{DETALII_SERVICII.btnDreptPenal.title}</h3>
                 <div className='line-dec-ver10'></div>
                 <p>{DETALII_SERVICII.btnDreptPenal.description}</p>
@@ -192,7 +201,7 @@ const Servicii = () => {
               </div>
             )}
           </div>
-          <div className='col-servicii'>
+          <div className='col-servicii' data-aos='fade-up'>
             <div>
               <img src={servicii2} alt='img civil' className='img-serv' />
             </div>
@@ -209,7 +218,7 @@ const Servicii = () => {
                 </ul>
               </p>
 
-
+              {/* buton mai multe detalii pentru `Drept Civil` */}
               <TapButton
                 className='butonDetaliiServicii'
                 isSelected={selectedServiciuRowZero === "btnDreptCivil"}
@@ -222,9 +231,9 @@ const Servicii = () => {
                 {getText(translations, "btnMaiMulteDetalii")}
               </TapButton>
             </div>
-
+            {/* {dreptCivilMobile} */}
             {isMobile && selectedServiciiMobile.dreptCivil && (
-              <div id='mobile-detalii-content'>
+              <div id='mobile-detalii-content' data-aos='fade-up'>
                 <h3>{DETALII_SERVICII.btnDreptCivil.title}</h3>
                 <div className='line-dec-ver10'></div>
                 <p>{DETALII_SERVICII.btnDreptCivil.description}</p>
@@ -236,7 +245,7 @@ const Servicii = () => {
               </div>
             )}
           </div>
-          <div className='col-servicii'>
+          <div className='col-servicii' data-aos='fade-up'>
             <div>
               <img src={servicii3} alt='img rutier' className='img-serv' />
             </div>
@@ -269,7 +278,7 @@ const Servicii = () => {
           </div>
           {/* {dreptRutierMobile} */}
           {isMobile && selectedServiciiMobile.dreptRutier && (
-            <div id='mobile-detalii-content'>
+            <div id='mobile-detalii-content' data-aos='fade-up'>
               <h3>{DETALII_SERVICII.btnDreptRutier.title}</h3>
               <div className='line-dec-ver10'></div>
               <p>{DETALII_SERVICII.btnDreptRutier.description}</p>
@@ -287,7 +296,7 @@ const Servicii = () => {
 
         {/* row - servicii - 1 : Declarații Fiscale / Dreptul Familiei / Dreptul Muncii */}
         <div className='row-servicii1 edit-detalii-servicii'>
-          <div className='col-servicii'>
+          <div className='col-servicii' data-aos='fade-up'>
             <div>
               <img
                 src={servicii4}
@@ -320,7 +329,7 @@ const Servicii = () => {
               </TapButton>
             </div>
             {isMobile && selectedServiciiMobile.declaratiiFiscale && (
-              <div id='mobile-detalii-content'>
+              <div id='mobile-detalii-content' data-aos='fade-up'>
                 <h3>{DETALII_SERVICII.btnDeclaratiiFiscale.title}</h3>
                 <div className='line-dec-ver10'></div>
                 <p>{DETALII_SERVICII.btnDeclaratiiFiscale.description}</p>
@@ -332,7 +341,7 @@ const Servicii = () => {
               </div>
             )}
           </div>
-          <div className='col-servicii'>
+          <div className='col-servicii' data-aos='fade-up'>
             <div>
               <img
                 src={servicii5}
@@ -367,7 +376,7 @@ const Servicii = () => {
               </TapButton>
             </div>
             {isMobile && selectedServiciiMobile.dreptulFamiliei && (
-              <div id='mobile-detalii-content'>
+              <div id='mobile-detalii-content' data-aos='fade-up'>
                 <h3>{DETALII_SERVICII.btnDreptulFamiliei.title}</h3>
                 <div className='line-dec-ver10'></div>
                 <p>{DETALII_SERVICII.btnDreptulFamiliei.description}</p>
@@ -379,7 +388,7 @@ const Servicii = () => {
               </div>
             )}
           </div>
-          <div className='col-servicii'>
+          <div className='col-servicii' data-aos='fade-up'>
             <div>
               <img
                 src={servicii6}
@@ -416,7 +425,7 @@ const Servicii = () => {
             </div>
           </div>
           {isMobile && selectedServiciiMobile.dreptulMuncii && (
-            <div id='mobile-detalii-content'>
+            <div id='mobile-detalii-content' data-aos='fade-up'>
               <h3>{DETALII_SERVICII.btnDreptulMuncii.title}</h3>
               <div className='line-dec-ver10'></div>
               <p>{DETALII_SERVICII.btnDreptulMuncii.description}</p>
@@ -435,7 +444,7 @@ const Servicii = () => {
         {/* <div className='line-dec-ver2'></div> */}
 
         <div className='brief-servicii'>
-          <div className='second-brief-servicii'>
+          <div className='second-brief-servicii' data-aos='fade-up'>
             <div className='div-servicii'>
               <p className='brief-heading'>
                 {getText(translations, "briefServiciiHeading")}
@@ -449,7 +458,7 @@ const Servicii = () => {
               </div>
             </div>
           </div>
-          <div className='first-brief-servicii'>
+          <div className='first-brief-servicii' data-aos='fade-up'>
             <img className='brief-img-servicii' src={briefDown} alt='' />
           </div>
         </div>

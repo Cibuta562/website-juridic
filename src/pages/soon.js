@@ -2,15 +2,7 @@ import "./soon.css";
 
 const Soon = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-        textAlign: "center",
-      }}
-    >
+    <div className='soon-div' data-aos='flip-up'>
       <div className='soon-cont'>
         <p className='soon-p'>Pagina este in constructie!</p>
         <p className='soon-p'>

@@ -8,7 +8,6 @@ import { useLanguage } from "../lang/LanguageContext";
 const Echipa = () => {
   const { getText, language } = useLanguage();
 
-
   let translations;
   if (language === "ro") {
     translations = translationsRO;
@@ -17,10 +16,12 @@ const Echipa = () => {
   }
   return (
     <div className='echipa-cont'>
-      <p className='echipa-title'>{getText(translations, "echipaTitle")}</p>
-      <div className='line-dec-echipa'></div>
+      <p className='echipa-title' data-aos='fade-up'>
+        {getText(translations, "echipaTitle")}
+      </p>
+      <div className='line-dec-echipa' data-aos='fade-up'></div>
       <div className='row-echipa'>
-        <div className='col-echipa'>
+        <div className='col-echipa' data-aos='fade-up'>
           <div>
             <img className='pic-avocat' src={lawyer} alt='mike' />
           </div>
@@ -33,7 +34,7 @@ const Echipa = () => {
             </p>
           </div>
         </div>
-        <div className='col-echipa'>
+        <div className='col-echipa' data-aos='fade-up'>
           <div>
             <img className='pic-avocat' src={lawyer} alt='mike' />
           </div>
@@ -47,7 +48,7 @@ const Echipa = () => {
             </p>
           </div>
         </div>
-        <div className='col-echipa'>
+        <div className='col-echipa' data-aos='fade-up'>
           <div>
             <img className='pic-avocat' src={lawyer} alt='mike' />
           </div>
@@ -62,7 +63,7 @@ const Echipa = () => {
             </p>
           </div>
         </div>
-        <div className='col-echipa'>
+        <div className='col-echipa' data-aos='fade-up'>
           <div>
             <img className='pic-avocat' src={lawyer} alt='mike' />
           </div>

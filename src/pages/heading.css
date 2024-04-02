@@ -1,3 +1,10 @@
+.stats-column {
+  background-color: black;
+}
+.heading {
+  background-color: #000;
+}
+
 .stats-row {
   background-color: black;
   color: white;

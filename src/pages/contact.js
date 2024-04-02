@@ -8,14 +8,12 @@ import { useLanguage } from "../lang/LanguageContext";
 const Contact = () => {
   const { getText, language } = useLanguage();
 
-
   let translations;
   if (language === "ro") {
     translations = translationsRO;
   } else if (language === "de") {
     translations = translationsDE;
   }
-
 
   return (
     <div>

@@ -1,5 +1,5 @@
 import "./App.css";
-import React, {useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "./lang/LanguageContext";
 
@@ -14,21 +14,18 @@ import Consultanta from "./pages/consultanta";
 import Payment from "./pages/formPayment";
 import Terms from "./pages/terms";
 import Soon from "./pages/soon";
-
+import LoadingScreen from "./pages/LoadingScreen";
 import { CookieConsent } from "react-cookie-consent";
 
 function App() {
+  const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href =
-            "https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap";
-        document.head.appendChild(link);
-        return () => {
-            document.head.removeChild(link);
-        };
-    }, []);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000); // Ajustează timpul de încărcare aici, în milisecunde
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <LanguageProvider>
@@ -58,7 +55,11 @@ function App() {
           </CookieConsent>
           <Menu />
           <Routes>
-            <Route index element={<Soon />} />
+            {loading ? (
+              <Route index element={<LoadingScreen />} />
+            ) : (
+              <Route index element={<Soon />} />
+            )}
             <Route path='/website-juridic' element={<Homepage />} />
             <Route path='/despre/noi' element={<Despre />} />
             <Route path='/consultanta' element={<Consultanta />} />
@@ -73,7 +74,6 @@ function App() {
 }
 
 // Componenta pentru homepage
-
 function Homepage() {
   return (
     <>

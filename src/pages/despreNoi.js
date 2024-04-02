@@ -8,9 +8,7 @@ import translationsDE from "../lang/data-de.js";
 import { useLanguage } from "../lang/LanguageContext";
 
 function Despre() {
-
   const { getText, language } = useLanguage();
-
 
   let translations;
   if (language === "ro") {
@@ -18,7 +16,6 @@ function Despre() {
   } else if (language === "de") {
     translations = translationsDE;
   }
-
 
   function moveToTop() {
     if ("scrollBehavior" in document.documentElement.style) {
@@ -34,7 +31,7 @@ function Despre() {
 
   return (
     <div style={{ backgroundColor: "black" }}>
-      <div className='heading-cont-despre'>
+      <div className='heading-cont-despre' data-aos='fade'>
         <div className='dark-overlay'></div>
 
         <p className='heading-quote-despre'>
@@ -46,27 +43,45 @@ function Despre() {
         </p>
       </div>
       <div className='despreCont-text'>
-        <p className='despre-heading'>
+        <p className='despre-heading' data-aos='fade-up'>
           {" "}
           {getText(translations, "despreNoiTitle")}
         </p>
-        <div className='line-dec-ver-despre'></div>
+        <div className='line-dec-ver-despre' data-aos='fade-up'></div>
         <div className='text-despre'>
-          <p className='despre-p'>{getText(translations, "despreNoiText1")}</p>
-          <p className='despre-p'>{getText(translations, "despreNoiText2")}</p>
-          <p className='despre-p'>{getText(translations, "despreNoiText3")}</p>
-          <p className='despre-p'>{getText(translations, "despreNoiText4")}</p>
-          <p className='despre-p'>{getText(translations, "despreNoiText5")}</p>
-          <p className='despre-p'>{getText(translations, "despreNoiText6")}</p>
-          <p className='despre-p'>{getText(translations, "despreNoiText7")}</p>
-          <p className='despre-p'>{getText(translations, "despreNoiText8")}</p>
-          <p className='despre-p'>{getText(translations, "despreNoiText9")}</p>
+          <p className='despre-p' data-aos='fade-up'>
+            {getText(translations, "despreNoiText1")}
+          </p>
+          <p className='despre-p' data-aos='fade-up'>
+            {getText(translations, "despreNoiText2")}
+          </p>
+          <p className='despre-p' data-aos='fade-up'>
+            {getText(translations, "despreNoiText3")}
+          </p>
+          <p className='despre-p' data-aos='fade-up'>
+            {getText(translations, "despreNoiText4")}
+          </p>
+          <p className='despre-p' data-aos='fade-up'>
+            {getText(translations, "despreNoiText5")}
+          </p>
+          <p className='despre-p' data-aos='fade-up'>
+            {getText(translations, "despreNoiText6")}
+          </p>
+          <p className='despre-p' data-aos='fade-up'>
+            {getText(translations, "despreNoiText7")}
+          </p>
+          <p className='despre-p' data-aos='fade-up'>
+            {getText(translations, "despreNoiText8")}
+          </p>
+          <p className='despre-p' data-aos='fade-up'>
+            {getText(translations, "despreNoiText9")}
+          </p>
         </div>
         <div className='brief-despre-noi'>
-          <div className='first-brief'>
+          <div className='first-brief' data-aos='fade-up'>
             <img className='brief-img despre-img' src={despre2} alt='' />
           </div>
-          <div className='second-brief second-brief-despre'>
+          <div className='second-brief second-brief-despre' data-aos='fade-up'>
             <div>
               <div className='briefText'>
                 <p>{getText(translations, "despreNoiText10")}</p>

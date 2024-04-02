@@ -8,7 +8,6 @@ import translationsDE from "../lang/data-de.js";
 import { useLanguage } from "../lang/LanguageContext";
 
 function Consultanta() {
-
   const { getText, language } = useLanguage();
 
   let translations;
@@ -37,7 +36,7 @@ function Consultanta() {
   }
   return (
     <div style={{ backgroundColor: "black" }}>
-      <div className='heading-cont-consultanta'>
+      <div className='heading-cont-consultanta' data-aos='fade'>
         <div className='dark-overlay'></div>
 
         <p className='heading-quote-consultanta'>
@@ -56,7 +55,7 @@ function Consultanta() {
         </div>
       </div>
       <div className='consultanta-cont'>
-        <div className='consultanta-desc-text'>
+        <div className='consultanta-desc-text' data-aos='fade-up'>
           <div className='consultanta-dec-text'>
             <p className='despre-p' style={{ paddingTop: "20px" }}>
               {getText(translations, "consultantaText1")}
@@ -65,9 +64,9 @@ function Consultanta() {
               {getText(translations, "consultantaText2")}
             </p>
           </div>
-          <div className='consultanta-dec'></div>
+          <div className='consultanta-dec' data-aos='fade-up'></div>
         </div>
-        <div className='consultanta-desc-text2'>
+        <div className='consultanta-desc-text2' data-aos='fade-up'>
           <p className='despre-p'>
             {getText(translations, "consultantaText3")}
           </p>
@@ -82,7 +81,11 @@ function Consultanta() {
           </p>
           <div className='consultanta-dec2'></div>
         </div>
-        <div className='despre-cont-text' ref={targetConsultantaOnline}>
+        <div
+          className='despre-cont-text'
+          ref={targetConsultantaOnline}
+          data-aos='fade-up'
+        >
           <p
             style={{ fontSize: "24px" }}
             className='despre-heading-consultanta'

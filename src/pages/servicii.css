@@ -1,4 +1,4 @@
-/* TEST MIKE */
+
 .edit-detalii-servicii button {
   margin-top: 1rem;
   font-family: Montserrat;
@@ -120,9 +120,8 @@
     font-size: 1rem;
   }
   .desc-servicii ul {
-    list-style-type: none; /* Remove default list item markers */
+    list-style-type: none;
     margin-top: 0;
-    /* margin-bottom: 0; */
     padding-left: 1em;
     text-indent: -1em;
   }
@@ -132,8 +131,8 @@
   }
 
   .desc-servicii ul li::before {
-    content: "»"; /* Use a bullet character as content */
-    color: #c1a267ff; /* Change the color of the bullet */
+    content: "»";
+    color: #c1a267ff;
     padding-right: 5px;
   }
 
@@ -435,9 +434,8 @@
   }
 
   .desc-servicii ul {
-    list-style-type: none; /* Remove default list item markers */
+    list-style-type: none;
     margin-top: 0;
-    /* margin-bottom: 0; */
     padding-left: 1em;
     text-indent: -1em;
   }
@@ -447,8 +445,8 @@
   }
 
   .desc-servicii ul li::before {
-    content: "»"; /* Use a bullet character as content */
-    color: #c1a267ff; /* Change the color of the bullet */
+    content: "»";
+    color: #c1a267ff;
     padding-right: 5px;
   }
 }

@@ -1,44 +1,42 @@
 import "./servicii.css";
 import React, { useState } from "react";
-import servicii1 from "../assets/servicii1.jpg";
-import servicii2 from "../assets/servicii2.jpg";
-import servicii3 from "../assets/servicii3.jpg";
-import servicii4 from "../assets/servicii4.jpg";
-import servicii5 from "../assets/servicii5.jpg";
-import servicii6 from "../assets/servicii6.jpg";
-import briefDown from "../assets/brief-down.jpg";
+import servicii1 from "../assetsMin/servicii1.jpg";
+import servicii2 from "../assetsMin/servicii2.jpg";
+import servicii3 from "../assetsMin/servicii3.jpg";
+import servicii4 from "../assetsMin/servicii4.jpg";
+import servicii5 from "../assetsMin/servicii5.jpg";
+import servicii6 from "../assetsMin/servicii6.jpg";
+import briefDown from "../assetsMin/brief-down.jpg";
 
 import TapButton from "./TapServicii";
 import { DETALII_SERVICII } from "../lang/data-ro";
 
-import translationsRO from "../lang/data-ro.js"; // obiect de traducere RO
-import translationsDE from "../lang/data-de.js"; // obict de traducere GER
-import { useLanguage } from "../lang/LanguageContext"; // hook pentru LanguageContext
+import translationsRO from "../lang/data-ro.js";
+import translationsDE from "../lang/data-de.js";
+import { useLanguage } from "../lang/LanguageContext";
 
 const Servicii = () => {
-  // Importă hook-ul useLanguage pentru a accesa contextul limbii și funcțiile asociate
+
   const { getText, language } = useLanguage();
 
-  // Alege fișierul de traducere corespunzător limbii selectate
   let translations;
   if (language === "ro") {
-    translations = translationsRO; // foloseste textul in RO
+    translations = translationsRO;
   } else if (language === "de") {
-    translations = translationsDE; // foloseste textul in GER
+    translations = translationsDE;
   }
 
-  /* useState pentru selectarea butonului din meniul de servicii de pe randul 0 */
   const [selectedServiciuRowZero, setSelectedServiciuRowZero] = useState();
 
-  // functie care seteaza butonul ca `activ` din meniul de servicii de pe randul 0
+
   function handleSelectServiciuRowZero(selectedButtonRowZero) {
     setSelectedServiciuRowZero(selectedButtonRowZero);
   }
 
-  /* useState pentru selectarea butonului din meniul de servicii de pe randul 1 */
+
   const [selectedServiciuRowOne, setSelectedServiciuRowOne] = useState();
 
-  // functie care seteaza butonul ca `activ` din meniul de servicii de pe randul 1
+
   function handleSelectServiciuRowOne(selectedButtonRowOne) {
     setSelectedServiciuRowOne(selectedButtonRowOne);
   }
@@ -85,7 +83,7 @@ const Servicii = () => {
     );
   }
   const isMobile = window.innerWidth < 800;
-  // mobile states
+
   const [selectedServiciiMobile, setSelectedServiciiMobile] = useState({
     dreptPenal: false,
     dreptCivil: false,
@@ -94,42 +92,42 @@ const Servicii = () => {
     dreptulFamiliei: false,
     dreptulMuncii: false,
   });
-  // drept penal mobile
+
   function handleSelectServiciuDreptPenal() {
     setSelectedServiciiMobile((prevState) => ({
       ...prevState,
       dreptPenal: !prevState.dreptPenal,
     }));
   }
-  // drept civil mobile
+
   function handleSelectServiciuDreptCivil() {
     setSelectedServiciiMobile((prevState) => ({
       ...prevState,
       dreptCivil: !prevState.dreptCivil,
     }));
   }
-  // drept rutier mobile
+
   function handleSelectServiciuDreptRutier() {
     setSelectedServiciiMobile((prevState) => ({
       ...prevState,
       dreptRutier: !prevState.dreptRutier,
     }));
   }
-  // declaratii fiscale mobile
+
   function handleSelectServiciuDeclaratiiFiscale() {
     setSelectedServiciiMobile((prevState) => ({
       ...prevState,
       declaratiiFiscale: !prevState.declaratiiFiscale,
     }));
   }
-  // dreptul familiei mobile
+
   function handleSelectServiciuDreptulFamiliei() {
     setSelectedServiciiMobile((prevState) => ({
       ...prevState,
       dreptulFamiliei: !prevState.dreptulFamiliei,
     }));
   }
-  // dreptul muncii mobile
+
   function handleSelectServiciuDreptulMuncii() {
     setSelectedServiciiMobile((prevState) => ({
       ...prevState,
@@ -149,7 +147,6 @@ const Servicii = () => {
         </p>
         <div className='line-dec-ver'></div>
 
-        {/* row - servicii - 0 : Drept Penal / Drept Civil / Drept Rutier */}
         <div className='row-servicii edit-detalii-servicii'>
           <div className='col-servicii'>
             <div>
@@ -168,7 +165,7 @@ const Servicii = () => {
                 </ul>
               </p>
 
-              {/* buton mai multe detalii pentru `Drept Penal` */}
+
               <TapButton
                 className='butonDetaliiServicii'
                 isSelected={selectedServiciuRowZero === "btnDreptPenal"}
@@ -181,7 +178,7 @@ const Servicii = () => {
                 {getText(translations, "btnMaiMulteDetalii")}
               </TapButton>
             </div>
-            {/* {dreptPenalMobile} */}
+
             {isMobile && selectedServiciiMobile.dreptPenal && (
               <div id='mobile-detalii-content'>
                 <h3>{DETALII_SERVICII.btnDreptPenal.title}</h3>
@@ -212,7 +209,7 @@ const Servicii = () => {
                 </ul>
               </p>
 
-              {/* buton mai multe detalii pentru `Drept Civil` */}
+
               <TapButton
                 className='butonDetaliiServicii'
                 isSelected={selectedServiciuRowZero === "btnDreptCivil"}
@@ -225,7 +222,7 @@ const Servicii = () => {
                 {getText(translations, "btnMaiMulteDetalii")}
               </TapButton>
             </div>
-            {/* {dreptCivilMobile} */}
+
             {isMobile && selectedServiciiMobile.dreptCivil && (
               <div id='mobile-detalii-content'>
                 <h3>{DETALII_SERVICII.btnDreptCivil.title}</h3>

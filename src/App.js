@@ -61,6 +61,7 @@ function App() {
 }
 
 // Componenta pentru homepage
+
 function Homepage() {
   return (
     <>

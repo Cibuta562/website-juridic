@@ -7,7 +7,6 @@
     width: 1px;
     height: 60px;
     background-color: #c1a267ff;
-    /* position: absolute; */
     margin-left: 50%;
     margin-top: 10px;
     margin-bottom: 40px;
@@ -91,7 +90,7 @@
   .heading-cont-despre {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.6);
-    background-image: url("../assets/despre.jpg");
+    background-image: url("../assetsMin/despre.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -138,7 +137,7 @@
   .heading-cont-despre {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.6);
-    background-image: url("../assets/despre.jpg");
+    background-image: url("../assetsMin/despre.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

@@ -3,20 +3,19 @@ import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import upArrow from "../assets/arrow.png";
 
-import translationsRO from "../lang/data-ro.js"; // obiect de traducere RO
-import translationsDE from "../lang/data-de.js"; // obict de traducere GER
-import { useLanguage } from "../lang/LanguageContext"; // hook pentru LanguageContext
+import translationsRO from "../lang/data-ro.js";
+import translationsDE from "../lang/data-de.js";
+import { useLanguage } from "../lang/LanguageContext";
 
 function Consultanta() {
-  // Importă hook-ul useLanguage pentru a accesa contextul limbii și funcțiile asociate
+
   const { getText, language } = useLanguage();
 
-  // Alege fișierul de traducere corespunzător limbii selectate
   let translations;
   if (language === "ro") {
-    translations = translationsRO; // foloseste textul in RO
+    translations = translationsRO;
   } else if (language === "de") {
-    translations = translationsDE; // foloseste textul in GER
+    translations = translationsDE;
   }
 
   const targetConsultantaOnline = useRef(null);
@@ -143,7 +142,6 @@ function Consultanta() {
       <button className='btn-top' onClick={moveToTop}>
         <img className='img-arrow' src={upArrow} alt={"btn-top"} />
       </button>
-      {/* <Subsol /> */}
     </div>
   );
 }

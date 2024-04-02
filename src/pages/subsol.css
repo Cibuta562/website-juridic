@@ -1,15 +1,11 @@
-/* .subsol-socials a {
-  font-weight: 600;
-} */
+
 @media screen and (min-width: 800px) {
   .subsol-adv {
     padding-top: 12px;
     font-family: Montserrat;
     text-align: left;
   }
-  /* .subsol-padding {
-    padding-left: 10% !important;
-  } */
+
   .subsol-row {
     height: 200px;
     background-color: #ffffff;

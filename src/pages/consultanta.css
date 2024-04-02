@@ -16,7 +16,6 @@
     width: 300px;
     height: 1px;
     background-color: #c1a267ff;
-    /* position: absolute; */
     margin-left: 5%;
     margin-top: 10px;
     z-index: 0;
@@ -36,7 +35,7 @@
   .heading-cont-consultanta {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.6);
-    background-image: url("../assets/consultanta2.jpg");
+    background-image: url("../assetsMin/consultanta2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -80,7 +79,6 @@
   }
 
   .consultanta-desc-text2 {
-    /* height: 400px; */
     height: auto;
     color: white;
     font-family: Montserrat;
@@ -134,7 +132,7 @@
   .heading-cont-consultanta {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.6);
-    background-image: url("../assets/consultanta2.jpg");
+    background-image: url("../assetsMin/consultanta2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

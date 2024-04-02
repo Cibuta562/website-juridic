@@ -2,12 +2,7 @@ import "./subsol.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
-import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
-import insta from "../assets/insta.png";
-import facebook from "../assets/facebook.svg";
-import linkedin from "../assets/linkedin.svg";
 import { Link } from "react-router-dom";
-import Terms from "./terms";
 import { useLanguage } from "../lang/LanguageContext";
 
 import translationsRO from "../lang/data-ro.js";
@@ -29,7 +24,6 @@ const Subsol = () => {
   const { getText, language } = useLanguage();
   let translations;
 
-  // Alege fișierul de traducere corespunzător limbii selectate
   if (language === "ro") {
     translations = translationsRO;
   } else if (language === "de") {
@@ -55,16 +49,11 @@ const Subsol = () => {
           <div className='subsol-flex'>
             <p className='subsol-socials'>
               <FontAwesomeIcon icon={faPhone} />
-              {/*<p style={{margin: "0px"}}>*/}
-              {/*    <a href="tel:+40731579043" style={{textDecoration: "none", color: "black"}}>*/}
-              {/*        0040 731 57 90 43</a></p>*/}
-
               <a
                 href='tel:+4017631234232'
                 style={{
                   textDecoration: "none",
                   color: "black",
-                  // fontWeight: 'bolder',
                   marginLeft: "5px",
                 }}
               >
@@ -73,7 +62,6 @@ const Subsol = () => {
             </p>
           </div>
           <div className='subsol-flex'>
-            {/*<img className="icon-socials" src={linkedin} alt="insta"/>*/}
             <p className='subsol-socials'>
               <FontAwesomeIcon icon={faEnvelope} />
               <a
@@ -81,7 +69,6 @@ const Subsol = () => {
                 style={{
                   textDecoration: "none",
                   color: "black",
-                  // fontWeight: 'bolder',
                   marginLeft: "5px",
                 }}
               >
@@ -112,16 +99,6 @@ const Subsol = () => {
         </div>
         <div className='subsol-dec-hor'></div>
         <div className='subsol-dec-ver'></div>
-        {/*<div className="subsol-col">*/}
-        {/*    <div className="subsol-flex">*/}
-        {/*        <img className="icon-socials" src={facebook} alt="insta"/>*/}
-        {/*        <a href="https://www.facebook.com/profile.php?id=100069100737162" target="_blank" style={{textDecoration: "none", color: "black"}}>*/}
-        {/*        <p className="subsol-socials">*/}
-        {/*            consult-juridic.*/}
-        {/*        </p>*/}
-        {/*        </a>*/}
-        {/*    </div>*/}
-        {/*</div>*/}
         <div className='subsol-dec-hor'></div>
       </div>
       <div className='subsol-row2'>

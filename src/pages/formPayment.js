@@ -1,10 +1,7 @@
 import "./formPayment.css";
-import { useRef, useState } from "react";
+import {  useState } from "react";
 import Menu from "../menu/menu";
 import Subsol from "./subsol";
-import check from "../assets/check-mark.png";
-
-import { Link } from "react-router-dom";
 
 function Payment() {
   const [sender, setSender] = useState("contact@consultjuridic.ro");
@@ -42,7 +39,6 @@ function Payment() {
       <Menu />
       <div className='heading-payment'>
         <h1 className='payment-conf'>Plata Dumneavoastra a fost procesata!</h1>
-        {/*<img className="img-check" src={check}/>*/}
         <p className='payment-conf-p'>
           Faceti click pe buton pentru a completa formularul pe email despre
           necesitatea dumneavostra

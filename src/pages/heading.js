@@ -1,27 +1,26 @@
 import "./heading.css";
 import React from "react";
-// import heading from "../assets/heading.jpg";
 import upArrow from "../assets/arrow.png";
-import briefImg from "../assets/brief-img.jpg";
+import briefImg from "../assetsMin/brief-img.jpg";
 import { Link } from "react-router-dom";
 
-import translationsRO from "../lang/data-ro.js"; // obiect de traducere RO
-import translationsDE from "../lang/data-de.js"; // obict de traducere GER
-import { useLanguage } from "../lang/LanguageContext"; // hook pentru LanguageContext
+import translationsRO from "../lang/data-ro.js";
+import translationsDE from "../lang/data-de.js";
+import { useLanguage } from "../lang/LanguageContext";
 
 function Heading() {
-  // Importă hook-ul useLanguage pentru a accesa contextul limbii și funcțiile asociate
+
   const { getText, language } = useLanguage();
 
-  // Alege fișierul de traducere corespunzător limbii selectate
+
   let translations;
   if (language === "ro") {
-    translations = translationsRO; // foloseste textul in RO
+    translations = translationsRO;
   } else if (language === "de") {
-    translations = translationsDE; // foloseste textul in GER
+    translations = translationsDE;
   }
 
-  // functie pentru derularea la inceputul paginii
+
   function moveToTop() {
     if ("scrollBehavior" in document.documentElement.style) {
       window.scrollTo({
@@ -35,7 +34,7 @@ function Heading() {
   }
 
   return (
-    // Heading
+
     <div className='heading'>
       <div className='heading-cont'>
         <div className='dark-overlay'></div>
@@ -53,7 +52,6 @@ function Heading() {
         </div>
       </div>
 
-      {/* stats-column */}
       <div className='stats-column'>
         <div className='stats-row'>
           <p className='heading-stats-number'>121</p>

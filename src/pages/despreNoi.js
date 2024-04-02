@@ -1,25 +1,25 @@
 import "./despreNoi.css";
-import despre2 from "../assets/despre2.jpg";
+import despre2 from "../assetsMin/despre2.jpg";
 import upArrow from "../assets/arrow.png";
 import React from "react";
 
-import translationsRO from "../lang/data-ro.js"; // obiect de traducere RO
-import translationsDE from "../lang/data-de.js"; // obict de traducere GER
-import { useLanguage } from "../lang/LanguageContext"; // hook pentru LanguageContext
+import translationsRO from "../lang/data-ro.js";
+import translationsDE from "../lang/data-de.js";
+import { useLanguage } from "../lang/LanguageContext";
 
 function Despre() {
-  // Importă hook-ul useLanguage pentru a accesa contextul limbii și funcțiile asociate
+
   const { getText, language } = useLanguage();
 
-  // Alege fișierul de traducere corespunzător limbii selectate
+
   let translations;
   if (language === "ro") {
-    translations = translationsRO; // foloseste textul in RO
+    translations = translationsRO;
   } else if (language === "de") {
-    translations = translationsDE; // foloseste textul in GER
+    translations = translationsDE;
   }
 
-  // functie pentru derularea la inceputul paginii
+
   function moveToTop() {
     if ("scrollBehavior" in document.documentElement.style) {
       window.scrollTo({

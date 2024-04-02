@@ -59,15 +59,13 @@
 
   .form-control:focus {
     border-color: transparent;
-    outline: none; /* Remove the default outline */
+    outline: none;
   }
 
   .form-control {
     width: 95%;
     padding: 10px;
     font-size: 16px;
-    /*border: 1px solid #ccc;*/
-    /*border-radius: 5px;*/
     color: white;
     border: none;
     background-color: rgba(0, 0, 0, 0);
@@ -208,7 +206,7 @@
 
   .form-control:focus {
     border-color: transparent;
-    outline: none; /* Remove the default outline */
+    outline: none;
   }
 
   .form-control {

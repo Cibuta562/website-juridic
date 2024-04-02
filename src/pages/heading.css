@@ -4,8 +4,6 @@
   text-align: center;
   height: 220px;
   border-top: 1px solid white;
-  /*border-right: 1px solid white;*/
-  /*border-left: 1px solid white;*/
   font-family: Montserrat;
   width: 100%;
 }
@@ -24,8 +22,6 @@
   text-align: center;
   height: 220px;
   border-bottom: 1px solid white;
-  /*border-right: 1px solid white;*/
-  /*border-left: 1px solid white;*/
   font-family: Montserrat;
   width: 100%;
 }
@@ -37,7 +33,7 @@
 
   .heading-cont {
     height: 100vh;
-    background-image: url("../assets/heading3.jpg");
+    background-image: url("../assetsMin/heading3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -172,7 +168,7 @@
   .heading-cont {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.6);
-    background-image: url("../assets/heading2.jpg");
+    background-image: url("../assetsMin/heading2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -180,10 +176,7 @@
   }
 
   .img-arrow {
-    /* position: fixed; */
-    /* top: 88%; */
     width: 30px;
-    /* left: 82.5%; */
     border-radius: 50%;
     z-index: 1;
   }
@@ -264,7 +257,6 @@
   .brief-img {
     object-fit: cover;
     object-position: top;
-    /* height: 230px; */
     width: 100%;
   }
 

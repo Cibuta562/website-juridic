@@ -103,12 +103,12 @@ function Consultanta() {
             <p className='despre-p'>
               {getText(translations, "consultantaText10")}
             </p>
-            <p className='despre-p'>
-              {getText(translations, "consultantaText11")}
-              <span style={{ fontWeight: "lighter" }}>
-                {getText(translations, "consultantaLizibil")}
-              </span>
-            </p>
+            {/*<p className='despre-p'>*/}
+            {/*  {getText(translations, "consultantaText11")}*/}
+            {/*  <span style={{ fontWeight: "lighter" }}>*/}
+            {/*    {getText(translations, "consultantaLizibil")}*/}
+            {/*  </span>*/}
+            {/*</p>*/}
             <p className='despre-p'>
               {getText(translations, "consultantaText12")}
             </p>
@@ -131,8 +131,9 @@ function Consultanta() {
             >
               <button className='btn-contact-consultanta btn-hover'>
                 <a
-                  href='https://buy.stripe.com/14kaHN0jn5u98s8aEF'
-                  target='_blank'
+                  // href='https://buy.stripe.com/14kaHN0jn5u98s8aEF'
+                  // target='_blank'
+                 href="./contact/form"
                   style={{ textDecoration: "none", color: "white" }}
                 >
                   {getText(translations, "consultantaTrimiteEmail")}

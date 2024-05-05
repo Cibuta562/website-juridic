@@ -1,4 +1,20 @@
+.p-div-center{
+    text-align: center;
+    padding-top: 7px;
+    color: black;
+}
+
+
 @media screen and (max-width: 800px) {
+
+    .payment-conf-div{
+        background-color: white;
+        width: 220px;
+        height: 40px;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
     .div-payment{
        height: 800px;
         background-color: black;
@@ -41,7 +57,7 @@
     }
 
     .heading-payment{
-        height: 450px;
+        height: 850px;
         background-color: black;
     }
 
@@ -88,12 +104,21 @@
 
 @media screen and (min-width: 800px) {
 
+    .payment-conf-div{
+        background-color: white;
+        width: 220px;
+        height: 40px;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
 
     .payment-conf-p{
         color: white;
         font-size: 20px;
         padding-left: 20px;
         padding-right: 20px;
+        width: 70%;
     }
 
     .payment-conf{
@@ -124,7 +149,7 @@
     }
 
     .heading-payment{
-        height: 500px;
+        height: 800px;
         background-color: black;
     }
 

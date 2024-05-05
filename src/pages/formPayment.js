@@ -2,9 +2,11 @@ import "./formPayment.css";
 import {  useState } from "react";
 import Menu from "../menu/menu";
 import Subsol from "./subsol";
+import ContactForm from "./contactForm";
+import {Link} from "react-router-dom";
 
 function Payment() {
-  const [sender, setSender] = useState("contact@consultjuridic.ro");
+  const [sender, setSender] = useState("online@consult-juridic.eu");
   const [message, setMessage] = useState(
     "Va rog sa completati urmatoarele campuri pentru a trimite emailul: \n" +
       "\n" +
@@ -14,10 +16,10 @@ function Payment() {
       "\n" +
       "Email: \n" +
       "\n" +
-      "Categoria Juridica: \n" +
+      "Denumire Situatie Juridica (exemplu: Civil, Penal, Divort, Amenda, Etc): \n" +
       "\n" +
       "\n" +
-      "Mesaj:" +
+      "Mesaj (Descriere succincta a problemei juridice):" +
       "\n" +
       "\n" +
       "\n" +
@@ -38,21 +40,36 @@ function Payment() {
     <div style={{ width: "100%" }}>
       <Menu />
       <div className='heading-payment'>
-        <h1 className='payment-conf'>Plata Dumneavoastra a fost procesata!</h1>
+        <br/>
+        <br/>
+        <br/>
+        <h1 className='payment-conf'>Plata Dumneavoastra a fost finalizata cu succes!</h1>
         <p className='payment-conf-p'>
-          Faceti click pe buton pentru a completa formularul pe email despre
-          necesitatea dumneavostra
+          Dupa confirmarea platii, situatia va fi analizata de un avocat, urmand ca solutia juridica sa va fie transmisa pe adresa de mail indicata de dvs. in cel mult 24 de ore.
         </p>
         <p className='payment-conf-p'>
-          Veti fi contactat de unul dinte avocatii nostri in maximum 24 de ore
-          de la primirea mail-ului
+          In cazul necesitatii unor informatii suplimentare, veti fi contactat prin mail separat, ori la numarul  de telefonul indicat de dumneavoastra.
         </p>
-        <button className='payment-btn' onClick={handleButtonClick}>
-          Catre formular
-        </button>
+        <p className='payment-conf-p'>
+          Va  multumim!
+        </p>
+        <p className='payment-conf-p'>
+          Echipa Consult Juridic
+        </p>
+        <br/>
+        <Link style={{textDecoration: "none"}} to="/">
+        <div className='payment-conf-div'>
+          <p className="p-div-center">
+          Inapoi la meniu
+          </p>
+        </div>
+        </Link>
+        {/*<button className='payment-btn' onClick={handleButtonClick}>*/}
+        {/*  Catre formular*/}
+        {/*</button>*/}
+        {/*<ContactForm/>*/}
       </div>
-      <div className='div-payment'></div>
-      <Subsol />
+      {/*<div className='div-payment'></div>*/}
     </div>
   );
 }

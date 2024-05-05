@@ -1,6 +1,7 @@
 {
   "name": "website-juridic",
   "version": "0.1.0",
+  "homepage": "https://consult-juridi.eu",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.3.3",

@@ -72,7 +72,7 @@ const Subsol = () => {
                   marginLeft: "5px",
                 }}
               >
-                urgent@consult-juridic.eu
+                office@consult-juridic.eu
               </a>
             </p>
           </div>
@@ -105,7 +105,11 @@ const Subsol = () => {
         <div className='subsol-col2' style={{ marginTop: "0px" }}>
           © 2024 Consult-Juridic.
         </div>
-        <div className='subsol-col2'>@generation salez</div>
+        <div className='subsol-col2'>
+          <a style={{textDecoration: "none", color: "black"}} href="https://generationsalez.com" target="_blank">
+          @generation salez
+          </a>
+        </div>
         <div className='subsol-col2'>
           <Link
             to='/termeni/si/conditii'

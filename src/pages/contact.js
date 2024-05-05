@@ -20,7 +20,7 @@ const Contact = () => {
       <div className='contact-img-cont'>
         <img className='contact-img' src={contact} alt='contact' />
       </div>
-      <div className='contact-form'>
+      <div className='contact-form-main'>
         <p className='contact-heading'>
           {getText(translations, "contactTitle")}
         </p>
@@ -29,8 +29,8 @@ const Contact = () => {
           <p className='text-cont'>{getText(translations, "contactText")}</p>
 
           <p className='text-cont'>
-            <a className='link-email' href='mailto:romania@consult-juridic.eu'>
-              romania@consult-juridic.eu
+            <a className='link-email' href='mailto:office@consult-juridic.eu'>
+              office@consult-juridic.eu
             </a>
           </p>
         </div>

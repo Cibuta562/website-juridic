@@ -16,6 +16,7 @@ import Terms from "./pages/terms";
 import Soon from "./pages/soon";
 import LoadingScreen from "./pages/LoadingScreen";
 import { CookieConsent } from "react-cookie-consent";
+import ContactForm from "./pages/contactForm";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -23,7 +24,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000); // Ajustează timpul de încărcare aici, în milisecunde
+    }, 1500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -58,10 +59,11 @@ function App() {
             {loading ? (
               <Route index element={<LoadingScreen />} />
             ) : (
-              <Route index element={<Soon />} />
+              <Route index element={<Homepage />} />
             )}
             <Route path='/website-juridic' element={<Homepage />} />
             <Route path='/despre/noi' element={<Despre />} />
+              <Route path='/contact/form' element={<ContactForm />} />
             <Route path='/consultanta' element={<Consultanta />} />
             <Route path='/termeni/si/conditii' element={<Terms />} />
             <Route path='/secure/payment/completed' element={<Payment />} />

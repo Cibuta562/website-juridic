@@ -15,11 +15,10 @@ const LoadingScreen = () => {
       initial='initial'
       animate='animate'
       exit='exit'
-      transition={{ duration: 0.5, delay: 2.5 }}
+      transition={{ duration: 0.5, delay: 1 }}
       className='loading-div'
     >
       <img src={loadingImage} alt='loading' className='loading-image' />
-      <div className='loading-bar'></div>
     </motion.div>
   );
 };

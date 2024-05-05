@@ -149,13 +149,13 @@ export const translationsRO = {
   consultantaText11:
     "4. După caz, atașați în format .pdf sau .jpg documentele ",
   consultantaLizibil: "(poze cât mai lizibile).",
-  consultantaText12: "5. Achitați onorariul afișat.",
+  consultantaText12: "4. Achitați onorariul afișat.",
   consultantaText13:
-    "6. Imediat dupa procesarea plății situația juridică prezentată de dumneavoastră va fi analizată de unul din specialiștii noștri.",
+    "5. Imediat dupa procesarea plății situația juridică prezentată de dumneavoastră va fi analizată de unul din specialiștii noștri.",
   consultantaText14:
-    "7. În maxim 12 de ore de la procesarea plații unul din specialiștii noștri va răspunde pe emailul indicat de dvs, iar după caz, veți primi documentele solicitate. De asemenea, veți primi datele de contact ale avocatului pentru eventuale detalii finale.",
+    "6. În maxim 24 de ore de la procesarea plații unul din specialiștii noștri va răspunde pe emailul indicat de dvs, iar după caz, veți primi documentele solicitate. De asemenea, veți primi datele de contact ale avocatului pentru eventuale detalii finale.",
   consultantaText15:
-    "8. Într-o eventuală discuție telefonică, finală, toate întrebările restante privind situația juridică prezentată, pot fi discutate cu avocatul care v-a răspuns.",
+    "7. Într-o eventuală discuție telefonică, finală, toate detaliile restante privind situația juridică prezentată, vor fi discutate cu avocatul dumneavoastră.",
   consultantaText16:
     "Biroul nostru va asigura consultanță juridică atât pentru cetățenii români rezidenți în Germania, cât și pentru cetățenii nemți care se confruntă cu situații juridice în România.",
   consultantaTrimiteEmail: "TRIMITE EMAIL",

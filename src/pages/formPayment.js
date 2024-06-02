@@ -4,6 +4,9 @@ import Menu from "../menu/menu";
 import Subsol from "./subsol";
 import ContactForm from "./contactForm";
 import {Link} from "react-router-dom";
+import {useLanguage} from "../lang/LanguageContext";
+import translationsRO from "../lang/data-ro";
+import translationsDE from "../lang/data-de";
 
 function Payment() {
   const [sender, setSender] = useState("online@consult-juridic.eu");
@@ -36,6 +39,15 @@ function Payment() {
     window.location.href = mailtoLink;
   };
 
+  const { getText, language } = useLanguage();
+
+  let translations;
+  if (language === "ro") {
+    translations = translationsRO;
+  } else if (language === "de") {
+    translations = translationsDE;
+  }
+
   return (
     <div style={{ width: "100%" }}>
       <Menu />
@@ -43,24 +55,24 @@ function Payment() {
         <br/>
         <br/>
         <br/>
-        <h1 className='payment-conf'>Plata Dumneavoastra a fost finalizata cu succes!</h1>
+        <h1 className='payment-conf'>{getText(translations, "paymentTextHeading")}</h1>
         <p className='payment-conf-p'>
-          Dupa confirmarea platii, situatia va fi analizata de un avocat, urmand ca solutia juridica sa va fie transmisa pe adresa de mail indicata de dvs. in cel mult 24 de ore.
+          {getText(translations, "paymentText1")}
         </p>
         <p className='payment-conf-p'>
-          In cazul necesitatii unor informatii suplimentare, veti fi contactat prin mail separat, ori la numarul  de telefonul indicat de dumneavoastra.
+          {getText(translations, "paymentText2")}
         </p>
         <p className='payment-conf-p'>
-          Va  multumim!
+          {getText(translations, "paymentText3")}
         </p>
         <p className='payment-conf-p'>
-          Echipa Consult Juridic
+          {getText(translations, "paymentText4")}
         </p>
         <br/>
         <Link style={{textDecoration: "none"}} to="/">
         <div className='payment-conf-div'>
           <p className="p-div-center">
-          Inapoi la meniu
+            {getText(translations, "paymentTextButton")}
           </p>
         </div>
         </Link>

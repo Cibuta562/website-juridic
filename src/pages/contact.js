@@ -26,10 +26,10 @@ const Contact = () => {
         </p>
         <div className='line-dec-cont'></div>
         <div className='form-cont'>
-          <p className='text-cont'>{getText(translations, "contactText")}</p>
+          <p className='text-cont' style={{textAlign: "justify"}}>{getText(translations, "contactText")}</p>
 
           <p className='text-cont'>
-            <a className='link-email' href='mailto:office@consult-juridic.eu'>
+            <a className='link-email' href='mailto:office@consult-juridic.eu' style={{color: "#c1a267", textAlign: "justify"}}>
               office@consult-juridic.eu
             </a>
           </p>

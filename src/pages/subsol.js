@@ -39,7 +39,7 @@ const Subsol = () => {
           </p>
           <p className='subsol-adv'>{getText(translations, "subsolText2")}</p>
         </div>
-        <div className='subsol-col subsol-padding'>
+        <div className='subsol-col3 subsol-padding'>
           <div className='subsol-flex'>
             {/*<img className="icon-socials" src={insta} alt="insta"/>*/}
             <p className='subsol-socials'>
@@ -59,6 +59,21 @@ const Subsol = () => {
               >
                 0049 176 31 23 42 32
               </a>
+            </p>
+          </div>
+          <div className='subsol-flex'>
+            <p className='subsol-socials'>
+          <FontAwesomeIcon icon={faPhone} />
+          <a
+              href='tel:+4017631234232'
+              style={{
+                textDecoration: "none",
+                color: "black",
+                marginLeft: "5px",
+              }}
+          >
+            0040 731 579 043
+          </a>
             </p>
           </div>
           <div className='subsol-flex'>

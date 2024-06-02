@@ -72,9 +72,9 @@ function Consultanta() {
           </p>
           <p className='despre-p'>
             {getText(translations, "consultantaText4")}
-            <p style={{ fontWeight: "lighter", padding: "0", margin: "0" }}>
-              {getText(translations, "consultantaText5")}
-            </p>
+            {/*<p style={{ fontWeight: "lighter", padding: "0", margin: "0" }}>*/}
+            {/*  {getText(translations, "consultantaText5")}*/}
+            {/*</p>*/}
           </p>
           <p className='despre-p'>
             {getText(translations, "consultantaText6")}

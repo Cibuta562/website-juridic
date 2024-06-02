@@ -134,21 +134,25 @@
 
   .text-cont,
   .link-email {
-    text-align: center;
     width: 70%;
     margin: auto;
     font-family: Montserrat;
     font-size: 18px;
     text-decoration: none;
     line-height: 1.5rem;
+    text-align: justify;
+    padding-top: 15px;
   }
 
   .link-email {
+    padding-top: 30px;
     color: #c1a267;
+    text-align: justify;
   }
 
   .text-cont {
     color: white;
+    text-align: justify;
   }
 }
 
@@ -288,10 +292,11 @@
   }
   .link-email {
     color: #c1a267;
+    text-align: justify;
   }
   .text-cont,
   .link-email {
-    text-align: left;
+    text-align: justify;
     width: 100%;
     font-family: Montserrat;
     font-size: 20px;

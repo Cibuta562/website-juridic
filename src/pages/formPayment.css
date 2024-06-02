@@ -59,6 +59,7 @@
     .heading-payment{
         height: 850px;
         background-color: black;
+        text-align: justify;
     }
 
     .file-input {
@@ -151,6 +152,7 @@
     .heading-payment{
         height: 800px;
         background-color: black;
+        text-align: justify;
     }
 
     .file-input {

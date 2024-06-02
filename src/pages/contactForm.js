@@ -1,9 +1,22 @@
 import "./contactForm.css"
 import {useRef, useState} from "react";
 import emailjs from "@emailjs/browser";
+import {useLanguage} from "../lang/LanguageContext";
+import translationsRO from "../lang/data-ro";
+import translationsDE from "../lang/data-de";
 
 
 const ContactForm = () => {
+
+
+    const { getText, language } = useLanguage();
+
+    let translations;
+    if (language === "ro") {
+        translations = translationsRO;
+    } else if (language === "de") {
+        translations = translationsDE;
+    }
 
     const [formData, setFormData] = useState({
         firstName: "",
@@ -56,7 +69,9 @@ const ContactForm = () => {
             {/*    <img className="contact-img" src={contact} alt="contact"/>*/}
             {/*</div>*/}
             <div className="contact-form">
-                <p className="contact-heading">Contact</p>
+                <p className="contact-heading">
+                    {getText(translations, "contactTextHeading")}
+                </p>
                 <div className="line-dec-cont"></div>
                 <div className="form-cont">
 
@@ -66,7 +81,7 @@ const ContactForm = () => {
                                 <input
                                     type="text"
                                     className="form-control"
-                                    placeholder="Nume"
+                                    placeholder={getText(translations, "contactTextNume")}
                                     name="lastName"
                                     value={formData.lastName}
                                     onChange={handleInputChange}
@@ -77,7 +92,7 @@ const ContactForm = () => {
                                 <input
                                     type="text"
                                     className="form-control"
-                                    placeholder="Prenume"
+                                    placeholder={getText(translations, "contactTextPrenume")}
                                     name="firstName"
                                     value={formData.firstName}
                                     onChange={handleInputChange}
@@ -101,7 +116,7 @@ const ContactForm = () => {
                                 <input
                                     type="number"
                                     className="form-control"
-                                    placeholder="Telefon"
+                                    placeholder={getText(translations, "contactTextTelefon")}
                                     name="phoneNumber"
                                     value={formData.phoneNumber}
                                     onChange={handleInputChange}
@@ -118,24 +133,24 @@ const ContactForm = () => {
                                 value={formData.subject}
                                 onChange={handleInputChange}
                             >
-                                <option value="">Categorie Juridica</option>
-                                <option value="Drept civil – RO">Drept civil – RO</option>
-                                <option value="Drept civil – DE">Drept civil – DE</option>
-                                <option value="Drept penal - RO">Drept penal - RO</option>
-                                <option value="Drept penal – DE">Drept penal – DE</option>
-                                <option value="Dreptul familiei  - RO">Dreptul familiei  - RO</option>
-                                <option value="Dreptul Familiei – DE">Dreptul Familiei – DE</option>
-                                <option value="Drept rutier – RO">Drept rutier – RO</option>
-                                <option value="Drept rutier – DE">Drept rutier – DE</option>
-                                <option value="Drept imobiliar – RO">Drept imobiliar – RO</option>
-                                <option value="Drept imobiliar - DE">Drept imobiliar - DE</option>
-                                <option value="Altele – RO">Altele – RO</option>
-                                <option value="Altele - DE">Altele - DE</option>
+                                <option value="">{getText(translations, "contactTextCategorieJuridica")}</option>
+                                <option value="Drept civil – RO">{getText(translations, "contactTextCategorieJuridica1")}</option>
+                                <option value="Drept civil – DE">{getText(translations, "contactTextCategorieJuridica2")}</option>
+                                <option value="Drept penal - RO">{getText(translations, "contactTextCategorieJuridica3")}</option>
+                                <option value="Drept penal – DE">{getText(translations, "contactTextCategorieJuridica4")}</option>
+                                <option value="Dreptul familiei  - RO">{getText(translations, "contactTextCategorieJuridica5")}</option>
+                                <option value="Dreptul Familiei – DE">{getText(translations, "contactTextCategorieJuridica6")}</option>
+                                <option value="Drept rutier – RO">{getText(translations, "contactTextCategorieJuridica7")}</option>
+                                <option value="Drept rutier – DE">{getText(translations, "contactTextCategorieJuridica8")}</option>
+                                <option value="Drept imobiliar – RO">{getText(translations, "contactTextCategorieJuridica9")}</option>
+                                <option value="Drept imobiliar - DE">{getText(translations, "contactTextCategorieJuridica10")}</option>
+                                <option value="Altele – RO">{getText(translations, "contactTextCategorieJuridica11")}</option>
+                                <option value="Altele - DE">{getText(translations, "contactTextCategorieJuridica12")}</option>
                             </select>
                             <hr className="decoration-line" />
                         </div>
                         </div>
-                        <p className="textarea-title">Mesaj</p>
+                        <p className="textarea-title">{getText(translations, "contactTextMesaj")}</p>
                         <div className="form-row">
                         <div className="form-group-area">
                           <textarea
@@ -154,7 +169,7 @@ const ContactForm = () => {
                             {/*    target='_blank'*/}
                             {/*    style={{ textDecoration: "none", color: "white" }}*/}
                             {/*> Trimite </a>*/}
-                            Trimite
+                            {getText(translations, "contactTextTrimite")}
                             </button>
                     </form>
                 </div>

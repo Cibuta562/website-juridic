@@ -2,14 +2,16 @@ import "./servicii.css";
 import React, { useState, useRef } from "react";
 import servicii1 from "../assetsMin/servicii1.jpg";
 import servicii2 from "../assetsMin/servicii2.jpg";
-import servicii3 from "../assetsMin/servicii3.jpg";
+import servicii5 from "../assetsMin/mobileHeading2.jpg";
 import servicii4 from "../assetsMin/servicii4.jpg";
-import servicii5 from "../assetsMin/servicii5.jpg";
+import servicii3 from "../assetsMin/servicii5.jpg";
 import servicii6 from "../assetsMin/servicii6.jpg";
 import briefDown from "../assetsMin/brief-down.jpg";
 
 import TapButton from "./TapServicii";
-import { DETALII_SERVICII } from "../lang/data-ro";
+import { DETALII_SERVICII } from "../lang/data-ro.js";
+import {DETALII_SERVICII_DE} from "../lang/data-de.js";
+
 
 import translationsRO from "../lang/data-ro.js"; // obiect de traducere RO
 import translationsDE from "../lang/data-de.js"; // obict de traducere GER
@@ -18,26 +20,27 @@ import { useLanguage } from "../lang/LanguageContext"; // hook pentru LanguageCo
 const Servicii = () => {
   const detaliiServiciuRefZero = useRef(null);
   const detaliiServiciuRefOne = useRef(null);
-  // Funcție pentru a realiza scroll către conținutul detaliat dorit
+
   function scrollLaDetalii(ref) {
     ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
-  // Importă hook-ul useLanguage pentru a accesa contextul limbii și funcțiile asociate
+
   const { getText, language } = useLanguage();
 
-  // Alege fișierul de traducere corespunzător limbii selectate
+
+
   let translations;
   if (language === "ro") {
-    translations = translationsRO; // foloseste textul in RO
+    translations = translationsRO;
   } else if (language === "de") {
-    translations = translationsDE; // foloseste textul in GER
+    translations = translationsDE;
   }
 
   /* useState pentru selectarea butonului din meniul de servicii de pe randul 0 */
   const [selectedServiciuRowZero, setSelectedServiciuRowZero] = useState();
 
-  // functie care seteaza butonul ca `activ` din meniul de servicii de pe randul 0
+  // functie care seteaza butonul ca `activ` din meniul de servicii de pe randul 0Besides this I have this translation file
   function handleSelectServiciuRowZero(selectedButtonRowZero) {
     setSelectedServiciuRowZero(selectedButtonRowZero);
   }
@@ -62,33 +65,95 @@ const Servicii = () => {
     "btnDreptulFamiliei",
     "btnDreptulMuncii",
   ];
-  if (selectedServiciuOptionsZero.includes(selectedServiciuRowZero)) {
+
+  function handleCloseServiciuRowZero() {
+    setSelectedServiciuRowZero(null);
+  }
+
+  function handleCloseServiciuRowOne() {
+    setSelectedServiciuRowOne(null);
+  }
+
+  if (selectedServiciuRowZero === "btnDreptPenal") {
     detaliiServiciiContentRowZero = (
-      <div id='detalii-content' data-aos='fade-up'>
-        <h3>{DETALII_SERVICII[selectedServiciuRowZero].title}</h3>
-        <div className='line-dec-ver10'></div>
-        <p>{DETALII_SERVICII[selectedServiciuRowZero].description}</p>
-        <p>{DETALII_SERVICII[selectedServiciuRowZero].info}</p>
-        <button
-          className='close-detaliiServicii'
-          onClick={() => handleSelectServiciuRowZero()}
-        ></button>
-      </div>
+        <div id='detalii-content' data-aos='fade-up'>
+          <h3>{getText(translations, "serviciiTextTitle1")}</h3>
+          <div className='line-dec-ver10'></div>
+          <p>{getText(translations, "serviciiTextDescriere1")}</p>
+          <p>{getText(translations, "serviciiTextInfo1")}</p>
+          <button
+              className='close-detaliiServicii'
+              onClick={handleCloseServiciuRowZero}
+          ></button>
+        </div>
+    );
+  } else if (selectedServiciuRowZero === "btnDreptCivil") {
+    detaliiServiciiContentRowZero = (
+        <div id='detalii-content' data-aos='fade-up'>
+          <h3>{getText(translations, "serviciiTextTitle2")}</h3>
+          <div className='line-dec-ver10'></div>
+          <p>{getText(translations, "serviciiTextDescriere2")}</p>
+          <p>{getText(translations, "serviciiTextInfo2")}</p>
+          <button
+              className='close-detaliiServicii'
+              onClick={handleCloseServiciuRowZero}
+          ></button>
+        </div>
+    );
+  } else if (selectedServiciuRowZero === "btnDreptRutier") {
+    detaliiServiciiContentRowZero = (
+        <div id='detalii-content' data-aos='fade-up'>
+          <h3>{getText(translations, "serviciiTextTitle3")}</h3>
+          <div className='line-dec-ver10'></div>
+          <p>{getText(translations, "serviciiTextDescriere3")}</p>
+          <p>{getText(translations, "serviciiTextInfo3")}</p>
+          <button
+              className='close-detaliiServicii'
+              onClick={handleCloseServiciuRowZero}
+          ></button>
+        </div>
     );
   }
 
-  if (selectedServiciuOptionsOne.includes(selectedServiciuRowOne)) {
+  // Row 1 Details
+  if (selectedServiciuRowOne === "btnDeclaratiiFiscale") {
     detaliiServiciiContentRowOne = (
-      <div id='detalii-content' data-aos='fade-up'>
-        <h3>{DETALII_SERVICII[selectedServiciuRowOne].title}</h3>
-        <div className='line-dec-ver10'></div>
-        <p>{DETALII_SERVICII[selectedServiciuRowOne].description}</p>
-        <p>{DETALII_SERVICII[selectedServiciuRowOne].info}</p>
-        <button
-          className='close-detaliiServicii'
-          onClick={() => handleSelectServiciuRowOne()}
-        ></button>
-      </div>
+        <div id='detalii-content' data-aos='fade-up'>
+          <h3>{getText(translations, "serviciiTextTitle4")}</h3>
+          <div className='line-dec-ver10'></div>
+          <p>{getText(translations, "serviciiTextDescriere4")}</p>
+          <p>{getText(translations, "serviciiTextInfo4")}</p>
+          <button
+              className='close-detaliiServicii'
+              onClick={handleCloseServiciuRowOne}
+          ></button>
+        </div>
+    );
+  } else if (selectedServiciuRowOne === "btnDreptulFamiliei") {
+    detaliiServiciiContentRowOne = (
+        <div id='detalii-content' data-aos='fade-up'>
+          <h3>{getText(translations, "serviciiTextTitle5")}</h3>
+          <div className='line-dec-ver10'></div>
+          <p>{getText(translations, "serviciiTextDescriere5")}</p>
+          <p>{getText(translations, "serviciiTextInfo5")}</p>
+          <button
+              className='close-detaliiServicii'
+              onClick={handleCloseServiciuRowOne}
+          ></button>
+        </div>
+    );
+  } else if (selectedServiciuRowOne === "btnDreptulMuncii") {
+    detaliiServiciiContentRowOne = (
+        <div id='detalii-content' data-aos='fade-up'>
+          <h3>{getText(translations, "serviciiTextTitle6")}</h3>
+          <div className='line-dec-ver10'></div>
+          <p>{getText(translations, "serviciiTextDescriere6")}</p>
+          <p>{getText(translations, "serviciiTextInfo6")}</p>
+          <button
+              className='close-detaliiServicii'
+              onClick={handleCloseServiciuRowOne}
+          ></button>
+        </div>
     );
   }
   const isMobile = window.innerWidth < 800;
@@ -190,10 +255,10 @@ const Servicii = () => {
             {/* {dreptPenalMobile} */}
             {isMobile && selectedServiciiMobile.dreptPenal && (
               <div id='mobile-detalii-content' data-aos='fade-up'>
-                <h3>{DETALII_SERVICII.btnDreptPenal.title}</h3>
+                <h3>{getText(translations, "serviciiTextTitle1")}</h3>
                 <div className='line-dec-ver10'></div>
-                <p>{DETALII_SERVICII.btnDreptPenal.description}</p>
-                <p>{DETALII_SERVICII.btnDreptPenal.info}</p>
+                <p>{getText(translations, "serviciiTextDescriere1")}</p>
+                <p>{getText(translations, "serviciiTextInfo1")}</p>
                 <button
                   className='close-detaliiServicii'
                   onClick={handleSelectServiciuDreptPenal}
@@ -234,10 +299,10 @@ const Servicii = () => {
             {/* {dreptCivilMobile} */}
             {isMobile && selectedServiciiMobile.dreptCivil && (
               <div id='mobile-detalii-content' data-aos='fade-up'>
-                <h3>{DETALII_SERVICII.btnDreptCivil.title}</h3>
+                <h3>{getText(translations, "serviciiTextTitle2")}</h3>
                 <div className='line-dec-ver10'></div>
-                <p>{DETALII_SERVICII.btnDreptCivil.description}</p>
-                <p>{DETALII_SERVICII.btnDreptCivil.info}</p>
+                <p>{getText(translations, "serviciiTextDescriere2")}</p>
+                <p>{getText(translations, "serviciiTextInfo2")}</p>
                 <button
                   className='close-detaliiServicii'
                   onClick={handleSelectServiciuDreptCivil}
@@ -279,10 +344,10 @@ const Servicii = () => {
           {/* {dreptRutierMobile} */}
           {isMobile && selectedServiciiMobile.dreptRutier && (
             <div id='mobile-detalii-content' data-aos='fade-up'>
-              <h3>{DETALII_SERVICII.btnDreptRutier.title}</h3>
+              <h3>{getText(translations, "serviciiTextTitle3")}</h3>
               <div className='line-dec-ver10'></div>
-              <p>{DETALII_SERVICII.btnDreptRutier.description}</p>
-              <p>{DETALII_SERVICII.btnDreptRutier.info}</p>
+              <p>{getText(translations, "serviciiTextDescriere3")}</p>
+              <p>{getText(translations, "serviciiTextInfo3")}</p>
               <button
                 className='close-detaliiServicii'
                 onClick={handleSelectServiciuDreptRutier}
@@ -295,7 +360,7 @@ const Servicii = () => {
         <div>{detaliiServiciiContentRowZero}</div>
 
         {/* row - servicii - 1 : Declarații Fiscale / Dreptul Familiei / Dreptul Muncii */}
-        <div className='row-servicii1 edit-detalii-servicii'>
+        <div className='row-servicii1 edit-detalii-servicii' style={{paddingTop: "100px"}}>
           <div className='col-servicii' data-aos='fade-up'>
             <div>
               <img
@@ -330,10 +395,10 @@ const Servicii = () => {
             </div>
             {isMobile && selectedServiciiMobile.declaratiiFiscale && (
               <div id='mobile-detalii-content' data-aos='fade-up'>
-                <h3>{DETALII_SERVICII.btnDeclaratiiFiscale.title}</h3>
+                <h3>{getText(translations, "serviciiTextTitle4")}</h3>
                 <div className='line-dec-ver10'></div>
-                <p>{DETALII_SERVICII.btnDeclaratiiFiscale.description}</p>
-                <p>{DETALII_SERVICII.btnDeclaratiiFiscale.info}</p>
+                {/*<p>{DETALII_SERVICII.btnDeclaratiiFiscale.description}</p>*/}
+                <p>{getText(translations, "serviciiTextInfo4")}</p>
                 <button
                   className='close-detaliiServicii'
                   onClick={handleSelectServiciuDeclaratiiFiscale}
@@ -377,10 +442,10 @@ const Servicii = () => {
             </div>
             {isMobile && selectedServiciiMobile.dreptulFamiliei && (
               <div id='mobile-detalii-content' data-aos='fade-up'>
-                <h3>{DETALII_SERVICII.btnDreptulFamiliei.title}</h3>
+                <h3>{getText(translations, "serviciiTextTitle5")}</h3>
                 <div className='line-dec-ver10'></div>
-                <p>{DETALII_SERVICII.btnDreptulFamiliei.description}</p>
-                <p>{DETALII_SERVICII.btnDreptulFamiliei.info}</p>
+                <p>{getText(translations, "serviciiTextDescriere5")}</p>
+                <p>{getText(translations, "serviciiTextInfo5")}</p>
                 <button
                   className='close-detaliiServicii'
                   onClick={handleSelectServiciuDreptulFamiliei}
@@ -426,10 +491,10 @@ const Servicii = () => {
           </div>
           {isMobile && selectedServiciiMobile.dreptulMuncii && (
             <div id='mobile-detalii-content' data-aos='fade-up'>
-              <h3>{DETALII_SERVICII.btnDreptulMuncii.title}</h3>
+              <h3>{getText(translations, "serviciiTextTitle6")}</h3>
               <div className='line-dec-ver10'></div>
-              <p>{DETALII_SERVICII.btnDreptulMuncii.description}</p>
-              <p>{DETALII_SERVICII.btnDreptulMuncii.info}</p>
+              {/*<p>{DETALII_SERVICII.btnDreptulMuncii.description}</p>*/}
+              <p>{getText(translations, "serviciiTextInfo6")}</p>
               <button
                 className='close-detaliiServicii'
                 onClick={handleSelectServiciuDreptulMuncii}

@@ -26,12 +26,27 @@ const Contact = () => {
         </p>
         <div className='line-dec-cont'></div>
         <div className='form-cont'>
-          <p className='text-cont' style={{textAlign: "justify"}}>{getText(translations, "contactText")}</p>
-
+          <p className='text-cont' >{getText(translations, "contactText")}</p>
+          <p className='text-cont' >{getText(translations, "contactText1")}</p>
+          <p className='text-cont' >{getText(translations, "contactText2")}</p>
+          <br/>
+          <p className='text-cont' >{getText(translations, "contactText3")}</p>
           <p className='text-cont'>
-            <a className='link-email' href='mailto:office@consult-juridic.eu' style={{color: "#c1a267", textAlign: "justify"}}>
-              office@consult-juridic.eu
-            </a>
+            0040/731579043
+          </p>
+          <p className="text-cont">
+          <a href='mailto:office@consult-juridic.eu' style={{color: "#c1a267", textDecoration: "none"}}>
+            office@consult-juridic.eu
+          </a>
+          </p>
+          <p className='text-cont' >{getText(translations, "contactText4")}</p>
+          <p className='text-cont' >
+            0049/17631234232
+          </p>
+          <p className="text-cont">
+          <a href='mailto:office@consult-juridic.eu' style={{color: "#c1a267" , textDecoration: "none"}}>
+            office@consult-juridic.eu
+          </a>
           </p>
         </div>
       </div>

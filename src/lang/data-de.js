@@ -74,7 +74,16 @@ const translationsDE = {
 
   contactTitle: "Kontakt",
   contactText:
-    "Für Termine im Büro in Rumänien, Bukarest, senden Sie uns bitte eine E-Mail mit Ihrem Vor- und Nachnamen sowie dem Rechtsgebiet (Zivilrecht, Strafrecht usw.) an:",
+      "Rechtsberatungsprogramm in der Zentrale. Mit vorheriger Terminvereinbarung:",
+  contactText1:
+      "Dienstag - Freitag: 10:00 - 16:00 Uhr",
+  contctText2:
+      "Samstag: 10:00 - 13:00 Uhr",
+  contactText3:
+      "Für Rumänien:",
+  contactText4:
+      "Für Deutschland:",
+  contactEmail: "romania@consult-juridic.eu",
 
   subsolText1:
     "Bitte verwenden Sie die unten stehende Telefonnummer oder E-Mail-Adresse nur in Notfällen.",
@@ -83,6 +92,7 @@ const translationsDE = {
   subsolSchedule1: "Montag - Donnerstag: 9:00 - 18:30",
   subsolSchedule2: "Freitag: 8:00 - 18:00",
   subsolSchedule3: "Samstag: 9:30 - 15:00",
+  subsolHeader: "Die Rechtsberatung an unserem Hauptsitz wird nach den einschlägigen Vorschriften gewährt und vergütet.",
 
   //contact
 

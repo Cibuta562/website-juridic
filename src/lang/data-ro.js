@@ -88,17 +88,26 @@ export const translationsRO = {
   //contact
   contactTitle: "Contact",
   contactText:
-    "Pentru programari la sediu din Romania, București, vă rugăm să ne trimiteți un e-mail cu nume, prenume, domeniul de drept (civil penal, etc) la adresa:",
+    "Program consult juridic la sediu. Cu programare prealabila:\n",
+  contactText1:
+      "marti - vineri : 10:00 - 16:00",
+  contactText2:
+      "sambata : 10:00 - 13:00",
+  contactText3:
+      "Pentru Romania:\n",
+  contactText4:
+      "Pentru Germania:",
   contactEmail: "romania@consult-juridic.eu",
 
   //subsol
   subsolText1:
-    "Folosiți numărul de telefon de mai jos sau adresa de email, exclusiv în situații de urgență.",
+    "Folosiți numărul de telefon de mai jos sau adresa de email, exclusiv pentru programări sau în situații de urgență.",
   subsolText2:
     "Pentru programari la sediu, vă rugam folosiți datele de contact de mai sus.",
   subsolSchedule1: "marti - vineri : 10:00 - 16:00",
   subsolSchedule2: "sambata : 10:00 - 13:00",
   subsolSchedule3: "Doar cu programare prealabila",
+  subsolHeader: "Consultanta juridica la sediul nostru se acorda si se tarifeaza  conform reglementarilor in materie.",
 
   //despre noi
   despreNoiHeading:

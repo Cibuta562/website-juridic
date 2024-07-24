@@ -44,15 +44,15 @@ const ContactForm = () => {
         console.log(formData);
 
         emailjs
-            .sendForm('service_ptzqzf9', 'template_iq97n57', form.current, {
-                publicKey: 'Vo_OfRgK6DeUPu2kL',
+            .sendForm('service_xcrg7kt', 'template_3y1mukr', form.current, {
+                publicKey: '5wMRQjsax-6NjhayN',
             })
             .then(
                 () => {
                     console.log('Email sent successfully!');
                     // Redirect to the Stripe payment link after the email is sent
                     setTimeout(() => {
-                        window.location.href = "https://buy.stripe.com/14kaHN0jn5u98s8aEF";
+                        window.location.href = "https://buy.stripe.com/eVa7vB3vz09P4bSaEG";
                     }, 500);
                 },
                 (error) => {

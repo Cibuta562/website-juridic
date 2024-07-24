@@ -32,48 +32,72 @@ const Subsol = () => {
 
   return (
     <div style={{ backgroundColor: "white" }}>
-      <div className='subsol-row'>
-        <div className='subsol-col'>
-          <p className='subsol-adv' style={{ paddingTop: "0px" }}>
-            {getText(translations, "subsolText1")}
+        <div className='subsol-flex' style={{paddingTop: "50px"}}>
+          <p style={{marginLeft: "20px", marginRight: "20px", textAlign: "center", fontSize: "20px"}}>
+            {getText(translations, "subsolHeader")}
           </p>
-          <p className='subsol-adv'>{getText(translations, "subsolText2")}</p>
         </div>
-        <div className='subsol-col3 subsol-padding'>
+      <div className='subsol-row'>
+        <div className='subsol-col-1'>
           <div className='subsol-flex'>
             {/*<img className="icon-socials" src={insta} alt="insta"/>*/}
             <p className='subsol-socials'>
-              București/România <br /> Speyer/Deutschland
+              București/Romania
             </p>
           </div>
-          <div className='subsol-flex'>
-            <p className='subsol-socials'>
-              <FontAwesomeIcon icon={faPhone} />
-              <a
+          <p className='subsol-socials'>
+            <FontAwesomeIcon icon={faPhone} />
+            <a
                 href='tel:+4017631234232'
                 style={{
                   textDecoration: "none",
                   color: "black",
                   marginLeft: "5px",
                 }}
+            >
+              0040 731 579 043 (RO)
+            </a>
+          </p>
+          <div className='subsol-flex'>
+            <p className='subsol-socials'>
+              <FontAwesomeIcon icon={faEnvelope} />
+              <a
+                  href='mailto:office@consult-juridic.eu'
+                  style={{
+                    textDecoration: "none",
+                    color: "black",
+                    marginLeft: "5px",
+                  }}
               >
-                0049 176 31 23 42 32
+                office@consult-juridic.eu
               </a>
             </p>
           </div>
+          {/*<p className='subsol-adv'>{getText(translations, "subsolText2")}</p>*/}
+        </div>
+
+        <div className='subsol-col3 subsol-padding'>
+          <div className='subsol-flex'>
+            {/*<img className="icon-socials" src={insta} alt="insta"/>*/}
+            <p className='subsol-socials'>
+              Speyer/Deutschland
+            </p>
+          </div>
+          <div className='subsol-flex'>
+          </div>
           <div className='subsol-flex'>
             <p className='subsol-socials'>
-          <FontAwesomeIcon icon={faPhone} />
-          <a
-              href='tel:+4017631234232'
-              style={{
-                textDecoration: "none",
-                color: "black",
-                marginLeft: "5px",
-              }}
-          >
-            0040 731 579 043
-          </a>
+              <FontAwesomeIcon icon={faPhone} />
+              <a
+                  href='tel:+4017631234232'
+                  style={{
+                    textDecoration: "none",
+                    color: "black",
+                    marginLeft: "5px",
+                  }}
+              >
+                0049 176 31 23 42 32 (DE)
+              </a>
             </p>
           </div>
           <div className='subsol-flex'>
@@ -109,6 +133,7 @@ const Subsol = () => {
           <div className='subsol-flex'>
             <p className='subsol-schedule'>
               {getText(translations, "subsolSchedule3")}
+              {/*{getText(translations, "subsolText1")}*/}
             </p>
           </div>
         </div>

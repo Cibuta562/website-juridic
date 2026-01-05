@@ -1,12 +1,12 @@
 import "./servicii.css";
 import React, { useState, useRef } from "react";
-import servicii1 from "../assetsMin/servicii1.jpg";
-import servicii2 from "../assetsMin/servicii2.jpg";
-import servicii5 from "../assetsMin/mobileHeading2.jpg";
-import servicii4 from "../assetsMin/servicii4.jpg";
-import servicii3 from "../assetsMin/servicii5.jpg";
-import servicii6 from "../assetsMin/servicii6.jpg";
-import briefDown from "../assetsMin/brief-down.jpg";
+import servicii1 from "../webp/servicii1.webp";
+import servicii2 from "../webp/servicii2.webp";
+import servicii5 from "../webp/mobileHeading2.webp";
+import servicii4 from "../webp/servicii4.webp";
+import servicii3 from "../webp/servicii5.webp";
+import servicii6 from "../webp/servicii6.webp";
+import briefDown from "../webp/brief-down.webp";
 
 import TapButton from "./TapServicii";
 import { DETALII_SERVICII } from "../lang/data-ro.js";
@@ -224,11 +224,17 @@ const Servicii = () => {
         <div className='row-servicii edit-detalii-servicii'>
           <div className='col-servicii' data-aos='fade-up'>
             <div>
-              <img src={servicii1} alt='img penal' className='img-serv' />
+              <img
+                  src={servicii1}
+                  alt='img penal'
+                  className='img-serv'
+                  loading="lazy"
+                  decoding="async"
+              />
             </div>
             <div className='text-servicii'>
               <p className='heading-servicii'>
-                {" "}
+              {" "}
                 {getText(translations, "dreptPenalTitle")}
               </p>
               <p className='desc-servicii'>
@@ -268,11 +274,17 @@ const Servicii = () => {
           </div>
           <div className='col-servicii' data-aos='fade-up'>
             <div>
-              <img src={servicii2} alt='img civil' className='img-serv' />
+              <img
+                  src={servicii2}
+                  alt='img civil'
+                  className='img-serv'
+                  loading="lazy"
+                  decoding="async"
+              />
             </div>
             <div className='text-servicii'>
               <p className='heading-servicii'>
-                {getText(translations, "dreptCivilTitle")}
+              {getText(translations, "dreptCivilTitle")}
               </p>
               <p className='desc-servicii'>
                 <ul type='square'>
@@ -312,11 +324,17 @@ const Servicii = () => {
           </div>
           <div className='col-servicii' data-aos='fade-up'>
             <div>
-              <img src={servicii3} alt='img rutier' className='img-serv' />
+              <img
+                  src={servicii3}
+                  alt='img rutier'
+                  className='img-serv'
+                  loading="lazy"
+                  decoding="async"
+              />
             </div>
             <div className='text-servicii'>
               <p className='heading-servicii'>
-                {" "}
+              {" "}
                 {getText(translations, "dreptRutierTitle")}
               </p>
               <p className='desc-servicii'>
@@ -364,9 +382,11 @@ const Servicii = () => {
           <div className='col-servicii' data-aos='fade-up'>
             <div>
               <img
-                src={servicii4}
-                alt='img declaratii fiscale'
-                className='img-serv'
+                  src={servicii4}
+                  alt='img declaratii fiscale'
+                  className='img-serv'
+                  loading="lazy"
+                  decoding="async"
               />
             </div>
             <div className='text-servicii'>
@@ -409,9 +429,11 @@ const Servicii = () => {
           <div className='col-servicii' data-aos='fade-up'>
             <div>
               <img
-                src={servicii5}
-                alt='img dreptul familiei'
-                className='img-serv'
+                  src={servicii5}
+                  alt='img dreptul familiei'
+                  className='img-serv'
+                  loading="lazy"
+                  decoding="async"
               />
             </div>
             <div className='text-servicii'>
@@ -456,9 +478,11 @@ const Servicii = () => {
           <div className='col-servicii' data-aos='fade-up'>
             <div>
               <img
-                src={servicii6}
-                alt='img dreptul muncii'
-                className='img-serv'
+                  src={servicii6}
+                  alt='img dreptul muncii'
+                  className='img-serv'
+                  loading="lazy"
+                  decoding="async"
               />
             </div>
             <div className='text-servicii'>
@@ -524,7 +548,13 @@ const Servicii = () => {
             </div>
           </div>
           <div className='first-brief-servicii' data-aos='fade-up'>
-            <img className='brief-img-servicii' src={briefDown} alt='' />
+            <img
+                className='brief-img-servicii'
+                src={briefDown}
+                alt=''
+                loading="lazy"
+                decoding="async"
+            />
           </div>
         </div>
       </div>

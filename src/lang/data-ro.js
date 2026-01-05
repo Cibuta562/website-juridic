@@ -81,9 +81,9 @@ export const translationsRO = {
   echipaTitle: "Echipa Noastră",
   echipaLucianNiculescu: "Lucian Niculescu",
   echipaPartener: "Partener",
-  echipaMembruDesc1: "avocat CNSA, membru al UNBR și BRAO Germania",
-  echipaMembruDesc2: "avocat CNSA, membru al Baroului București",
-  echipaMembruDesc3: "avocat CNSA",
+  echipaMembruDesc1: "avocat NSA, membru al UNBR și BRAO Germania",
+  echipaMembruDesc2: "avocat NSA, membru al Baroului București",
+  echipaMembruDesc3: "avocat NSA",
 
   //contact
   contactTitle: "Contact",

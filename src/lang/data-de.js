@@ -67,9 +67,9 @@ const translationsDE = {
   echipaTitle: "Unser Team",
   echipaLucianNiculescu: "Lucian Niculescu",
   echipaPartener: "Partner",
-  echipaMembruDesc1: "Anwalt CNSA, Mitglied der UNBR und BRAO Deutschland",
-  echipaMembruDesc2: "Anwalt CNSA, Mitglied der Anwaltskammer Bukarest",
-  echipaMembruDesc3: "Anwalt CNSA",
+  echipaMembruDesc1: "Anwalt NSA, Mitglied der UNBR und BRAO Deutschland",
+  echipaMembruDesc2: "Anwalt NSA, Mitglied der Anwaltskammer Bukarest",
+  echipaMembruDesc3: "Anwalt NSA",
 
 
   contactTitle: "Kontakt",

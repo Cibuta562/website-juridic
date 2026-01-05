@@ -34,7 +34,7 @@ const ContactForm = () => {
 
         try {
             const response = await fetch(
-                "https://siteul-tau.ro/api/create-payment-intent.php",
+                "https://consult-juridic.eu/api/create-payment-intent.php",
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
@@ -152,12 +152,22 @@ const ContactForm = () => {
                                     onChange={handleInputChange}
                                     required
                                 >
-                                    <option value="">
+                                    <option value="" disabled>
                                         {getText(translations, "contactTextCategorieJuridica")}
                                     </option>
-                                    {/* opțiuni */}
+
+                                    <option value="drept-civil">Drept civil</option>
+                                    <option value="drept-comercial">Drept comercial</option>
+                                    <option value="dreptul-muncii">Dreptul muncii</option>
+                                    <option value="drept-familie">Dreptul familiei</option>
+                                    <option value="drept-penal">Drept penal</option>
+                                    <option value="drept-administrativ">Drept administrativ</option>
+                                    <option value="drept-imobiliar">Drept imobiliar</option>
+                                    <option value="consultanta-juridica">Consultanță juridică</option>
+                                    <option value="alta-situatie">Altă situație</option>
                                 </select>
-                                <hr className="decoration-line" />
+
+                                <hr className="decoration-line"/>
                             </div>
                         </div>
 
@@ -170,7 +180,7 @@ const ContactForm = () => {
                             <div className="form-group-area">
                 <textarea
                     className="form-control"
-                    style={{ minHeight: "150px", resize: "vertical" }}
+                    style={{minHeight: "150px", resize: "vertical"}}
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}

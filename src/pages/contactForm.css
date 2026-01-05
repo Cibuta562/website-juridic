@@ -363,3 +363,22 @@
     }
 
 }
+
+/* select închis – rămâne cum e acum */
+.form-control-option {
+    background-color: transparent;
+    color: white;
+}
+
+/* DOAR lista deschisă */
+.form-control-option option {
+    background-color: #ffffff;
+    color: #111111;
+}
+
+/* hover în dropdown */
+.form-control-option option:hover {
+    background-color: #f2f2f2;
+    color: #111111;
+}
+

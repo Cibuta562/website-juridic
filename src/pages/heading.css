@@ -40,7 +40,7 @@
 
   .heading-cont {
     height: 100vh;
-    background-image: url("../assetsMin/heading3.jpg");
+    background-image: url("../webp/heading-desktop.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -175,7 +175,7 @@
   .heading-cont {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.6);
-    background-image: url("../assetsMin/heading2.jpg");
+    background-image: url("../webp/heading-mobile.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 100%;

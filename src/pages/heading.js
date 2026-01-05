@@ -80,7 +80,13 @@ function Heading() {
 
       <div className='brief'>
         <div className='first-brief' data-aos='fade-up'>
-          <img className='brief-img' src={briefImg} alt='' />
+          <img
+              className='brief-img'
+              src={briefImg}
+              alt=''
+              loading="lazy"
+              decoding="async"
+          />
         </div>
         <div className='second-brief' data-aos='fade-up'>
           <div>
@@ -105,7 +111,13 @@ function Heading() {
         </div>
       </div>
       <button className='btn-top' onClick={moveToTop}>
-        <img className='img-arrow' src={upArrow} alt={"btn-top"} />
+        <img
+            className='img-arrow'
+            src={upArrow}
+            alt="btn-top"
+            loading="lazy"
+            decoding="async"
+        />
       </button>
     </div>
   );

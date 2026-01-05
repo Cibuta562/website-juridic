@@ -1,7 +1,9 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { LanguageProvider } from "./lang/LanguageContext";
+
 
 import Menu from "./menu/menu";
 import Subsol from "./pages/subsol";
@@ -15,8 +17,9 @@ import Payment from "./pages/formPayment";
 import Terms from "./pages/terms";
 import Soon from "./pages/soon";
 import LoadingScreen from "./pages/LoadingScreen";
-import { CookieConsent } from "react-cookie-consent";
+// import { CookieConsent } from "react-cookie-consent";
 import ContactForm from "./pages/contactForm";
+import {LanguageProvider} from "./lang/LanguageContext";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -24,36 +27,45 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 800);
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      duration: 800,
+      easing: "ease-out-cubic",
+    });
+  }, []);
+
 
   return (
     <LanguageProvider>
       <BrowserRouter>
         <div className='App'>
-          <CookieConsent
-            location='bottom'
-            buttonText='Sunt de acord'
-            cookieName='myAwesomeCookieName2'
-            style={{ background: "black" }}
-            buttonStyle={{
-              color: "white",
-              fontSize: "16px",
-              backgroundColor: "transparent",
-              borderColor: "#c1a267",
-              border: "1px solid #c1a267",
-              marginTop: "0px",
-            }}
-            expires={150}
-            containerClasses='cont-cookie'
-          >
-            <p className='p-cookies'>
-              Acest site web folosește cookie-uri pentru a îmbunătăți experiența
-              utilizatorului.
-            </p>
-            {/*<span style={{ fontSize: "10px" }}>This bit of text is smaller :O</span>*/}
-          </CookieConsent>
+          {/*<CookieConsent*/}
+          {/*  location='bottom'*/}
+          {/*  buttonText='Sunt de acord'*/}
+          {/*  cookieName='myAwesomeCookieName2'*/}
+          {/*  style={{ background: "black" }}*/}
+          {/*  buttonStyle={{*/}
+          {/*    color: "white",*/}
+          {/*    fontSize: "16px",*/}
+          {/*    backgroundColor: "transparent",*/}
+          {/*    borderColor: "#c1a267",*/}
+          {/*    border: "1px solid #c1a267",*/}
+          {/*    marginTop: "0px",*/}
+          {/*  }}*/}
+          {/*  expires={150}*/}
+          {/*  containerClasses='cont-cookie'*/}
+          {/*>*/}
+          {/*  <p className='p-cookies'>*/}
+          {/*    Acest site web folosește cookie-uri pentru a îmbunătăți experiența*/}
+          {/*    utilizatorului.*/}
+          {/*  </p>*/}
+          {/*  /!*<span style={{ fontSize: "10px" }}>This bit of text is smaller :O</span>*!/*/}
+          {/*</CookieConsent>*/}
           <Menu />
           <Routes>
             {loading ? (

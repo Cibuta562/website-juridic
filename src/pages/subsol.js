@@ -32,7 +32,7 @@ const Subsol = () => {
 
   return (
     <div style={{ backgroundColor: "white" }}>
-        <div className='subsol-flex' style={{paddingTop: "50px"}}>
+        <div style={{paddingTop: "50px", textAlign: "center"}}>
           <p style={{marginLeft: "20px", marginRight: "20px", textAlign: "center", fontSize: "20px"}}>
             {getText(translations, "subsolHeader")}
           </p>
@@ -143,7 +143,7 @@ const Subsol = () => {
       </div>
       <div className='subsol-row2'>
         <div className='subsol-col2' style={{ marginTop: "0px" }}>
-          © 2024 Consult-Juridic.
+          © 2025 Consult-Juridic.
         </div>
         <div className='subsol-col2'>
           <a style={{textDecoration: "none", color: "black"}} href="https://generationsalez.com" target="_blank">

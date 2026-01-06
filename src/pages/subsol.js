@@ -30,6 +30,9 @@ const Subsol = () => {
     translations = translationsDE;
   }
 
+  const currentYear = new Date().getFullYear();
+
+
   return (
     <div style={{ backgroundColor: "white" }}>
         <div style={{paddingTop: "50px", textAlign: "center"}}>
@@ -142,19 +145,19 @@ const Subsol = () => {
         <div className='subsol-dec-hor'></div>
       </div>
       <div className='subsol-row2'>
-        <div className='subsol-col2' style={{ marginTop: "0px" }}>
-          © 2025 Consult-Juridic.
+        <div className='subsol-col2' style={{marginTop: "0px"}}>
+          © {currentYear} Consult-Juridic.
         </div>
         <div className='subsol-col2'>
           <a style={{textDecoration: "none", color: "black"}} href="https://generationsalez.com" target="_blank">
-          @generation salez
+            @generation salez
           </a>
         </div>
         <div className='subsol-col2'>
           <Link
-            to='/termeni/si/conditii'
-            onClick={moveToTop}
-            style={{ textDecoration: "none", color: "black" }}
+              to='/termeni/si/conditii'
+              onClick={moveToTop}
+              style={{textDecoration: "none", color: "black"}}
           >
             terms & conditions
           </Link>

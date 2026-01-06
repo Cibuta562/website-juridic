@@ -124,27 +124,22 @@ function Consultanta() {
             <p className='despre-p'>
               {getText(translations, "consultantaText16")}
             </p>
-            <br />
-            <a
-              // href='mailto:office@consult-juridic.eu'
-              style={{ textDecoration: "none", color: "black" }}
+            <br/>
+            <button
+                className="btn-contact-consultanta btn-hover"
+                onClick={() =>
+                    window.location.href =
+                        "https://buy.stripe.com/test_cNi9AU9G30Oq0XrdK77N600"
+                }
             >
-              <button className='btn-contact-consultanta btn-hover'>
-                <a
-                  // href='https://buy.stripe.com/14kaHN0jn5u98s8aEF'
-                  // target='_blank'
-                 href="./contact/form"
-                  style={{ textDecoration: "none", color: "white" }}
-                >
-                  {getText(translations, "consultantaTrimiteEmail")}
-                </a>
-              </button>
-            </a>
+              {getText(translations, "consultantaTrimiteEmail")}
+            </button>
+
           </div>
         </div>
       </div>
       <button className='btn-top' onClick={moveToTop}>
-        <img className='img-arrow' src={upArrow} alt={"btn-top"} />
+        <img className='img-arrow' src={upArrow} alt={"btn-top"}/>
       </button>
     </div>
   );

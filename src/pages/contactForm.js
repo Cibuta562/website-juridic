@@ -1,17 +1,20 @@
 import "./contactForm.css";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { loadStripe } from "@stripe/stripe-js";
+import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../lang/LanguageContext";
 import translationsRO from "../lang/data-ro";
 import translationsDE from "../lang/data-de";
 
-const stripePromise = loadStripe("pk_live_XXXXXXXXXXXX"); // cheia PUBLICĂ Stripe
-
 const ContactForm = () => {
+    const navigate = useNavigate();
     const { getText, language } = useLanguage();
     const translations = language === "ro" ? translationsRO : translationsDE;
+
     const form = useRef();
+    const [allowed, setAllowed] = useState(false);
+    const [checking, setChecking] = useState(true);
+    const [sending, setSending] = useState(false);
 
     const [formData, setFormData] = useState({
         firstName: "",
@@ -22,55 +25,59 @@ const ContactForm = () => {
         message: "",
     });
 
-    const [isProcessing, setIsProcessing] = useState(false);
+    // 🔐 VERIFICARE PLATĂ LA LOAD
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const sessionId = params.get("session_id");
 
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((p) => ({ ...p, [name]: value }));
-    };
+        // ❌ FĂRĂ session_id → AFARĂ
+        if (!sessionId) {
+            navigate("/");
+            return;
+        }
 
-    const handlePayAndSend = async () => {
-        setIsProcessing(true);
+        fetch(`/api/verify-session.php?session_id=${sessionId}`)
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.valid) {
+                    setAllowed(true);
+                } else {
+                    navigate("/");
+                }
+            })
+            .catch(() => navigate("/"))
+            .finally(() => setChecking(false));
+    }, [navigate]);
+
+    // 🔄 LOADING
+    if (checking) {
+        return <p style={{ color: "white" }}>Se verifică plata...</p>;
+    }
+
+    // ❌ BLOCARE TOTALĂ
+    if (!allowed) {
+        return null;
+    }
+
+    // 📧 EMAILJS — DOAR DUPĂ PLATĂ
+    const sendEmail = async (e) => {
+        e.preventDefault();
+        setSending(true);
 
         try {
-            const response = await fetch(
-                "https://consult-juridic.eu/api/create-payment-intent.php",
-                {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({
-                        amount: 1000,
-                        metadata: formData,
-                    }),
-                }
+            await emailjs.sendForm(
+                "service_xcrg7kt",
+                "template_3y1mukr",
+                form.current,
+                { publicKey: "5wMRQjsax-6NjhayN" }
             );
 
-            const { clientSecret } = await response.json();
-            if (!clientSecret) {
-                alert("Eroare inițializare plată");
-                return;
-            }
-
-            const stripe = await stripePromise;
-            const result = await stripe.confirmCardPayment(clientSecret);
-
-            if (result.paymentIntent?.status === "succeeded") {
-                await emailjs.sendForm(
-                    "service_xcrg7kt",
-                    "template_3y1mukr",
-                    form.current,
-                    { publicKey: "5wMRQjsax-6NjhayN" }
-                );
-
-                alert("Plata reușită. Formular trimis!");
-            } else {
-                alert("Plata a eșuat");
-            }
+            alert("Mesaj trimis cu succes!");
+            form.current.reset();
         } catch (err) {
-            console.error(err);
-            alert("Eroare la procesarea plății");
+            alert("Eroare la trimiterea mesajului");
         } finally {
-            setIsProcessing(false);
+            setSending(false);
         }
     };
 
@@ -80,128 +87,26 @@ const ContactForm = () => {
                 <p className="contact-heading">
                     {getText(translations, "contactTextHeading")}
                 </p>
-                <div className="line-dec-cont"></div>
 
-                <div className="form-cont">
-                    <form ref={form}>
-                        {/* NUME / PRENUME */}
-                        <div className="form-row">
-                            <div className="form-group">
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    placeholder={getText(translations, "contactTextNume")}
-                                    name="lastName"
-                                    value={formData.lastName}
-                                    onChange={handleInputChange}
-                                    required
-                                />
-                                <hr className="decoration-line" />
-                            </div>
+                <form ref={form} onSubmit={sendEmail}>
+                    <input name="lastName" placeholder="Nume" required />
+                    <input name="firstName" placeholder="Prenume" required />
+                    <input name="email" type="email" placeholder="Email" required />
+                    <input name="phoneNumber" placeholder="Telefon" />
 
-                            <div className="form-group">
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    placeholder={getText(translations, "contactTextPrenume")}
-                                    name="firstName"
-                                    value={formData.firstName}
-                                    onChange={handleInputChange}
-                                    required
-                                />
-                                <hr className="decoration-line" />
-                            </div>
-                        </div>
+                    <select name="subject" required>
+                        <option value="">Subiect</option>
+                        <option value="drept-civil">Drept civil</option>
+                        <option value="drept-penal">Drept penal</option>
+                        <option value="consultanta">Consultanță juridică</option>
+                    </select>
 
-                        {/* EMAIL / TELEFON */}
-                        <div className="form-row">
-                            <div className="form-group">
-                                <input
-                                    type="email"
-                                    className="form-control"
-                                    placeholder="Email"
-                                    name="email"
-                                    value={formData.email}
-                                    onChange={handleInputChange}
-                                    required
-                                />
-                                <hr className="decoration-line" />
-                            </div>
+                    <textarea name="message" placeholder="Mesaj" required />
 
-                            <div className="form-group">
-                                <input
-                                    type="tel"
-                                    className="form-control"
-                                    placeholder={getText(translations, "contactTextTelefon")}
-                                    name="phoneNumber"
-                                    value={formData.phoneNumber}
-                                    onChange={handleInputChange}
-                                />
-                                <hr className="decoration-line" />
-                            </div>
-                        </div>
-
-                        {/* SUBIECT */}
-                        <div className="form-row">
-                            <div className="form-group-option">
-                                <label htmlFor="subject">Subiect</label>
-                                <select
-                                    className="form-control-option"
-                                    name="subject"
-                                    value={formData.subject}
-                                    onChange={handleInputChange}
-                                    required
-                                >
-                                    <option value="" disabled>
-                                        {getText(translations, "contactTextCategorieJuridica")}
-                                    </option>
-
-                                    <option value="drept-civil">Drept civil</option>
-                                    <option value="drept-comercial">Drept comercial</option>
-                                    <option value="dreptul-muncii">Dreptul muncii</option>
-                                    <option value="drept-familie">Dreptul familiei</option>
-                                    <option value="drept-penal">Drept penal</option>
-                                    <option value="drept-administrativ">Drept administrativ</option>
-                                    <option value="drept-imobiliar">Drept imobiliar</option>
-                                    <option value="consultanta-juridica">Consultanță juridică</option>
-                                    <option value="alta-situatie">Altă situație</option>
-                                </select>
-
-                                <hr className="decoration-line"/>
-                            </div>
-                        </div>
-
-                        {/* MESAJ */}
-                        <p className="textarea-title">
-                            {getText(translations, "contactTextMesaj")}
-                        </p>
-
-                        <div className="form-row">
-                            <div className="form-group-area">
-                <textarea
-                    className="form-control"
-                    style={{minHeight: "150px", resize: "vertical"}}
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                />
-                            </div>
-                        </div>
-
-                        {/* BUTON FINAL */}
-                        <button
-                            type="button"
-                            className="btn btn-primary"
-                            onClick={handlePayAndSend}
-                            disabled={isProcessing}
-                        >
-                            {isProcessing
-                                ? "Se procesează plata..."
-                                : "Plătește și trimite"}
-                        </button>
-                    </form>
-                </div>
+                    <button type="submit" disabled={sending}>
+                        {sending ? "Se trimite..." : "Trimite mesajul"}
+                    </button>
+                </form>
             </div>
         </div>
     );

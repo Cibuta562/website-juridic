@@ -22,7 +22,6 @@ const Consultanta = lazy(() => import("./pages/consultanta"));
 const Payment = lazy(() => import("./pages/formPayment"));
 const Terms = lazy(() => import("./pages/terms"));
 const Cookies = lazy(() => import("./pages/cookies"));
-const Soon = lazy(() => import("./pages/soon"));
 const ContactForm = lazy(() => import("./pages/contactForm"));
 const Multumire = lazy(() => import("./pages/Multumire"));
 

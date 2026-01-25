@@ -149,7 +149,7 @@ const Subsol = () => {
           © {currentYear} Consult-Juridic.
         </div>
         <div className='subsol-col2'>
-          <a style={{textDecoration: "none", color: "black"}} href="https://generationsalez.ro" target="_blank">
+          <a style={{textDecoration: "none", color: "black"}} href="https://generationsalez.ro" target="_blank" rel="noreferrer">
             @generation salez
           </a>
         </div>

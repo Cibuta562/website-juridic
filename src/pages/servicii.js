@@ -1,5 +1,5 @@
 import "./servicii.css";
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import servicii1 from "../webp/servicii1.webp";
 import servicii2 from "../webp/servicii2.webp";
 import servicii5 from "../webp/mobileHeading2.webp";
@@ -9,21 +9,12 @@ import servicii6 from "../webp/servicii6.webp";
 import briefDown from "../webp/brief-down.webp";
 
 import TapButton from "./TapServicii";
-import { DETALII_SERVICII } from "../lang/data-ro.js";
-import {DETALII_SERVICII_DE} from "../lang/data-de.js";
-
 
 import translationsRO from "../lang/data-ro.js"; // obiect de traducere RO
 import translationsDE from "../lang/data-de.js"; // obict de traducere GER
 import { useLanguage } from "../lang/LanguageContext"; // hook pentru LanguageContext
 
 const Servicii = () => {
-  const detaliiServiciuRefZero = useRef(null);
-  const detaliiServiciuRefOne = useRef(null);
-
-  function scrollLaDetalii(ref) {
-    ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
 
 
   const { getText, language } = useLanguage();
@@ -55,16 +46,6 @@ const Servicii = () => {
 
   let detaliiServiciiContentRowZero;
   let detaliiServiciiContentRowOne;
-  const selectedServiciuOptionsZero = [
-    "btnDreptPenal",
-    "btnDreptCivil",
-    "btnDreptRutier",
-  ];
-  const selectedServiciuOptionsOne = [
-    "btnDeclaratiiFiscale",
-    "btnDreptulFamiliei",
-    "btnDreptulMuncii",
-  ];
 
   function handleCloseServiciuRowZero() {
     setSelectedServiciuRowZero(null);

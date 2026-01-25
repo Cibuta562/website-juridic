@@ -95,13 +95,13 @@ function Consultanta() {
           <div className='dec-consultanta'></div>
           <div className='text-despre-consultanta'>
             <p className='despre-p'>
-              {getText(translations, "consultantaText8")}
+              {getText(translations, "consultantaText12")}
             </p>
             <p className='despre-p'>
               {getText(translations, "consultantaText9")}
             </p>
             <p className='despre-p'>
-              {getText(translations, "consultantaText10")}
+              {getText(translations, "consultantaText8")}
             </p>
             {/*<p className='despre-p'>*/}
             {/*  {getText(translations, "consultantaText11")}*/}
@@ -110,7 +110,7 @@ function Consultanta() {
             {/*  </span>*/}
             {/*</p>*/}
             <p className='despre-p'>
-              {getText(translations, "consultantaText12")}
+              {getText(translations, "consultantaText10")}
             </p>
             <p className='despre-p'>
               {getText(translations, "consultantaText13")}
@@ -129,7 +129,7 @@ function Consultanta() {
                 className="btn-contact-consultanta btn-hover"
                 onClick={() =>
                     window.location.href =
-                        "https://buy.stripe.com/test_cNi9AU9G30Oq0XrdK77N600"
+                        "https://buy.stripe.com/14kaHN0jn5u98s8aEF"
                 }
             >
               {getText(translations, "consultantaTrimiteEmail")}
@@ -139,7 +139,7 @@ function Consultanta() {
         </div>
       </div>
       <button className='btn-top' onClick={moveToTop}>
-        <img className='img-arrow' src={upArrow} alt={"btn-top"}/>
+        <img className='img-arrow' src={upArrow} alt={"btn-top"} loading="lazy" decoding="async" />
       </button>
     </div>
   );

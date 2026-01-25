@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="ro" itemscope itemtype="https://schema.org/LegalService">
 <head>
   <!-- Google Tag Manager -->
   <script>
@@ -16,21 +16,41 @@
   </script>
   <!-- End Google Tag Manager -->
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3CXRVNJC3L"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'G-3CXRVNJC3L');
-  </script>
+  <!-- Google Analytics - Se va încărca doar după consimțământul utilizatorului -->
+  <!-- Script-ul este încărcat dinamic prin componenta CookieConsent -->
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Consultanta Juridica Online" />
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Consultanță juridică online specializată în drept român și german. Avokatskanzlei Niculescu oferă servicii juridice pentru persoane fizice și juridice în Germania și România. Consultanță juridică pe email, drept penal, civil, rutier, fiscal și altele." />
+  <meta name="keywords" content="consultanță juridică, avocat român Germania, drept român, drept german, avocat Speyer, consultanță juridică online, servicii juridice, drept penal, drept civil, drept rutier, declarații fiscale, dreptul familiei, dreptul muncii" />
+  <meta name="author" content="Avokatskanzlei Niculescu" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="Romanian, German" />
+  <meta name="geo.region" content="DE-RP" />
+  <meta name="geo.placename" content="Speyer" />
+  <meta name="geo.position" content="49.3173;8.4311" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://consult-juridic.eu/" />
+  <meta property="og:title" content="Consult-Juridic.eu - Consultanță Juridică Online | Drept Român și German" />
+  <meta property="og:description" content="Consultanță juridică online specializată în drept român și german. Servicii juridice pentru persoane fizice și juridice în Germania și România." />
+  <meta property="og:image" content="%PUBLIC_URL%/logo512.png" />
+  <meta property="og:locale" content="ro_RO" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://consult-juridic.eu/" />
+  <meta property="twitter:title" content="Consult-Juridic.eu - Consultanță Juridică Online" />
+  <meta property="twitter:description" content="Consultanță juridică online specializată în drept român și german. Servicii juridice pentru persoane fizice și juridice." />
+  <meta property="twitter:image" content="%PUBLIC_URL%/logo512.png" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://consult-juridic.eu/" />
 
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -62,7 +82,7 @@
   />
 
 
-  <title>Juridic Website</title>
+  <title>Consult-Juridic.eu - Consultanță Juridică Online | Drept Român și German | Avokatskanzlei Niculescu</title>
 </head>
 
 <body>
@@ -79,5 +99,41 @@
 
 <noscript>You need to enable JavaScript to run this app.</noscript>
 <div id="root"></div>
+
+<!-- Structured Data for Legal Service -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Avokatskanzlei Niculescu",
+  "alternateName": "Consult-Juridic.eu",
+  "url": "https://consult-juridic.eu",
+  "logo": "https://consult-juridic.eu/logo512.png",
+  "description": "Consultanță juridică online specializată în drept român și german. Servicii juridice pentru persoane fizice și juridice în Germania și România.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Petronia-Steiner Str 25",
+    "addressLocality": "Speyer",
+    "postalCode": "67346",
+    "addressCountry": "DE"
+  },
+  "telephone": "+49 176 31234232",
+  "email": "office@consult-juridic.eu",
+  "areaServed": ["DE", "RO"],
+  "serviceType": [
+    "Consultanță juridică online",
+    "Drept penal",
+    "Drept civil",
+    "Drept rutier",
+    "Declarații fiscale",
+    "Dreptul familiei",
+    "Dreptul muncii"
+  ],
+  "priceRange": "$$",
+  "sameAs": [
+    "https://consult-juridic.eu"
+  ]
+}
+</script>
 </body>
 </html>

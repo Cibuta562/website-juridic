@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense, lazy } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -7,19 +7,24 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Menu from "./menu/menu";
 import Subsol from "./pages/subsol";
-import Heading from "./pages/heading";
-import Servicii from "./pages/servicii";
-import Echipa from "./pages/echipa";
-import Contact from "./pages/contact";
-import Despre from "./pages/despreNoi";
-import Consultanta from "./pages/consultanta";
-import Payment from "./pages/formPayment";
-import Terms from "./pages/terms";
-import Soon from "./pages/soon";
 import LoadingScreen from "./pages/LoadingScreen";
-// import { CookieConsent } from "react-cookie-consent";
-import ContactForm from "./pages/contactForm";
 import {LanguageProvider} from "./lang/LanguageContext";
+import CookieConsent from "./components/CookieConsent";
+import TrackingTags from "./components/TrackingTags";
+
+// Lazy loading pentru optimizare performanță
+const Heading = lazy(() => import("./pages/heading"));
+const Servicii = lazy(() => import("./pages/servicii"));
+const Echipa = lazy(() => import("./pages/echipa"));
+const Contact = lazy(() => import("./pages/contact"));
+const Despre = lazy(() => import("./pages/despreNoi"));
+const Consultanta = lazy(() => import("./pages/consultanta"));
+const Payment = lazy(() => import("./pages/formPayment"));
+const Terms = lazy(() => import("./pages/terms"));
+const Cookies = lazy(() => import("./pages/cookies"));
+const Soon = lazy(() => import("./pages/soon"));
+const ContactForm = lazy(() => import("./pages/contactForm"));
+const Multumire = lazy(() => import("./pages/Multumire"));
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -67,20 +72,26 @@ function App() {
           {/*  /!*<span style={{ fontSize: "10px" }}>This bit of text is smaller :O</span>*!/*/}
           {/*</CookieConsent>*/}
           <Menu />
-          <Routes>
-            {loading ? (
-              <Route index element={<LoadingScreen />} />
-            ) : (
-              <Route index element={<Homepage />} />
-            )}
-            <Route path='/website-juridic' element={<Homepage />} />
-            <Route path='/despre/noi' element={<Despre />} />
+          <Suspense fallback={<LoadingScreen />}>
+            <Routes>
+              {loading ? (
+                <Route index element={<LoadingScreen />} />
+              ) : (
+                <Route index element={<Homepage />} />
+              )}
+              <Route path='/website-juridic' element={<Homepage />} />
+              <Route path='/despre/noi' element={<Despre />} />
               <Route path='/contact/form' element={<ContactForm />} />
-            <Route path='/consultanta' element={<Consultanta />} />
-            <Route path='/termeni/si/conditii' element={<Terms />} />
-            <Route path='/secure/payment/completed' element={<Payment />} />
-          </Routes>
+              <Route path='/consultanta' element={<Consultanta />} />
+              <Route path='/termeni/si/conditii' element={<Terms />} />
+              <Route path='/politica/cookies' element={<Cookies />} />
+              <Route path='/secure/payment/completed' element={<Payment />} />
+              <Route path="/multumire" element={<Multumire />} />
+            </Routes>
+          </Suspense>
           <Subsol />
+          <CookieConsent />
+          <TrackingTags />
         </div>
       </BrowserRouter>
     </LanguageProvider>
@@ -90,12 +101,12 @@ function App() {
 // Componenta pentru homepage
 function Homepage() {
   return (
-    <>
+    <Suspense fallback={<LoadingScreen />}>
       <Heading />
       <Servicii />
       <Echipa />
       <Contact />
-    </>
+    </Suspense>
   );
 }
 

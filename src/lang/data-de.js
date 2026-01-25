@@ -171,14 +171,14 @@ const translationsDE = {
   consultantaText6:
     "Sie werden mit einem Anwalt kommunizieren, der Ihre Fragen klar beantworten wird. Innerhalb von maximal 24 Stunden erhalten Sie eine schriftliche, detaillierte Beratung von einem spezialisierten Anwalt. Der spezialisierte Anwalt wird die vorgelegte rechtliche Situation analysieren, das anwendbare Recht festlegen und anschließend fundierte rechtliche Informationen bereitstellen.",
   consultantaText7: "Rechtsberatung per E-Mail",
-  consultantaText8: "1. Wählen Sie das Rechtsgebiet Ihres Problems aus.",
+  consultantaText8: "3. Wählen Sie das Rechtsgebiet Ihres Problems aus.",
   consultantaText9: "2. Geben Sie Ihre Kontaktdaten ein.",
   consultantaText10:
-    "3. Beschreiben Sie Ihr rechtliches Problem so genau wie möglich.",
+    "4. Beschreiben Sie Ihr rechtliches Problem so genau wie möglich.",
   consultantaText11:
     "4. Falls erforderlich, hängen Sie die Dokumente im .pdf- oder .jpg-Format an",
   consultantaLizibil: "(möglichst gut lesbare Bilder).",
-  consultantaText12: "4. Bezahlen Sie die angezeigte Gebühr.",
+  consultantaText12: "1. Bezahlen Sie die angezeigte Gebühr.",
   consultantaText13:
     "5. Unmittelbar nach der Bearbeitung der Zahlung wird die von Ihnen vorgelegte rechtliche Situation von einem unserer Fachleute analysiert.",
   consultantaText14:
@@ -231,6 +231,78 @@ const translationsDE = {
       "; Erlangung einer Arbeitserlaubnis in Rumänien oder Deutschland\n" +
       "; Unterstützung und Vertretung vor den zuständigen Behörden\n" +
       "; verschiedene Formalitäten im Zusammenhang mit dem Flüchtlings- und Expatriate-Regime",
+
+  multumireTitle: "Vielen Dank!",
+  multumireText:
+      "Die Zahlung wurde bestätigt und Ihre Nachricht wurde erfolgreich gesendet. Sie werden in Kürze kontaktiert.",
+  multumireBtn: "Zur Startseite",
+
+  //terms
+  termsTitle: "NUTZUNGSBEDINGUNGEN – CONSULT-JURIDIC.EU",
+  termsSection1Title: "1. IDENTIFIZIERUNG DES DIENSTLEISTUNGSERBRINGERS",
+  termsSection1Text: "Die über diese Website bereitgestellten Dienstleistungen werden betrieben von:",
+  termsEntity: "Entität:",
+  termsEntityName: "Avokatskanzlei Niculescu",
+  termsAddress: "Sitz:",
+  termsAddressValue: "Petronia-Steiner Str 25, 67346 Speyer, Deutschland",
+  termsContact: "Kontakt:",
+  termsContactValue: "+49 176 31234232 | office@consult-juridic.eu",
+  termsSection2Title: "2. DEFINITIONEN UND BEGRIFFE",
+  termsSite: "Website:",
+  termsSiteValue: "Die Online-Plattform www.consult-juridic.eu.",
+  termsUser: "Nutzer:",
+  termsUserValue: "Jede Person, die auf die Website zugreift.",
+  termsService: "Dienstleistung:",
+  termsServiceValue: "Die Bereitstellung von Rechtsberatung oder Fachinformationen.",
+  termsSection3Title: "3. NATUR DER DIENSTLEISTUNGEN",
+  termsSection3Text1: "3.1. Die Informationen auf der Website sind informativ und ersetzen keine personalisierte Rechtsberatung.",
+  termsSection3Text2: "3.2. Die Beratung vor Ort oder online erfolgt ausschließlich nach vorheriger Terminvereinbarung.",
+  termsSection4Title: "4. ZAHLUNGSMETHODEN UND RECHNUNGSSTELLUNG",
+  termsSection4Subtitle1: "4.1. Zahlung über Stripe:",
+  termsSection4Text1: "Zur Erleichterung schneller und sicherer Online-Zahlungen nutzt der Dienstleister die Plattform Stripe. Nutzer können Dienstleistungen direkt auf der Website mit Debit- oder Kreditkarten bezahlen.",
+  termsSection4Subtitle2: "4.2. Andere Methoden:",
+  termsSection4Text2: "Die Zahlung kann auch per Banküberweisung oder bar erfolgen, je nach Vereinbarung der Parteien.",
+  termsSection4Subtitle3: "4.3. Rechnungsstellung:",
+  termsSection4Text3: "Für jede erbrachte Dienstleistung wird eine Steuerrechnung ausgestellt (z.B. Invoice 26B95094-0017). Das Fälligkeitsdatum ist in der Regel das Ausstellungsdatum, es sei denn, es wird anders angegeben.",
+  termsSection5Title: "5. HAFTUNGSBESCHRÄNKUNG",
+  termsSection5Text1: "5.1. Der Dienstleister haftet nicht für Schäden, die aus der fehlerhaften Nutzung der Website oder der fehlerhaften Interpretation allgemeiner Informationen ohne spezielle Unterstützung resultieren.",
+  termsSection5Text2: "5.2. Avokatskanzlei Niculescu behält sich das Recht vor, die Erbringung von Dienstleistungen im Falle eines Interessenkonflikts zu verweigern.",
+  termsSection6Title: "6. VERTRAULICHKEIT (DSGVO)",
+  termsSection6Text: "Alle über Kontaktformulare oder während des Zahlungsprozesses über Stripe gesammelten Daten werden gemäß der geltenden europäischen Gesetzgebung verarbeitet, wobei die berufliche Schweigepflicht respektiert wird.",
+  termsSection7Title: "7. GEISTIGES EIGENTUM",
+  termsSection7Text: "Der gesamte Inhalt der rechtlichen Texte auf der Website ist Eigentum der Avokatskanzlei Niculescu. Die unbefugte Vervielfältigung ist untersagt.",
+  termsSection8Title: "8. ANWENDBARES RECHT",
+  termsSection8Text: "Dieser Vertrag unterliegt deutschem Recht, wobei alle Streitigkeiten von den zuständigen Gerichten am Sitz des Unternehmens beigelegt werden.",
+
+  //cookies
+  cookiesTitle: "COOKIE-RICHTLINIE – CONSULT-JURIDIC.EU",
+  cookiesIntro: "Dieses Dokument erläutert, wie wir Cookies und ähnliche Technologien auf unserer Website www.consult-juridic.eu verwenden. Durch die weitere Nutzung der Website akzeptieren Sie die Verwendung von Cookies gemäß dieser Richtlinie.",
+  cookiesSection1Title: "1. WAS SIND COOKIES?",
+  cookiesSection1Text: "Cookies sind kleine Textdateien, die auf Ihrem Gerät (Computer, Tablet oder Mobilgerät) platziert werden, wenn Sie eine Website besuchen. Sie ermöglichen es der Website, sich Ihre Aktionen und Präferenzen über einen Zeitraum zu merken, sodass Sie sie nicht jedes Mal erneut eingeben müssen, wenn Sie zur Website zurückkehren oder von einer Seite zur anderen navigieren.",
+  cookiesSection2Title: "2. ARTEN DER VERWENDETEN COOKIES",
+  cookiesEssentialTitle: "Notwendige Cookies:",
+  cookiesEssentialText: "Diese Cookies sind für das Funktionieren der Website erforderlich und können in unseren Systemen nicht deaktiviert werden. Sie werden normalerweise nur als Reaktion auf Ihre Aktionen gesetzt, z. B. beim Festlegen Ihrer Datenschutzeinstellungen, beim Anmelden oder beim Ausfüllen von Formularen.",
+  cookiesAnalyticsTitle: "Analyse-Cookies:",
+  cookiesAnalyticsText: "Wir verwenden Google Analytics, um zu verstehen, wie Besucher mit unserer Website interagieren. Diese Cookies helfen uns, die Funktionalität der Website zu verbessern, indem sie Informationen darüber sammeln, wie Benutzer auf der Website navigieren und sie nutzen.",
+  cookiesFunctionalTitle: "Funktionale Cookies:",
+  cookiesFunctionalText: "Diese Cookies ermöglichen es der Website, erweiterte und personalisierte Funktionen bereitzustellen, wie z. B. das Speichern von Spracheinstellungen oder Anmeldeinformationen.",
+  cookiesSection3Title: "3. COOKIES VON DRITTEN",
+  cookiesSection3Text: "Unsere Website nutzt Dienste von Dritten, die Cookies auf Ihrem Gerät setzen können, einschließlich Google Analytics und Google Tag Manager. Diese Dienste helfen uns, den Website-Traffic zu analysieren und die Benutzererfahrung zu verbessern. Weitere Informationen darüber, wie diese Unternehmen Cookies verwenden, finden Sie in deren Datenschutzrichtlinien.",
+  cookiesSection4Title: "4. VERWALTUNG VON COOKIES",
+  cookiesSection4Text: "Sie können Cookies nach Belieben steuern und/oder löschen. Sie können alle Cookies löschen, die sich bereits auf Ihrem Computer befinden, und die meisten Browser so einstellen, dass sie verhindern, dass Cookies platziert werden. Wenn Sie dies tun, müssen Sie möglicherweise jedes Mal, wenn Sie eine Website besuchen, bestimmte Präferenzen manuell anpassen, und einige Dienste und Funktionen funktionieren möglicherweise nicht.",
+  cookiesSection5Title: "5. AKTUALISIERUNGEN DIESER RICHTLINIE",
+  cookiesSection5Text: "Wir behalten uns das Recht vor, diese Cookie-Richtlinie jederzeit zu aktualisieren. Wir empfehlen Ihnen, diese Seite regelmäßig zu überprüfen, um über Änderungen informiert zu bleiben. Änderungen treten sofort nach der Veröffentlichung auf der Website in Kraft.",
+  cookiesSection6Title: "6. KONTAKT",
+  cookiesSection6Text: "Wenn Sie Fragen zur Verwendung von Cookies auf unserer Website haben, kontaktieren Sie uns bitte unter: office@consult-juridic.eu oder +49 176 31234232.",
+
+  //cookie consent popup
+  cookieConsentTitle: "Wir verwenden Cookies",
+  cookieConsentText: "Diese Website verwendet Cookies, um Ihr Erlebnis zu verbessern. Notwendige Cookies sind für das Funktionieren der Website erforderlich. Analyse-Cookies helfen uns zu verstehen, wie Sie die Website nutzen.",
+  cookieConsentAnalytics: "Analyse-Cookies zulassen (Google Analytics)",
+  cookieConsentNecessary: "Nur Notwendige",
+  cookieConsentAcceptAll: "Alle Akzeptieren",
+  cookieConsentLearnMore: "Mehr über Cookies erfahren",
+
 
 };
 

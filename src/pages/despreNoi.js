@@ -79,7 +79,7 @@ function Despre() {
         </div>
         <div className='brief-despre-noi'>
           <div className='first-brief' data-aos='fade-up'>
-            <img className='brief-img despre-img' src={despre2} alt='' />
+            <img className='brief-img despre-img' src={despre2} alt='' loading="lazy" decoding="async" />
           </div>
           <div className='second-brief second-brief-despre' data-aos='fade-up'>
             <div>
@@ -92,7 +92,7 @@ function Despre() {
         </div>
       </div>
       <button className='btn-top' onClick={moveToTop}>
-        <img className='img-arrow' src={upArrow} alt={"btn-top"} />
+        <img className='img-arrow' src={upArrow} alt={"btn-top"} loading="lazy" decoding="async" />
       </button>
     </div>
   );

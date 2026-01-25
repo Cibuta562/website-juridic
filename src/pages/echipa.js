@@ -23,7 +23,7 @@ const Echipa = () => {
       <div className='row-echipa'>
         <div className='col-echipa' data-aos='fade-up'>
           <div>
-            <img className='pic-avocat' src={lawyer} alt='mike' />
+            <img className='pic-avocat' src={lawyer} alt='mike' loading="lazy" decoding="async" />
           </div>
           <div className='desc-echipa'>
             <p className='membru-title'>
@@ -36,7 +36,7 @@ const Echipa = () => {
         </div>
         <div className='col-echipa' data-aos='fade-up'>
           <div>
-            <img className='pic-avocat' src={lawyer} alt='mike' />
+            <img className='pic-avocat' src={lawyer} alt='mike' loading="lazy" decoding="async" />
           </div>
           <div className='desc-echipa'>
             <p className='membru-title'>
@@ -50,7 +50,7 @@ const Echipa = () => {
         </div>
         <div className='col-echipa' data-aos='fade-up'>
           <div>
-            <img className='pic-avocat' src={lawyer} alt='mike' />
+            <img className='pic-avocat' src={lawyer} alt='mike' loading="lazy" decoding="async" />
           </div>
           <div className='desc-echipa'>
             <p className='membru-title'>
@@ -65,7 +65,7 @@ const Echipa = () => {
         </div>
         <div className='col-echipa' data-aos='fade-up'>
           <div>
-            <img className='pic-avocat' src={lawyer} alt='mike' />
+            <img className='pic-avocat' src={lawyer} alt='mike' loading="lazy" decoding="async" />
           </div>
           <div className='desc-echipa'>
             <p className='membru-title'>

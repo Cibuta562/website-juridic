@@ -1,108 +1,97 @@
 import "./terms.css";
+import React from "react";
+import translationsRO from "../lang/data-ro.js";
+import translationsDE from "../lang/data-de.js";
+import { useLanguage } from "../lang/LanguageContext";
 
 const Terms = () => {
+  const { getText, language } = useLanguage();
+
+  let translations;
+  if (language === "ro") {
+    translations = translationsRO;
+  } else if (language === "de") {
+    translations = translationsDE;
+  }
+
   return (
     <div className='terms-cont' data-aos='fade'>
-      <p className='terms-heading'>Termeni și Condiții</p>
+      <p className='terms-heading'>{getText(translations, "termsTitle")}</p>
       <div className='dec-line-terms'></div>
 
+      <p className='terms-heading'>{getText(translations, "termsSection1Title")}</p>
+      <div className='dec-line-terms'></div>
       <p className='terms-text'>
-        Acești Termeni și Condiții ("Termeni") guvernează utilizarea dvs. a
-        [Numele Site-ului] ("Site-ul") operat de [Numele Companiei]
-        ("Compania"). Accesând și utilizând Site-ul, sunteți de acord să
-        respectați acești Termeni. Dacă nu sunteți de acord cu nicio parte a
-        acestor Termeni, trebuie să vă abțineți să utilizați Site-ul.
+        {getText(translations, "termsSection1Text")}
+      </p>
+      <p className='terms-text'>
+        <strong>{getText(translations, "termsEntity")}</strong> {getText(translations, "termsEntityName")}
+      </p>
+      <p className='terms-text'>
+        <strong>{getText(translations, "termsAddress")}</strong> {getText(translations, "termsAddressValue")}
+      </p>
+      <p className='terms-text'>
+        <strong>{getText(translations, "termsContact")}</strong> {getText(translations, "termsContactValue")}
       </p>
 
-      <p className='terms-heading'>1. Acceptarea Termenilor</p>
+      <p className='terms-heading'>{getText(translations, "termsSection2Title")}</p>
       <div className='dec-line-terms'></div>
-
       <p className='terms-text'>
-        Prin accesarea sau utilizarea Site-ului, sunteți de acord să fiți supus
-        acestor Termeni și tuturor legilor și reglementărilor aplicabile. Dacă
-        nu sunteți de acord cu niciunul dintre acești Termeni, vi se interzice
-        utilizarea sau accesarea Site-ului.
+        <strong>{getText(translations, "termsSite")}</strong> {getText(translations, "termsSiteValue")}
+      </p>
+      <p className='terms-text'>
+        <strong>{getText(translations, "termsUser")}</strong> {getText(translations, "termsUserValue")}
+      </p>
+      <p className='terms-text'>
+        <strong>{getText(translations, "termsService")}</strong> {getText(translations, "termsServiceValue")}
       </p>
 
-      <p className='terms-heading'>2. Drepturile de Proprietate Intelectuală</p>
+      <p className='terms-heading'>{getText(translations, "termsSection3Title")}</p>
       <div className='dec-line-terms'></div>
-
       <p className='terms-text'>
-        Toate conținutul de pe Site, inclusiv textul, grafica, logo-urile,
-        imaginile și software-ul, sunt proprietatea Companiei sau a
-        licențiatorilor săi și sunt protejate de drepturile de autor, mărci
-        înregistrate și alte legi privind proprietatea intelectuală. Nu puteți
-        reproduce, distribui, modifica sau transmite nicio parte a Site-ului
-        fără permisiunea prealabilă în scris din partea Companiei.
+        {getText(translations, "termsSection3Text1")}
+      </p>
+      <p className='terms-text'>
+        {getText(translations, "termsSection3Text2")}
       </p>
 
-      <p className='terms-heading'>3. Conduită a Utilizatorului</p>
+      <p className='terms-heading'>{getText(translations, "termsSection4Title")}</p>
       <div className='dec-line-terms'></div>
-
       <p className='terms-text'>
-        Sunteți de acord să utilizați Site-ul numai în scopuri legale și într-un
-        mod care să nu încalce drepturile altora. Nu trebuie să utilizați
-        Site-ul pentru: Transmiterea de conținut ilegal, defăimător, obscen sau
-        ofensiv. Hartuirea, intimidarea sau vătămarea altora. Încălcarea
-        oricăror legi sau reglementări aplicabile.
+        <strong>{getText(translations, "termsSection4Subtitle1")}</strong> {getText(translations, "termsSection4Text1")}
+      </p>
+      <p className='terms-text'>
+        <strong>{getText(translations, "termsSection4Subtitle2")}</strong> {getText(translations, "termsSection4Text2")}
+      </p>
+      <p className='terms-text'>
+        <strong>{getText(translations, "termsSection4Subtitle3")}</strong> {getText(translations, "termsSection4Text3")}
       </p>
 
-      <p className='terms-heading'>4. Renunțare la Garanții</p>
+      <p className='terms-heading'>{getText(translations, "termsSection5Title")}</p>
       <div className='dec-line-terms'></div>
-
       <p className='terms-text'>
-        Site-ul este furnizat în baza "așa cum este" și "conform
-        disponibilității", fără niciun fel de garanții, fie explicite, fie
-        implicite. Compania nu face nicio reprezentare sau garanție cu privire
-        la exactitatea, fiabilitatea sau completitudinea conținutului de pe
-        Site.
+        {getText(translations, "termsSection5Text1")}
+      </p>
+      <p className='terms-text'>
+        {getText(translations, "termsSection5Text2")}
       </p>
 
-      <p className='terms-heading'>5. Limitare a Răspunderii</p>
+      <p className='terms-heading'>{getText(translations, "termsSection6Title")}</p>
       <div className='dec-line-terms'></div>
-
       <p className='terms-text'>
-        În niciun caz Compania nu va fi răspunzătoare pentru daune directe,
-        indirecte, accidentale, speciale sau consecințiale rezultate din
-        utilizarea sau imposibilitatea de a utiliza Site-ul, chiar dacă Compania
-        a fost informată despre posibilitatea unor astfel de daune.
+        {getText(translations, "termsSection6Text")}
       </p>
 
-      <p className='terms-heading'>6. Indemnizare</p>
+      <p className='terms-heading'>{getText(translations, "termsSection7Title")}</p>
       <div className='dec-line-terms'></div>
-
       <p className='terms-text'>
-        Sunteți de acord să despăgubiți, să apărați și să mențineți nevinovați
-        Compania și ofițerii săi, directorii, angajații, agenții și afiliații de
-        orice pretenții, daune, răspunderi, costuri și cheltuieli rezultate din
-        utilizarea dvs. a Site-ului sau încălcarea acestor Termeni.
+        {getText(translations, "termsSection7Text")}
       </p>
 
-      <p className='terms-heading'>7. Modificări ale Termenilor</p>
+      <p className='terms-heading'>{getText(translations, "termsSection8Title")}</p>
       <div className='dec-line-terms'></div>
-
       <p className='terms-text'>
-        Compania își rezervă dreptul de a modifica acești Termeni în orice
-        moment fără notificare prealabilă. Continuând să utilizați Site-ul după
-        orice astfel de modificări, sunteți de acord să fiți supus Termenilor
-        revizuiți.
-      </p>
-
-      <p className='terms-heading'>8. Legea Aplicabilă</p>
-      <div className='dec-line-terms'></div>
-
-      <p className='terms-text'>
-        Acești Termeni vor fi guvernați și interpretați în conformitate cu
-        legile din [jurisdicția], fără a se face referire la conflicte de legi.
-      </p>
-
-      <p className='terms-heading'>9. Contactați-ne</p>
-      <div className='dec-line-terms'></div>
-
-      <p className='terms-text'>
-        Dacă aveți întrebări sau nelămuriri cu privire la acești Termeni, vă
-        rugăm să ne contactați la [adresa de e-mail sau adresa poștală de
-        contact].
+        {getText(translations, "termsSection8Text")}
       </p>
     </div>
   );

@@ -152,13 +152,13 @@ export const translationsRO = {
   consultantaText6:
     "Veți comunica cu un avocat, care va răspunde clarificat întrebărilor dumneavoastră. În maxim 24 de ore veți primi o consultație scrisă, detaliată de la un avocat specializat. În timp, avocatul specializat va analiza situația juridică prezentată, va stabili legislația aplicabilă, iar ulterior va oferi informații juridice temeinice.",
   consultantaText7: "Consultanță juridică pe E-mail",
-  consultantaText8: "1. Alegeți domeniul de drept al problemei dumneavoastră.",
+  consultantaText8: "3. Alegeți domeniul de drept al problemei dumneavoastră.",
   consultantaText9: "2. Introduceți datele de contact.",
-  consultantaText10: "3. Descrieți cat mai detaliat problema juridică.",
+  consultantaText10: "4. Descrieți cat mai detaliat problema juridică.",
   consultantaText11:
     "4. După caz, atașați în format .pdf sau .jpg documentele ",
   consultantaLizibil: "(poze cât mai lizibile).",
-  consultantaText12: "4. Achitați onorariul afișat.",
+  consultantaText12: "1. Achitați onorariul afișat.",
   consultantaText13:
     "5. Imediat dupa procesarea plății situația juridică prezentată de dumneavoastră va fi analizată de unul din specialiștii noștri.",
   consultantaText14:
@@ -244,6 +244,78 @@ export const translationsRO = {
       "; obtinerea permiselor de munca in Romania sau Germania\n" +
       "; asistenta si reprezentare in fata autoritatilor competente\n" +
       "; diverse formalitati legate de regimul refugiatilor si expatilor\n",
+
+  multumireTitle: "Mulțumim!",
+  multumireText:
+      "Plata a fost confirmată și mesajul tău a fost trimis cu succes. Vei fi contactat în cel mai scurt timp.",
+  multumireBtn: "Înapoi la homepage",
+
+  //terms
+  termsTitle: "TERMENI ȘI CONDIȚII DE UTILIZARE – CONSULT-JURIDIC.EU",
+  termsSection1Title: "1. IDENTIFICAREA PRESTATORULUI",
+  termsSection1Text: "Serviciile furnizate prin intermediul acestui site sunt operate de:",
+  termsEntity: "Entitate:",
+  termsEntityName: "Avokatskanzlei Niculescu",
+  termsAddress: "Sediu:",
+  termsAddressValue: "Petronia-Steiner Str 25, 67346 Speyer, Germany",
+  termsContact: "Contact:",
+  termsContactValue: "+49 176 31234232 | office@consult-juridic.eu",
+  termsSection2Title: "2. DEFINIȚII ȘI TERMENI",
+  termsSite: "Site:",
+  termsSiteValue: "Platforma online www.consult-juridic.eu.",
+  termsUser: "Utilizator:",
+  termsUserValue: "Orice persoană care accesează site-ul.",
+  termsService: "Serviciu:",
+  termsServiceValue: "Furnizarea de consultanță juridică sau informații de specialitate.",
+  termsSection3Title: "3. NATURA SERVICIILOR",
+  termsSection3Text1: "3.1. Informațiile de pe site au caracter informativ și nu înlocuiesc o consultanță juridică personalizată.",
+  termsSection3Text2: "3.2. Consultanța la sediu sau online se face exclusiv cu programare prealabilă.",
+  termsSection4Title: "4. MODALITĂȚI DE PLATĂ ȘI FACTURARE",
+  termsSection4Subtitle1: "4.1. Plata prin Stripe:",
+  termsSection4Text1: "Pentru facilitarea plăților online rapide și securizate, Prestatorul utilizează platforma Stripe. Utilizatorii pot achita serviciile direct pe site folosind carduri de debit sau credit.",
+  termsSection4Subtitle2: "4.2. Alte metode:",
+  termsSection4Text2: "Plata se poate efectua și prin transfer bancar sau numerar, în funcție de acordul părților.",
+  termsSection4Subtitle3: "4.3. Facturare:",
+  termsSection4Text3: "Pentru fiecare serviciu prestat se va emite o factură fiscală (ex: Invoice 26B95094-0017). Data scadenței este, de regulă, data emiterii, cu excepția cazurilor în care se specifică altfel.",
+  termsSection5Title: "5. LIMITAREA RĂSPUNDERII",
+  termsSection5Text1: "5.1. Prestatorul nu răspunde pentru daune rezultate din utilizarea defectuoasă a site-ului sau interpretarea eronată a informațiilor generale fără asistență dedicată.",
+  termsSection5Text2: "5.2. Avokatskanzlei Niculescu își rezervă dreptul de a refuza prestarea serviciilor în cazul unui conflict de interese.",
+  termsSection6Title: "6. CONFIDENȚIALITATE (GDPR)",
+  termsSection6Text: "Toate datele colectate prin formularele de contact sau în timpul procesului de plată prin Stripe sunt prelucrate conform legislației europene în vigoare, respectând secretul profesional.",
+  termsSection7Title: "7. PROPRIETATE INTELECTUALĂ",
+  termsSection7Text: "Întreg conținutul textelor juridice de pe site este proprietatea Avokatskanzlei Niculescu. Reproducerea neautorizată este interzisă.",
+  termsSection8Title: "8. LEGEA APLICABILĂ",
+  termsSection8Text: "Prezentul contract este guvernat de legile din Germania, orice litigiu urmând a fi soluționat de instanțele competente din jurisdicția sediului social.",
+
+  //cookies
+  cookiesTitle: "POLITICA DE COOKIES – CONSULT-JURIDIC.EU",
+  cookiesIntro: "Acest document explică modul în care utilizăm cookie-urile și tehnologii similare pe site-ul nostru www.consult-juridic.eu. Prin continuarea utilizării site-ului, acceptați utilizarea cookie-urilor în conformitate cu această politică.",
+  cookiesSection1Title: "1. CE SUNT COOKIE-URILE?",
+  cookiesSection1Text: "Cookie-urile sunt fișiere text mici care sunt plasate pe dispozitivul dvs. (computer, tabletă sau mobil) când accesați un site web. Acestea permit site-ului să-și amintească acțiunile și preferințele dvs. pe o perioadă de timp, astfel încât să nu trebuiască să le reintroduceți de fiecare dată când reveniți pe site sau navigați de la o pagină la alta.",
+  cookiesSection2Title: "2. TIPURI DE COOKIE-URI UTILIZATE",
+  cookiesEssentialTitle: "Cookie-uri esențiale:",
+  cookiesEssentialText: "Aceste cookie-uri sunt necesare pentru funcționarea site-ului și nu pot fi dezactivate în sistemele noastre. Ele sunt de obicei setate doar ca răspuns la acțiunile dvs., cum ar fi setarea preferințelor de confidențialitate, conectarea sau completarea formularelor.",
+  cookiesAnalyticsTitle: "Cookie-uri de analiză:",
+  cookiesAnalyticsText: "Utilizăm Google Analytics pentru a înțelege modul în care vizitatorii interacționează cu site-ul nostru. Aceste cookie-uri ne ajută să îmbunătățim funcționalitatea site-ului prin colectarea de informații despre modul în care utilizatorii navighează și utilizează site-ul.",
+  cookiesFunctionalTitle: "Cookie-uri funcționale:",
+  cookiesFunctionalText: "Aceste cookie-uri permit site-ului să ofere funcționalități îmbunătățite și personalizate, cum ar fi reținerea preferințelor de limbă sau informațiile de autentificare.",
+  cookiesSection3Title: "3. COOKIE-URI DE LA TERȚI",
+  cookiesSection3Text: "Site-ul nostru utilizează servicii de la terți care pot seta cookie-uri pe dispozitivul dvs., inclusiv Google Analytics și Google Tag Manager. Aceste servicii ne ajută să analizăm traficul site-ului și să îmbunătățim experiența utilizatorilor. Pentru mai multe informații despre modul în care aceste companii utilizează cookie-urile, vă rugăm să consultați politicile lor de confidențialitate.",
+  cookiesSection4Title: "4. GESTIONAREA COOKIE-URILOR",
+  cookiesSection4Text: "Puteți controla și/sau șterge cookie-urile după cum doriți. Puteți șterge toate cookie-urile care sunt deja pe computerul dvs. și puteți seta majoritatea browserelor pentru a preveni plasarea acestora. Totuși, dacă faceți acest lucru, este posibil să trebuiască să ajustați manual anumite preferințe de fiecare dată când vizitați un site, iar unele servicii și funcționalități pot să nu funcționeze.",
+  cookiesSection5Title: "5. ACTUALIZĂRI ALE ACESTEI POLITICI",
+  cookiesSection5Text: "Ne rezervăm dreptul de a actualiza această politică de cookies în orice moment. Vă recomandăm să verificați periodic această pagină pentru a fi la curent cu orice modificări. Modificările vor intra în vigoare imediat după publicarea pe site.",
+  cookiesSection6Title: "6. CONTACT",
+  cookiesSection6Text: "Dacă aveți întrebări despre utilizarea cookie-urilor pe site-ul nostru, vă rugăm să ne contactați la: office@consult-juridic.eu sau +49 176 31234232.",
+
+  //cookie consent popup
+  cookieConsentTitle: "Utilizăm Cookie-uri",
+  cookieConsentText: "Acest site folosește cookie-uri pentru a îmbunătăți experiența dumneavoastră. Cookie-urile esențiale sunt necesare pentru funcționarea site-ului. Cookie-urile de analiză ne ajută să înțelegem cum utilizați site-ul.",
+  cookieConsentAnalytics: "Permite cookie-uri de analiză (Google Analytics)",
+  cookieConsentNecessary: "Doar Necesare",
+  cookieConsentAcceptAll: "Acceptă Toate",
+  cookieConsentLearnMore: "Află mai multe despre cookie-uri",
+
 
 };
 

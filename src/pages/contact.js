@@ -18,9 +18,9 @@ const Contact = () => {
   return (
     <div>
       <div className='contact-img-cont'>
-        <img className='contact-img' src={contact} alt='contact' />
+        <img className='contact-img' src={contact} alt='contact' loading="lazy" decoding="async" />
       </div>
-      <div className='contact-form-main'>
+      <div className='contact-form'>
         <p className='contact-heading'>
           {getText(translations, "contactTitle")}
         </p>

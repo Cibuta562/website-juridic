@@ -149,7 +149,7 @@ const Subsol = () => {
           © {currentYear} Consult-Juridic.
         </div>
         <div className='subsol-col2'>
-          <a style={{textDecoration: "none", color: "black"}} href="https://generationsalez.com" target="_blank">
+          <a style={{textDecoration: "none", color: "black"}} href="https://generationsalez.ro" target="_blank">
             @generation salez
           </a>
         </div>
@@ -160,6 +160,15 @@ const Subsol = () => {
               style={{textDecoration: "none", color: "black"}}
           >
             terms & conditions
+          </Link>
+        </div>
+        <div className='subsol-col2'>
+          <Link
+              to='/politica/cookies'
+              onClick={moveToTop}
+              style={{textDecoration: "none", color: "black"}}
+          >
+            {language === "ro" ? "politica cookies" : "cookie-richtlinie"}
           </Link>
         </div>
         <div className='subsol-col2'>impressum</div>

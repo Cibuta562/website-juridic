@@ -69,13 +69,13 @@ const CookieConsent = () => {
     // Încarcă Google Analytics script (gtag.js)
     const script1 = document.createElement("script");
     script1.async = true;
-    script1.src = "https://www.googletagmanager.com/gtag/js?id=G-VGF7WHKVPD";
+    script1.src = "https://www.googletagmanager.com/gtag/js?id=G-9SGTTZYL8Z";
     document.head.appendChild(script1);
 
     script1.onload = () => {
       // Configurează Google Analytics cu noul ID
       if (window.gtag) {
-        window.gtag("config", "G-VGF7WHKVPD", {
+        window.gtag("config", "G-9SGTTZYL8Z", {
           anonymize_ip: true,
         });
       }

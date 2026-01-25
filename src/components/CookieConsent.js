@@ -17,6 +17,21 @@ const CookieConsent = () => {
   }
 
   useEffect(() => {
+    // Inițializează Consent Mode înainte de orice altceva
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      window.dataLayer.push(arguments);
+    }
+    window.gtag = gtag;
+    gtag("js", new Date());
+
+    // Setează Consent Mode default (denied) pentru conformitate GDPR
+    gtag("consent", "default", {
+      analytics_storage: "denied",
+      ad_storage: "denied",
+      wait_for_update: 500,
+    });
+
     // Verifică dacă utilizatorul a dat deja consimțământul
     const consent = localStorage.getItem("cookieConsent");
     const analytics = localStorage.getItem("analyticsConsent");
@@ -26,28 +41,45 @@ const CookieConsent = () => {
     } else {
       const hasAnalytics = analytics === "true";
       setAnalyticsConsent(hasAnalytics);
-      // Dacă există consimțământ pentru analytics, încarcă Google Analytics
-      if (hasAnalytics && !window.gtag) {
-        loadGoogleAnalytics();
+      // Dacă există consimțământ pentru analytics, actualizează consent și încarcă Google Analytics
+      if (hasAnalytics) {
+        gtag("consent", "update", {
+          analytics_storage: "granted",
+        });
+        if (!window.gtagLoaded) {
+          loadGoogleAnalytics();
+        }
       }
     }
   }, []);
 
   const loadGoogleAnalytics = () => {
-    // Încarcă Google Analytics script
+    // Verifică dacă script-ul a fost deja încărcat
+    if (window.gtagLoaded) {
+      return;
+    }
+
+    // Actualizează consimțământul pentru analytics
+    if (window.gtag) {
+      window.gtag("consent", "update", {
+        analytics_storage: "granted",
+      });
+    }
+
+    // Încarcă Google Analytics script (gtag.js)
     const script1 = document.createElement("script");
     script1.async = true;
-    script1.src = "https://www.googletagmanager.com/gtag/js?id=G-3CXRVNJC3L";
+    script1.src = "https://www.googletagmanager.com/gtag/js?id=G-VGF7WHKVPD";
     document.head.appendChild(script1);
 
     script1.onload = () => {
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        window.dataLayer.push(arguments);
+      // Configurează Google Analytics cu noul ID
+      if (window.gtag) {
+        window.gtag("config", "G-VGF7WHKVPD", {
+          anonymize_ip: true,
+        });
       }
-      window.gtag = gtag;
-      gtag("js", new Date());
-      gtag("config", "G-3CXRVNJC3L");
+      window.gtagLoaded = true;
     };
   };
 
@@ -64,6 +96,12 @@ const CookieConsent = () => {
     localStorage.setItem("analyticsConsent", "false");
     setShowConsent(false);
     setAnalyticsConsent(false);
+    // Asigură-te că consent mode rămâne pe denied
+    if (window.gtag) {
+      window.gtag("consent", "update", {
+        analytics_storage: "denied",
+      });
+    }
   };
 
   const handleAcceptAnalytics = () => {
